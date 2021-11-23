@@ -1,4 +1,4 @@
-import { Button, Drawer, Grid, Hidden, IconButton, List, ListItem, ListItemButton, ListItemText, Paper, Typography } from '@mui/material';
+import { Button, Drawer, Grid, Hidden, IconButton, List, ListItem, ListItemButton, ListItemIcon , ListItemText, Paper, Typography } from '@mui/material';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { useBackground, useDisplay, useTypography, useResponsive } from '../../styles';
@@ -10,6 +10,7 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
+import HomeIcon from '@mui/icons-material/Home';
 
 
 const Header = () => {
@@ -26,22 +27,31 @@ const Header = () => {
         <Paper elevation={0} component="nav" className={classNames(responsive.mdMl2, classes.headerNav, 
              responsive.mdRelative, display.h100, display.pt1, responsive.mdPt0)}>
             <Hidden mdUp>
-                <Button onClick={menuClickHandler}><ArrowBackIcon /></Button>
+                <Button onClick={menuClickHandler}><ArrowBackIcon classes={{ root: text.textLight}} /></Button>
             </Hidden>
             <List component="ul" className={classNames(display.flex, display.flexColumn, responsive.mdRow)}>
-                <ListItem disablePadding>
+                <ListItem disablePadding >
                     <ListItemButton>
-                        <ListItemText primary="Inbox" />
+                        <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
+                            <HomeIcon classes={{ root: text.textLight}} />
+                        </ListItemIcon>
+                        <ListItemText classes={{ root: text.textLight}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton>
-                        <ListItemText primary="About us" />
+                        <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
+                            <HomeIcon classes={{ root: text.textLight}} />
+                        </ListItemIcon>
+                        <ListItemText classes={{ root: text.textLight}} primary="About us" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton>
-                        <ListItemText primary="Blogs" />
+                        <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
+                            <HomeIcon classes={{ root: text.textLight}} />
+                        </ListItemIcon>
+                        <ListItemText classes={{ root: text.textLight}} primary="Blogs" />
                     </ListItemButton>
                 </ListItem>
             </List>
@@ -50,7 +60,7 @@ const Header = () => {
                     display.alignStretch, display.absolute, display.w100, classes.headerDrawerBottom)}>
                     <Link to="/register" className={classNames(text.decorationNone, classes.contactMeLink)}>
                         <Button 
-                            className={classNames(classes.headerGetStarted, display.w100, classes.headerContactMe, text.textLight)}>
+                            className={classNames(classes.headerGetStarted, text.font7, display.w100, classes.headerContactMe, text.textLight)}>
                             Contact me
                         </Button>
                     </Link>

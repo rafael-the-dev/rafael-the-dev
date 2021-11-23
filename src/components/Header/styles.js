@@ -20,6 +20,7 @@ export const useStyles =  makeStyles(theme =>
             headerNav: {
                 // top: 0,
                 //right: 9999,
+                backgroundImage: 'linear-gradient(to bottom, #0b4681 , #186bbd ) !important',
                 transition: "all 1s",
                 [theme.breakpoints.up("sm")]: {
                   top: 0,
@@ -27,6 +28,7 @@ export const useStyles =  makeStyles(theme =>
                   width: "300px !important",
                 },
                 [theme.breakpoints.up("md")]: {
+                  backgroundImage: 'none',
                   width: "auto !important",
                 },
               },
@@ -38,9 +40,12 @@ export const useStyles =  makeStyles(theme =>
                   width: "auto",
                 },
               },
+              headerNavIcon: {
+                minWidth: '0 !important'
+              },
               headerGetStarted: {
-                backgroundColor: "#1976d2 !important",
-                color: "#FFF",
+                backgroundColor: "#FFF !important",
+                color: "#186bbd !important",
                 fontSize: ".8rem",
                 padding: ".3rem .5rem !important",
                 textTransform: "capitalize",

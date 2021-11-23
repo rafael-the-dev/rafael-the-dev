@@ -11,6 +11,9 @@ export const useTypography = makeStyles(theme => ({
     alignRight: {
         textAlign: 'right !important'
     },
+    decorationNone: {
+        textDecoration: 'none !important'
+    },
     font7: {
         fontWeight: '700 !important'
     },
