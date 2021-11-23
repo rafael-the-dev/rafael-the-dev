@@ -9,6 +9,7 @@ export const AppContextProvider = ({ children }) => {
             backward: 'Audiophile e-commerce',
             forward: 'Audiophile e-commerce',
             liveURL: 'https://pro-audiophile-ecommerce.netlify.app/',
+            sourceCodeURL: 'https://github.com/rafael-the-dev/Audiophile-E-commerce',
             name: 'Audiophile e-commerce',
             videoURL: '',
             content: {
@@ -31,6 +32,18 @@ export const AppContextProvider = ({ children }) => {
                 tools: [
                     {
                         name: 'Material-ui',
+                        url: ''
+                    },
+                    {
+                        name: 'classnames',
+                        url: ''
+                    },
+                    {
+                        name: 'Material-ui',
+                        url: ''
+                    },
+                    {
+                        name: 'classnames',
                         url: ''
                     }
                 ]

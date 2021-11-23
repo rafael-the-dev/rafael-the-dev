@@ -34,6 +34,9 @@ export const useDisplay = makeStyles(theme => ({
     flexGrow1: {
         flexGrow: 1
     },
+    flexWrap: {
+        flexWrap: 'wrap !important'
+    },
     h100: {
         height: '100%'
     },
@@ -51,6 +54,9 @@ export const useDisplay = makeStyles(theme => ({
     },
     justifyEnd: {
         justifyContent: 'flex-end'
+    },
+    listStyleNone: {
+        listStyle: 'none'
     },
     mb1: {
         marginBottom: '1rem !important'

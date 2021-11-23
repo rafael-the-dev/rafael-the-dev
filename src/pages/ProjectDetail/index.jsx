@@ -10,13 +10,15 @@ import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CircleIcon from '@mui/icons-material/Circle';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import WebIcon from '@mui/icons-material/Web';
 
 const ProjectDetail = () => {
     const display = useDisplay();
     const text = useTypography();
     const classes = useStyles();
 
-    const [ project, setProject ] = useState({ content: { features: [] }})
+    const [ project, setProject ] = useState({ content: { features: [], tools: [] }})
     const [ expandMore, setExpandMore ] = useState(false);
 
     const { projects } = useContext(AppContext);
@@ -59,7 +61,18 @@ const ProjectDetail = () => {
                 }
             </List>
         );
-    }, [ project, text, classes, display, expandMore ])
+    }, [ project, text, classes, display, expandMore ]);
+
+    const getTools = useCallback(() => (
+        <ul classes={{ root: classes.list }} className={classNames(display.flex, display.alignCenter,
+         display.listStyleNone, display.pl1, display.flexWrap)}>
+            {
+                project.content.tools.map((tool, index) => (
+                    <li key={index} className={classNames(display.mb1, display.mr1,  classes.toolsItem)} >{ tool.name }</li>
+                ))
+            }
+        </ul>
+    ), [ project, classes, display ]);
 
     useEffect(() => {
         setProject(projects['audiophile e-commerce']);
@@ -93,9 +106,9 @@ const ProjectDetail = () => {
             </Grid>
             <Grid item xs={12}>
                 <Paper elevation={0} classes={{ root: classNames(display.mr1, display.ml1, display.mt2)}} className={classNames()}>
-                    <Typography variant="h6" className={classNames(display.mt1, text.font7)}>Description</Typography>
+                    <Typography component="h2" variant="h6" className={classNames(display.mt1, text.font7)}>Description</Typography>
                     <Typography className={classNames(text.rem9)}>{ project.content?.description }</Typography>
-                    <Typography variant="h6" className={classNames(display.mt1, text.font7)}>Features</Typography>
+                    <Typography component="h2" variant="h6" className={classNames(display.mt1, text.font7)}>Features</Typography>
                     <div>
                         { getFeatures() }
                         <Button onClick={() => setExpandMore(b => !b)}  
@@ -104,6 +117,41 @@ const ProjectDetail = () => {
                             className={classNames()}>
                             Show { expandMore ? 'Less' : 'More'}
                         </Button>
+                    </div>
+                    <Typography component="h2" variant="h6" className={classNames(display.mt1, text.font7)}>Tools</Typography>
+                    { getTools() }
+                    <div className={classNames(display.mt1, display.flex, display.alignCenter)}>
+                        <Typography 
+                            component="h2" 
+                            variant="h6" 
+                            gutterBottom
+                            className={classNames(text.font7)}>
+                            Source Code:
+                        </Typography>
+                        <a 
+                            href={project.sourceCodeURL} 
+                            rel="noreferrer" 
+                            target="_blank" 
+                            className={classNames(display.flex, display.alignCenter, display.ml1, classes.linkText)}>
+                            <GitHubIcon color="primary" className={classNames(classes.linkIcon)}/> 
+                            Github
+                        </a>
+                    </div>
+                    <div className={classNames(display.flex, display.alignCenter)}>
+                        <Typography 
+                            component="h2" 
+                            variant="h6" 
+                            className={classNames(text.font7)}>
+                            Live site:
+                        </Typography>
+                        <a 
+                            href={project.liveURL} 
+                            rel="noreferrer" 
+                            target="_blank" 
+                            className={classNames(display.flex, display.alignCenter, display.ml1, classes.linkText)}>
+                            <WebIcon color="primary" className={classNames(classes.linkIcon)} /> 
+                            Github
+                        </a>
                     </div>
                 </Paper>
             </Grid>

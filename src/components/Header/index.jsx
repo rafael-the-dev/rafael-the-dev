@@ -67,7 +67,7 @@ const Header = () => {
                 variant="h5" 
                 component={Link} 
                 to="/" 
-                className={classNames(text.noUnderline, text.font7)}>
+                className={classNames(text.noUnderline, text.font7, classes.headerLogo)}>
                 Rafael Tivane
             </Typography>
                 <Hidden mdDown>

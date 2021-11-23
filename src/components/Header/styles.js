@@ -11,6 +11,9 @@ export const useStyles =  makeStyles(theme =>
                   paddingTop: 0,
                 },
             },
+            headerLogo: {
+              color: '#1976d2'
+            },
             headerDrawe: {
                 width: '70% !important'
             },
@@ -36,7 +39,7 @@ export const useStyles =  makeStyles(theme =>
                 },
               },
               headerGetStarted: {
-                backgroundColor: "#0d0d6e !important",
+                backgroundColor: "#1976d2 !important",
                 color: "#FFF",
                 fontSize: ".8rem",
                 padding: ".3rem .5rem !important",
