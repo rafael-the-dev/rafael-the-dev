@@ -12,6 +12,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CircleIcon from '@mui/icons-material/Circle';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WebIcon from '@mui/icons-material/Web';
+import { Pagination } from '@mui/material';
 
 const ProjectDetail = () => {
     const display = useDisplay();
@@ -152,6 +153,9 @@ const ProjectDetail = () => {
                             <WebIcon color="primary" className={classNames(classes.linkIcon)} /> 
                             Github
                         </a>
+                    </div>
+                    <div className={classNames(display.mt1, display.flex, display.justifyBetween)}>
+                        <Pagination count={10} size="small" /> 
                     </div>
                 </Paper>
             </Grid>
