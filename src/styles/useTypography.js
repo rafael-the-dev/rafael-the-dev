@@ -20,6 +20,9 @@ export const useTypography = makeStyles(theme => ({
     noUnderline: {
         textDecoration: 'none'
     },
+    textDark: {
+        color: '#000 !important'
+    },
     textLight: {
         color: '#FFF !important'
     },

@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { StylesProvider } from '@mui/styles';
 import { AppContextProvider } from '../../context/AppContext';
 import Header from '../../components/Header'
+import Footer from "../../components/Footer";
 
 const App = () => {
     const theme = createTheme();
@@ -24,6 +25,7 @@ const App = () => {
                         <Routes>
                             <Route exact path="/" element={<ProjectDetail />} />
                         </Routes>
+                        <Footer />
                     </Router>
                 </AppContextProvider>
             </ThemeProvider>

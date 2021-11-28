@@ -80,7 +80,7 @@ const ProjectDetail = () => {
     }, [ projects ]);
 
     return (
-        <Grid container component="main" className={classNames(display.pt1, display.pb2, display.px5)}>
+        <Grid container component="main" className={classNames(display.pt1, display.pb3, display.px5)}>
             <Grid item xs={12}>
                 <Paper elevation={0} className={classNames(display.flex, display.justifyBetween, display.alignCenter)}>
                     <IconButton>
@@ -154,7 +154,7 @@ const ProjectDetail = () => {
                             Github
                         </a>
                     </div>
-                    <div className={classNames(display.mt1, display.flex, display.justifyBetween)}>
+                    <div className={classNames(display.mt1, display.flex, display.justifyCenter)}>
                         <Pagination count={10} size="small" /> 
                     </div>
                 </Paper>

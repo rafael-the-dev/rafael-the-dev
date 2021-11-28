@@ -57,7 +57,7 @@ const Header = () => {
             </List>
             <Hidden mdUp>
                 <Paper elevation={0} className={classNames(display.flex, display.flexColumn, 
-                    display.alignStretch, display.absolute, display.w100, classes.headerDrawerBottom)}>
+                    display.alignStretch, display.absolute, display.w100, bg.transparent, classes.headerDrawerBottom)}>
                     <Link to="/register" className={classNames(text.decorationNone, classes.contactMeLink)}>
                         <Button 
                             className={classNames(classes.headerGetStarted, text.font7, display.w100, classes.headerContactMe, text.textLight)}>
