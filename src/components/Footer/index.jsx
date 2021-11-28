@@ -15,7 +15,7 @@ const Footer = () => {
     const classes = useStyles();
 
     return (
-        <Container maxWidth={false} className={classNames(display.flex, display.flexColumn, display.alignCenter,
+        <Container maxWidth={false} component="footer" className={classNames(display.flex, display.flexColumn, display.alignCenter,
             display.pt2, display.pb2, classes.footer, display.relative)}>
                 <div className={classNames(classes.footerBar, display.absolute)}></div>
             <Link to="/" className={classNames(text.decorationNone)}>
