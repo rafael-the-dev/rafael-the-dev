@@ -18,4 +18,16 @@ export const useStyles = makeStyles(theme => ({
             padding: ".5rem .8rem !important",
         },
     },
+    projectsSection: {
+        backgroundColor: '#acf1ff4f',
+    },
+    projectsSectionTitle: {
+        color: '#00000e',
+        fontFamily: "'Abril Fatface', cursive !important",
+        fontSize: '1.4rem !important'
+        //font-family: 'Mochiy Pop P One', sans-serif;
+    },
+    projectsSectionDescription: {
+        color: '#2e2e2e'
+    }
 }));
