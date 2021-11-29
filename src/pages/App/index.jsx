@@ -23,7 +23,7 @@ const App = () => {
                     <Router>
                         <Header />
                         <Routes>
-                            <Route exact path="/" element={<ProjectDetail />} />
+                            <Route exact path="/projects/:name" element={<ProjectDetail />} />
                         </Routes>
                         <Footer />
                     </Router>

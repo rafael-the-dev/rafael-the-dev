@@ -13,7 +13,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WebIcon from '@mui/icons-material/Web';
 import { Pagination } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const ProjectDetail = () => {
     const display = useDisplay();
@@ -76,16 +76,18 @@ const ProjectDetail = () => {
         </ul>
     ), [ project, classes, display ]);
 
-    const projectsRefs = useRef(['audiophile-e-commerce', 'dine-restaurant-websit', 'coffeeroasters-subscription-site']);
+    const projectsRefs = useRef(['audiophile-e-commerce', 'dine-restaurant-website', 'photosnap', 'devjobs-web-app',
+    'coffeeroasters-subscription-site']);
     let navigate = useNavigate();
 
     const handlePaginationChange = (event, value) => {
         navigate(`/projects/${projectsRefs.current[value]}`);
-      };
-
+    };
+    
+    const { name } = useParams();
     useEffect(() => {
-        setProject(projects['audiophile-e-commerce']);
-    }, [ projects ]);
+        setProject(projects[name]);
+    }, [ name, projects ]);
 
     return (
         <Grid container component="main" className={classNames(display.pt1, display.pb3, display.px5)}>
