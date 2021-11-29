@@ -170,8 +170,8 @@ export const useDisplay = makeStyles(theme => ({
         paddingRight: '3rem !important'
     },
     px5: {
-        paddingLeft: '5%',
-        paddingRight: '5%'
+        paddingLeft: '5% !important',
+        paddingRight: '5% !important'
     },
     relative: {
         position: 'relative'

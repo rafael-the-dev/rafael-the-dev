@@ -13,6 +13,11 @@ export const useStyles = makeStyles(theme => ({
         right: 'auto',
         width: 100
     },
+    footerLogo: {
+      [theme.breakpoints.up('md')]: {
+        fontSize: '1.9rem !important'
+      }
+    },
     footerPageLink: {
         fontSize: '1.06rem',
         marginBottom: 6

@@ -101,7 +101,7 @@ const ProjectDetail = () => {
                         variant="h6" 
                         classes={{ h6: text.font7 }}
                         className={classNames(display.flexGrow1, text.alignCenter)}>
-                        Portfolio
+                        { project.name }
                     </Typography>
                     <IconButton>
                         <ArrowForwardIcon />

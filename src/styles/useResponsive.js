@@ -26,6 +26,11 @@ export const useResponsive = makeStyles(theme => ({
             flexDirection: 'row !important'
         }
     },
+    mdJustifyBetween: {
+        [theme.breakpoints.up('md')]: {
+            justifyContent: 'space-between !important'
+        }
+    },
     mdMb0: {
         [theme.breakpoints.up('md')]: {
             marginBottom: '0rem !important'
