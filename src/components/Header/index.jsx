@@ -32,26 +32,32 @@ const Header = () => {
             <List component="ul" className={classNames(display.flex, display.flexColumn, responsive.mdRow)}>
                 <ListItem disablePadding >
                     <ListItemButton>
-                        <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                            <HomeIcon classes={{ root: text.textLight}} />
-                        </ListItemIcon>
-                        <ListItemText classes={{ root: text.textLight}} primary="Home" />
+                        <Hidden mdUp>
+                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
+                                <HomeIcon classes={{ root: text.textLight}} />
+                            </ListItemIcon>
+                        </Hidden>
+                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, responsive.mdMb0, responsive.mdMt0)}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton>
-                        <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                            <HomeIcon classes={{ root: text.textLight}} />
-                        </ListItemIcon>
-                        <ListItemText classes={{ root: text.textLight}} primary="About us" />
+                        <Hidden mdUp>
+                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
+                                <HomeIcon classes={{ root: text.textLight}} />
+                            </ListItemIcon>
+                        </Hidden>
+                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, responsive.mdMb0, responsive.mdMt0)}} primary="About us" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton>
-                        <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                            <HomeIcon classes={{ root: text.textLight}} />
-                        </ListItemIcon>
-                        <ListItemText classes={{ root: text.textLight}} primary="Blogs" />
+                        <Hidden mdUp>
+                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
+                                <HomeIcon classes={{ root: text.textLight}} />
+                            </ListItemIcon>
+                        </Hidden>
+                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, responsive.mdMb0, responsive.mdMt0)}} primary="Blogs" />
                     </ListItemButton>
                 </ListItem>
             </List>
@@ -67,11 +73,11 @@ const Header = () => {
                 </Paper>
             </Hidden>
         </Paper>
-    ), [ classes, display, responsive, text, menuClickHandler]);
+    ), [ classes, display, responsive, text, menuClickHandler, bg]);
 
     return (
         <Paper elevation={0} component="header" className={classNames(display.flex, display.alignCenter, 
-            display.justifyBetween, display.px5, classes.header)}>
+            display.justifyBetween, display.px5, classes.header, responsive.mdPy1)}>
             <Paper elevation={0} className={classNames(display.flex, display.alignCenter)}>
             <Typography 
                 variant="h5" 
@@ -91,11 +97,8 @@ const Header = () => {
             </Paper>
             <Paper elevation={0} className={classNames(display.flex, display.alignCenter)}>
                 <Hidden mdDown>
-                    <Link to="/sign-in" className={classNames(text.noUnderline)}>
-                        <Button>Log in</Button>
-                    </Link>
                     <Link to="/register" className={classNames(text.decorationNone)}>
-                        <Button className={classNames(classes.headerGetStarted)}>Get Started</Button>
+                        <Button className={classNames(classes.headerGetStarted)}>Contact Me</Button>
                     </Link>
                 </Hidden>
                 <Hidden mdUp>

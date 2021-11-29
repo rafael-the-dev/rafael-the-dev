@@ -12,10 +12,19 @@ export const useStyles =  makeStyles(theme =>
                 },
             },
             headerLogo: {
-              color: '#1976d2'
+              color: '#1976d2',
+              [theme.breakpoints.up('md')]: {
+                fontSize: '1.9rem !important'
+              }
             },
             headerDrawe: {
-                width: '70% !important'
+                width: '70% !important',
+                [theme.breakpoints.up(400)]: {
+                  width: '280px !important'
+                },
+                [theme.breakpoints.up(600)]: {
+                  width: 'auto !important'
+                }
             },
             headerNav: {
                 // top: 0,
@@ -28,7 +37,7 @@ export const useStyles =  makeStyles(theme =>
                   width: "300px !important",
                 },
                 [theme.breakpoints.up("md")]: {
-                  backgroundImage: 'none',
+                  backgroundImage: 'none !important',
                   width: "auto !important",
                 },
               },
@@ -43,6 +52,12 @@ export const useStyles =  makeStyles(theme =>
               headerNavIcon: {
                 minWidth: '0 !important'
               },
+              headerNavItemText: {
+                width: 'max-content',
+                [theme.breakpoints.up('md')]: {
+                  color: '#000 !important'
+                }
+              },
               headerGetStarted: {
                 backgroundColor: "#FFF !important",
                 color: "#186bbd !important",
@@ -50,10 +65,15 @@ export const useStyles =  makeStyles(theme =>
                 padding: ".3rem .5rem !important",
                 textTransform: "capitalize",
                 [theme.breakpoints.up("md")]: {
+                  backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2)',
+                  backgroundColor: "transparent !important",
+                  color: "#FFF !important",
+                  fontWeight: '700 !important',
                   marginLeft: 16,
                   padding: ".5rem .8rem !important",
                 },
               },
+              headerGetStartedDesktop: {},
               headerDrawerBottom: {
                 bottom: 19,
               },
