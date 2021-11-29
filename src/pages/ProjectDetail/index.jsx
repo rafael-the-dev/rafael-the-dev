@@ -32,7 +32,7 @@ const ProjectDetail = () => {
                     project.content.features.map((feature, index) => {
                         if(typeof feature === 'object') {
                             return (
-                                <ListItem key={index} classes={{ root: display.pt0}} className={classNames(display.flex, display.flexColumn)}>
+                                <ListItem key={index} classes={{ root: display.pt0}} className={classNames(display.flex, display.flexColumn, display.alignStart)}>
                                     <ListItemText classes={{ primary: classNames(display.flex, display.alignBaseline, text.rem9) }}>
                                         <CircleIcon  sx={{ fontSize: '.7rem' }}  className={classNames(text.rem7, classes.listItemCircle)} /> { feature.name }
                                     </ListItemText>

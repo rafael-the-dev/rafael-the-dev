@@ -3,7 +3,16 @@ import { makeStyles } from "@mui/styles";
 export const useStyles =  makeStyles(theme => ({
     videoContainer: {
         height: 250,
-        width: '80%'
+        width: '80%',
+        [theme.breakpoints.up('sm')]: {
+            height: 290
+        },
+        [theme.breakpoints.up(780)]: {
+            height: 350
+        },
+        [theme.breakpoints.up('md')]: {
+            height: 440
+        }
     },
     list: {
         listStyle: 'disc !important',
