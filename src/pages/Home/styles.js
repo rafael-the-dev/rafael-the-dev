@@ -2,9 +2,33 @@ import { makeStyles } from "@mui/styles";
 import heroImage from '../../assets/images/home-hero.jfif'
 
 export const useStyles = makeStyles(theme => ({
+    heroSection: {
+        [theme.breakpoints.up(900)]: {
+            alignCenter: 'center',
+            backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)), url(${heroImage})`,
+            color: '#FFF',
+            display: 'flex',
+            height: 510,
+            
+        }
+    },
     heroMobileBanner: {
         backgroundImage: `url(${heroImage})`,
-        height: 415
+        height: 415,
+        [theme.breakpoints.up(900)]: {
+            display: 'none !important'
+        }
+    },
+    heroSectionContent: {
+        [theme.breakpoints.up(900)]: {
+            justifyContent: 'center !important',
+            width: 400
+        }
+    },
+    heroSectionContentDescription: {
+        [theme.breakpoints.up(900)]: {
+            opacity: .8
+        }
     },
     headerGetStarted: {
         backgroundColor: "transparent !important",
@@ -20,6 +44,19 @@ export const useStyles = makeStyles(theme => ({
     },
     projectsSection: {
         backgroundColor: '#acf1ff4f',
+        [theme.breakpoints.up(820)]: {
+            backgroundColor: 'transparent',
+            flexDirection: 'row-reverse !important',
+            justifyContent: 'center',
+            marginTop: '2rem'
+        }
+    },
+    projectsSectionContent: {
+        [theme.breakpoints.up(820)]: {
+            marginLeft: 83,
+            width: 384
+        }
+
     },
     projectsSectionTitle: {
         color: '#00000e',
@@ -29,5 +66,26 @@ export const useStyles = makeStyles(theme => ({
     },
     projectsSectionDescription: {
         color: '#2e2e2e'
+    },
+    projectsSectionTableLink: {
+        [theme.breakpoints.up(820)]: {
+            display: 'block !important'
+        }
+
+    },
+    projectsSectionProjectsContainer: {
+        [theme.breakpoints.up(820)]: {
+            backgroundColor: '#acf1ff4f',
+            marginTop: '0 !important',
+            padding: '2rem'
+        },
+        [theme.breakpoints.up(1050)]: {
+            width: 400
+        }
+    },
+    projectsSectionLink: {
+        [theme.breakpoints.up(820)]: {
+            display: 'none !important'
+        }
     }
 }));

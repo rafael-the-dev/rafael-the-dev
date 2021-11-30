@@ -18,24 +18,34 @@ const Home = () => {
 
     return (
        <main>
-           <section>
+           <section className={classNames(classes.heroSection, bg.cover, bg.noRepeat, bg.center)}>
                 <div className={classNames(classes.heroMobileBanner, bg.noRepeat, bg.cover, bg.center)}></div>
-               <div className={classNames(display.flex, display.flexColumn, display.pt1, display.px5, display.pb2)}>
+               <div className={classNames(display.flex, display.flexColumn, display.pt1, display.px5, display.pb2,
+                    classes.heroSectionContent)}>
                     <Typography component="h1" variant="h5" gutterBottom className={classNames(text.font7)}>Hello! I am Rafael Tivane</Typography>
-                    <Typography variant="body2">i'm remote web developer, I am focused on frontend development. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nobis voluptatibus nulla tenetur doloremque deserunt! Aliquam officia quibusdam cumque eligendi neque in dolorem sint, eius itaque, natus laboriosam ipsam repellat.</Typography>
+                    <Typography variant="body2" className={classNames(classes.heroSectionContentDescription)}>i'm remote web developer, I am focused on frontend development. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nobis voluptatibus nulla tenetur doloremque deserunt! Aliquam officia quibusdam cumque eligendi neque in dolorem sint, eius itaque, natus laboriosam ipsam repellat.</Typography>
                     <Link to="/register" className={classNames(text.decorationNone, display.mt1)}>
                         <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>Contact Me</Button>
                     </Link>
                </div>
            </section>
-           <section className={classNames(display.px5, classes.projectsSection, display.mb3, display.pt2, display.pb3)}>
-                <Typography component="h2" variant="h6" gutterBottom className={classNames(text.font7, classes.projectsSectionTitle)}>
-                    My latest projects
-                </Typography>
-                <Typography variant="body2" className={classNames(classes.projectsSectionDescription)}>
-                    Frontend projects built out using hottest tooks that every programmer must know.
-                </Typography>
-                <div className={classNames(display.flex, display.flexColumn, display.alignStretch, display.mt2)}>
+           <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, display.mb3, display.pt2, display.pb3)}>
+                <div className={classNames(display.flex, display.flexColumn, classes.projectsSectionContent)}>
+                    <Typography component="h2" variant="h6" gutterBottom className={classNames(text.font7, classes.projectsSectionTitle)}>
+                        My latest projects
+                    </Typography>
+                    <Typography variant="body2" className={classNames(classes.projectsSectionDescription)}>
+                        Frontend projects built out using hottest tooks that every programmer must know.
+                    </Typography>
+                    <Link to="/register" className={classNames(text.decorationNone, display.mt1, display.none,
+                        classes.projectsSectionTableLink)}>
+                        <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>
+                            View more
+                        </Button>
+                    </Link>
+                </div>
+                <div className={classNames(display.flex, display.flexColumn, display.alignStretch, display.mt2, 
+                    classes.projectsSectionProjectsContainer)}>
                     <LatestProject 
                         name="Audiophile E-commerce"
                         description="Frontend projects built out using hottest tooks that every programmer must know."
@@ -55,7 +65,7 @@ const Home = () => {
                         nameParameter="coffeeroasters-subscription-site"
                     />
                 </div>
-                <Link to="/register" className={classNames(text.decorationNone, display.mt1)}>
+                <Link to="/register" className={classNames(text.decorationNone, display.mt1, classes.projectsSectionLink)}>
                     <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>
                         View more
                     </Button>

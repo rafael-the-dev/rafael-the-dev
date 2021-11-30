@@ -17,5 +17,15 @@ export const useStyles = makeStyles(theme => ({
     },
     searchButton: {
         height: '53px !important'
-    }
+    },
+    loadMoreButton: {
+        backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2)',
+        backgroundColor: "transparent !important",
+        fontSize: ".8rem",
+        padding: ".3rem .5rem !important",
+        textTransform: "capitalize",
+        [theme.breakpoints.up("md")]: {
+          padding: ".5rem .8rem !important",
+        },
+      },
 }));

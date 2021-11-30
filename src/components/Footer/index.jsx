@@ -16,7 +16,7 @@ const Footer = () => {
 
     return (
         <Container maxWidth={false} component="footer" className={classNames(display.flex, display.flexColumn, display.alignStart,
-            display.pt2, display.pb2, classes.footer, display.relative, responsive.mdRow, responsive.mdJustifyBetween, display.px5)}>
+            display.pt2, display.pb2, classes.footer, display.relative, classes.rowSm, classes.justifyBetweenSm, display.px5)}>
             <div className={classNames(classes.footerBar, display.absolute)}></div>
             <div className={classNames(display.flex, display.flexColumn , display.alignStart)}>
                 <Link to="/" className={classNames(text.decorationNone)}>
@@ -28,11 +28,11 @@ const Footer = () => {
                         Rafael Tivane
                     </Typography>
                 </Link>
-                <div className={classNames(display.flex, display.flexColumn, display.alignStart, display.mt1, responsive.mdRow)}>
-                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, responsive.mdMr1)} to="/">Home</Link>
-                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, responsive.mdMr1)} to="/projects">Projects</Link>
-                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, responsive.mdMr1)} to="/">Home</Link>
-                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, responsive.mdMr1)} to="/">Home</Link>
+                <div className={classNames(display.flex, display.flexColumn, display.alignStart, display.mt1, classes.rowSm)}>
+                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/">Home</Link>
+                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/projects">Projects</Link>
+                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/">Home</Link>
+                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/">Home</Link>
                 </div>
             </div>
             <div className={classNames(display.flex, display.flexColumn)}>
@@ -50,7 +50,8 @@ const Footer = () => {
                 <Typography 
                     variant="body2" 
                     to="/" 
-                    className={classNames(text.textLight, text.noUnderline, classes.headerLogo, display.mt1, text.mdAlignEnd)}>
+                    className={classNames(text.textLight, text.noUnderline, classes.headerLogo, display.mt1, 
+                    text.mdAlignEnd, classes.mt0Sm)}>
                 { new Date().getFullYear()}
                 </Typography>
             </div>

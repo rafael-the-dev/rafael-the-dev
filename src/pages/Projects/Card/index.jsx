@@ -12,7 +12,7 @@ const Card = ({ project, name, description, nameParameter, imageLink }) => {
     const classes = useStyles();
 
     return (
-        <Grid xs={12} sm={6} md={4} lg={3}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
             <Paper component="article" className={classNames(classes.projectCard, display.relative, display.mb3,
                 display.pt3, display.pb2, display.pl1)}>
                 <div style={{ backgroundImage: `url(${project.imageLink})`}} className={classNames(bg.contain, 
@@ -20,15 +20,12 @@ const Card = ({ project, name, description, nameParameter, imageLink }) => {
                 <Typography gutterBottom component="h2" variant="h6" className={classNames(text.font7, classes.projectCardTitle)}>
                     { project.name }
                 </Typography>
-                <Typography className={classNames(text.rem9, classes.projectCardDescription, display.mb1)}>
-                    <ShowMoreText
+                <Typography className={classNames(text.rem9, classes.projectCardDescription, display.mb1, "content-css")}
+                    component={ShowMoreText}
                     lines={3}
                     more="Show more"
-                    less="Show less"
-                    className="content-css"
-                    >
-                        { project.content.description }
-                    </ShowMoreText>
+                    less="Show less">
+                    { project.content.description }
                 </Typography>
                 <Link to={`/projects/${nameParameter}`} 
                     className={classNames(text.decorationNone, classes.projectCardLink)}>
