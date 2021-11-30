@@ -15,10 +15,10 @@ const Footer = () => {
     const classes = useStyles();
 
     return (
-        <Container maxWidth={false} component="footer" className={classNames(display.flex, display.flexColumn, display.alignCenter,
+        <Container maxWidth={false} component="footer" className={classNames(display.flex, display.flexColumn, display.alignStart,
             display.pt2, display.pb2, classes.footer, display.relative, responsive.mdRow, responsive.mdJustifyBetween, display.px5)}>
             <div className={classNames(classes.footerBar, display.absolute)}></div>
-            <div className={classNames(display.flex, display.flexColumn)}>
+            <div className={classNames(display.flex, display.flexColumn , display.alignStart)}>
                 <Link to="/" className={classNames(text.decorationNone)}>
                     <Typography 
                         variant="h5" 
@@ -28,9 +28,9 @@ const Footer = () => {
                         Rafael Tivane
                     </Typography>
                 </Link>
-                <div className={classNames(display.flex, display.flexColumn, display.alignCenter, display.mt1, responsive.mdRow)}>
+                <div className={classNames(display.flex, display.flexColumn, display.alignStart, display.mt1, responsive.mdRow)}>
                     <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, responsive.mdMr1)} to="/">Home</Link>
-                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, responsive.mdMr1)} to="/">Projects</Link>
+                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, responsive.mdMr1)} to="/projects">Projects</Link>
                     <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, responsive.mdMr1)} to="/">Home</Link>
                     <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, responsive.mdMr1)} to="/">Home</Link>
                 </div>
