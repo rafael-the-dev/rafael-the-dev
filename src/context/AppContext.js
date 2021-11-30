@@ -1,4 +1,5 @@
 import React, { createContext} from 'react';
+import redECommerceIcon from '../assets/images/red-ecommerce-icon.jfif'
 
 export const AppContext = createContext();
 AppContext.displayName = 'AppContext';
@@ -12,6 +13,7 @@ export const AppContextProvider = ({ children }) => {
             sourceCodeURL: 'https://github.com/rafael-the-dev/Audiophile-E-commerce',
             name: 'Audiophile e-commerce',
             videoURL: '',
+            imageLink: `${redECommerceIcon}`,
             content: {
                 description: 'Audiophile e-commerce is a frontend project for shopping',
                 features: [
@@ -57,6 +59,7 @@ export const AppContextProvider = ({ children }) => {
             sourceCodeURL: 'https://github.com/rafael-the-dev/Dine-restaurant-website',
             name: 'Dine Restaurant Website',
             videoURL: '',
+            imageLink: 'https://i.pinimg.com/originals/c9/b9/85/c9b985bba6c9d60ab8955099bc633dcf.png',
             content: {
                 description: 'Audiophile e-commerce is a frontend project for shopping',
                 features: [
@@ -102,6 +105,7 @@ export const AppContextProvider = ({ children }) => {
             sourceCodeURL: 'https://github.com/rafael-the-dev/Coffeeroasters-subscription-site',
             name: 'Coffeeroasters Subscription Site',
             videoURL: '',
+            imageLink: 'https://cdn1.iconfinder.com/data/icons/e-commerance-7/56/coffee__cup__mug__drink__glass-512.png',
             content: {
                 description: 'Audiophile e-commerce is a frontend project for shopping',
                 features: [
@@ -147,6 +151,7 @@ export const AppContextProvider = ({ children }) => {
             sourceCodeURL: 'https://github.com/rafael-the-dev/photosnap',
             name: 'Photosnap',
             videoURL: '',
+            imageLink: 'https://cdn4.iconfinder.com/data/icons/traveling-and-tourism/135/Landscape-512.png',
             content: {
                 description: 'Audiophile e-commerce is a frontend project for shopping',
                 features: [
@@ -192,6 +197,7 @@ export const AppContextProvider = ({ children }) => {
             sourceCodeURL: 'https://github.com/rafael-the-dev/devjobs',
             name: 'Devjobs web app',
             videoURL: '',
+            imageLink: 'https://png.pngitem.com/pimgs/s/133-1337753_job-vector-vacancy-job-icon-hd-png-download.png',
             content: {
                 description: 'Audiophile e-commerce is a frontend project for shopping',
                 features: [
@@ -237,6 +243,7 @@ export const AppContextProvider = ({ children }) => {
             sourceCodeURL: 'https://github.com/rafael-the-dev/planect-fact-site',
             name: 'Planects Fact Web App',
             videoURL: '',
+            imageLink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLxJF47Y1wAKA4mo3dvcWrLd-rgm1KutnUg&usqp=CAU',
             content: {
                 description: 'Audiophile e-commerce is a frontend project for shopping',
                 features: [

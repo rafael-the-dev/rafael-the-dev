@@ -14,6 +14,7 @@ import Footer from "../../components/Footer";
 const App = () => {
     const theme = createTheme();
     const ProjectDetail = loadable(() => import('../ProjectDetail'));
+    const Projects = loadable(() => import('../Projects'));
     const Home = loadable(() => import('../Home'));
 
     
@@ -25,6 +26,7 @@ const App = () => {
                         <Header />
                         <Routes>
                             <Route exact path="/projects/:name" element={<ProjectDetail />} />
+                            <Route exact path="/projects" element={<Projects />} />
                             <Route exact path="/" element={<Home />} />
                         </Routes>
                         <Footer />
