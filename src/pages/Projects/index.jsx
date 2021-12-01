@@ -43,6 +43,22 @@ const ProjectsContainer = () => {
         setProjectsList(Object.entries(projects).slice(startIndex, startIndex + numberOfVisibleProjects))
     }, [ numberOfVisibleProjects, projects ]);
 
+    
+    const searchInputRef = useRef(null);
+    const searchHandler = () => {
+        const searchValue = searchInputRef.current.value.toLowerCase();
+        if(searchValue) {
+           setProjectsList (Object.entries(projects).filter(item => item[1].name.toLowerCase().includes(searchValue)));
+        }
+    };
+
+    const inputOnChangeHandler = event => {
+        const value = event.target.value;
+        if(value === '') {
+            handlePaginationChange();
+        }
+    };
+
     const setListLength = useCallback(width => {
         if(width >= 1400) {
             setNumberOfVisibleProjects(12)
@@ -73,8 +89,19 @@ const ProjectsContainer = () => {
     return (
        <main className={classNames(display.px5, display.pb3)}>
            <form className={classNames(display.flex, display.alignStretch, display.w100, classes.searchForm, display.mb3)}>
-               <input className={classNames(display.flexGrow1, display.borderNone, display.outlineNone, classes.searchInput)} />
-               <Button endIcon={<SearchIcon />} className={classNames(display.outlineNone, classes.searchButton)}>Search</Button>
+                <input
+                    ref={searchInputRef}
+                    placeholder="Insert text here to search"
+                    onChange={inputOnChangeHandler}
+                    className={classNames(display.flexGrow1, display.borderNone, display.outlineNone, 
+                    classes.searchInput)} 
+                />
+               <Button 
+                    endIcon={<SearchIcon />} 
+                     onClick={searchHandler}
+                    className={classNames(display.outlineNone, classes.searchButton)}>
+                    Search
+                </Button>
            </form>
            <Grid container className={classNames(display.mt2, responsive.mdMt2)}>
                {
