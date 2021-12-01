@@ -11,6 +11,9 @@ export const useStyles = makeStyles(theme => ({
             width: 800
         }
     },
+    darkBlue1: {
+        color: '#0f4e6c'
+    },
     leftSide: {
         backgroundColor: '#1976d2',
         [theme.breakpoints.up(600)]: {
@@ -33,6 +36,19 @@ export const useStyles = makeStyles(theme => ({
     },
     expertiseItem: {
         listStyleType: 'none',
+        marginBottom: 7
+    },
+    rightSideTitle: {
+        color: '#081f3e'
+    },
+    rightSideSubtitleContainer: {
+        backgroundColor: '#294468',
+        borderRadius: '100px 0 0 100px'
+    },
+    experienceSubtitle: {
+        fontSize: '1.2rem !important'
+    },
+    experienceItem: {
         marginBottom: 7
     }
 })
