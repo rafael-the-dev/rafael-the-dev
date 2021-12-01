@@ -9,6 +9,7 @@ import neptuneImage from '../../assets/images/neptune.svg'
 import coffeeroasterImage from '../../assets/images/coffeeroaster.jpg'
 import redECommerceIcon from '../../assets/images/red-ecommerce-icon.jfif'
 import blueCoffeeIcon from '../../assets/images/coffee-cup.png'
+import Testimonial from './Testimonial';
 
 const Home = () => {
     const display = useDisplay();
@@ -29,7 +30,7 @@ const Home = () => {
                     </Link>
                </div>
            </section>
-           <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, display.mb3, display.pt2, display.pb3)}>
+           <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, display.mb2, display.pt2, display.pb3)}>
                 <div className={classNames(display.flex, display.flexColumn, classes.projectsSectionContent)}>
                     <Typography component="h2" variant="h6" gutterBottom className={classNames(text.font7, classes.projectsSectionTitle)}>
                         My latest projects
@@ -70,6 +71,25 @@ const Home = () => {
                         View more
                     </Button>
                 </Link>
+           </section>
+           <section className={classNames(display.px5, display.pb3)}>
+               <Typography component="h2" variant="h6" className={classNames(text.font7, display.mb2, classes.projectsSectionTitle)}>
+                   Testimonials
+                </Typography>
+               <Grid container>
+                   <Testimonial 
+                        author="Kady Baker"
+                        description="The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned."
+                   />
+                   <Testimonial 
+                        author="Kady Baker"
+                        description="The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned."
+                   />
+                   <Testimonial 
+                        author="Kady Baker"
+                        description="The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned."
+                   />
+               </Grid>
            </section>
        </main>
     );

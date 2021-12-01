@@ -53,6 +53,7 @@ export const useStyles = makeStyles(theme => ({
     },
     projectsSectionContent: {
         [theme.breakpoints.up(820)]: {
+            justifyContent: 'center',
             marginLeft: 83,
             width: 384
         }
