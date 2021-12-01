@@ -22,6 +22,9 @@ export const useDisplay = makeStyles(theme => ({
     borderNone: {
         border: 'none !important'
     },
+    radius50: {
+        borderRadius: '50%'
+    },
     fixed: {
         position: 'fixed'
     },
@@ -96,6 +99,9 @@ export const useDisplay = makeStyles(theme => ({
     },
     mr3: {
         marginRight: '3rem !important'
+    },
+    mt0: {
+        marginTop: '0rem !important'
     },
     mt1: {
         marginTop: '1rem !important'

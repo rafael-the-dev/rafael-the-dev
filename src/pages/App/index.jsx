@@ -15,6 +15,7 @@ const App = () => {
     const theme = createTheme();
     const ProjectDetail = loadable(() => import('../ProjectDetail'));
     const Projects = loadable(() => import('../Projects'));
+    const Resume = loadable(() => import('../Resume'));
     const Home = loadable(() => import('../Home'));
 
     
@@ -27,6 +28,7 @@ const App = () => {
                         <Routes>
                             <Route exact path="/projects/:name" element={<ProjectDetail />} />
                             <Route exact path="/projects" element={<Projects />} />
+                            <Route exact path="/resume" element={<Resume />} />
                             <Route exact path="/" element={<Home />} />
                         </Routes>
                         <Footer />

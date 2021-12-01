@@ -76,18 +76,30 @@ const ProjectDetail = () => {
         </ul>
     ), [ project, classes, display ]);
 
-    const projectsRefs = useRef(['audiophile-e-commerce', 'dine-restaurant-website', 'photosnap', 'devjobs-web-app',
-    'coffeeroasters-subscription-site']);
+    //['audiophile-e-commerce', 'dine-restaurant-website', 'photosnap', 'devjobs-web-app',
+    //'coffeeroasters-subscription-site']
+    const projectsRefs = useRef([]);
     let navigate = useNavigate();
 
     const handlePaginationChange = (event, value) => {
-        navigate(`/projects/${projectsRefs.current[value]}`);
+        navigate(`/projects/${projectsRefs.current[value - 1]}`);
     };
     
     const { name } = useParams();
+    const [ defaultIndex, setDefaultIndex ] = useState(1);
+
     useEffect(() => {
         setProject(projects[name]);
+        let index = Object.keys(projects).findIndex(item => item === name);
+        if(index === -1)
+            navigate('/projects')
+        
+        setDefaultIndex(index + 1)
     }, [ name, projects ]);
+    
+    useEffect(() => {
+        projectsRefs.current = Object.keys(projects);
+    }, [ ]);
 
     return (
         <Grid container component="main" className={classNames(display.pt1, display.pb3, display.px5)}>
@@ -173,7 +185,12 @@ const ProjectDetail = () => {
                         </a>
                     </div>
                     <div className={classNames(display.mt1, display.flex, display.justifyCenter)}>
-                        <Pagination count={10} size="small" onChange={handlePaginationChange} /> 
+                        <Pagination 
+                            count={Object.keys(projects).length} 
+                            size="small" 
+                            onChange={handlePaginationChange} 
+                            page={defaultIndex}
+                        /> 
                     </div>
                 </Paper>
             </Grid>
