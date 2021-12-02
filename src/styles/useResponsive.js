@@ -121,6 +121,11 @@ export const useResponsive = makeStyles(theme => ({
             paddingTop: '2rem !important'
         }
     },
+    mdPl0: {
+        [theme.breakpoints.up('md')]: {
+            paddingLeft: '0rem !important'
+        }
+    },
     mdPl2: {
         [theme.breakpoints.up('md')]: {
             paddingLeft: '2rem !important'

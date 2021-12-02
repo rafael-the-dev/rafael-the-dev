@@ -31,7 +31,7 @@ const Footer = () => {
                 <div className={classNames(display.flex, display.flexColumn, display.alignStart, display.mt1, classes.rowSm)}>
                     <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/">Home</Link>
                     <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/projects">Projects</Link>
-                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/">Home</Link>
+                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/resume">resume</Link>
                     <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/">Home</Link>
                 </div>
             </div>
