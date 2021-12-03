@@ -11,6 +11,8 @@ import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
+import { useContext } from 'react'
+import { AppContext } from '../../context/AppContext'
 
 
 const Header = () => {
@@ -19,6 +21,8 @@ const Header = () => {
     const bg = useBackground();
     const responsive = useResponsive();
     const classes = useStyles();
+
+    const { currentPage } = useContext(AppContext);
 
     const [ canIOpenNavBar, setCanIOpenNavBar ] = useState(false);
     const menuClickHandler = useCallback(() => setCanIOpenNavBar(b => !b), [ ]);
@@ -34,30 +38,33 @@ const Header = () => {
                     <ListItemButton>
                         <Hidden mdUp>
                             <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                                <HomeIcon classes={{ root: text.textLight}} />
+                                <HomeIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/'})}} />
                             </ListItemIcon>
                         </Hidden>
-                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, responsive.mdMb0, responsive.mdMt0)}} primary="Home" />
+                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 
+                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/'})}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton>
                         <Hidden mdUp>
                             <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                                <HomeIcon classes={{ root: text.textLight}} />
+                                <HomeIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/projects'})}} />
                             </ListItemIcon>
                         </Hidden>
-                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, responsive.mdMb0, responsive.mdMt0)}} primary="About us" />
+                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 
+                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/projects'})}} primary="About us" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
                     <ListItemButton>
                         <Hidden mdUp>
                             <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                                <HomeIcon classes={{ root: text.textLight}} />
+                                <HomeIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/resume'})}} />
                             </ListItemIcon>
                         </Hidden>
-                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, responsive.mdMb0, responsive.mdMt0)}} primary="Blogs" />
+                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 
+                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/resume'})}} primary="Blogs" />
                     </ListItemButton>
                 </ListItem>
             </List>
@@ -73,7 +80,7 @@ const Header = () => {
                 </Paper>
             </Hidden>
         </Paper>
-    ), [ classes, display, responsive, text, menuClickHandler, bg]);
+    ), [ classes, display, responsive, text, menuClickHandler, bg, currentPage]);
 
     return (
         <Paper elevation={0} component="header" className={classNames(display.flex, display.alignCenter, 

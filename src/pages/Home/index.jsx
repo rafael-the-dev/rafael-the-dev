@@ -2,7 +2,7 @@ import { Button, Grid, Typography } from '@mui/material';
 import classNames from 'classnames';
 import { useBackground, useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import LatestProject from './LatestProject';
 import audiophileImage from '../../assets/images/audiophile.jpg'
 import neptuneImage from '../../assets/images/neptune.svg'
@@ -10,12 +10,23 @@ import coffeeroasterImage from '../../assets/images/coffeeroaster.jpg'
 import redECommerceIcon from '../../assets/images/red-ecommerce-icon.jfif'
 import blueCoffeeIcon from '../../assets/images/coffee-cup.png'
 import Testimonial from './Testimonial';
+import { useContext, useEffect } from 'react';
+import { AppContext } from '../../context/AppContext';
 
 const Home = () => {
     const display = useDisplay();
     const text = useTypography();
     const bg = useBackground();
     const classes = useStyles();
+
+    const { setCurrentPage } = useContext(AppContext);
+
+    const location = useLocation();
+    useEffect(() => {
+        if(location.pathname) {
+            setCurrentPage(location.pathname);
+        }
+    }, [ setCurrentPage, location ]);
 
     return (
        <main>

@@ -1,4 +1,4 @@
-import React, { createContext} from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import redECommerceIcon from '../assets/images/red-ecommerce-icon.jfif'
 
 export const AppContext = createContext();
@@ -330,8 +330,10 @@ export const AppContextProvider = ({ children }) => {
         }
     };
 
+    const [ currentPage, setCurrentPage ] = useState('');
+
     return (
-        <AppContext.Provider value={{ projects }}>
+        <AppContext.Provider value={{ currentPage, projects, setCurrentPage }}>
             { children }
         </AppContext.Provider>
     );

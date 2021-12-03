@@ -85,6 +85,10 @@ export const useStyles =  makeStyles(theme =>
               headerContactMe: {
                 padding: ".55rem .5rem !important",
               },
+              currentPage: {
+                color: '#27b1bf !important',
+                fontWeight: '700 !important'
+              }
         }
     )
 );

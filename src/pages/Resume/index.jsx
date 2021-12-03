@@ -1,7 +1,7 @@
 import { Button, Hidden, Paper, Typography } from '@mui/material';
 import { useBackground, useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import ShowMoreText from "react-show-more-text";
 import rafaelImage from '../../assets/images/home-hero.jfif';
@@ -9,7 +9,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { useResponsive } from '../../styles/useResponsive';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { AppContext } from '../../context/AppContext';
 
 const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
     <div className={classNames(classes.leftSide, display.flex, display.flexColumn, display.alignCenter, 
@@ -140,6 +141,7 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
                     <li className={classNames(classes.experienceItem)}>Meet with team to align on Sprint objectives</li>
                     <li className={classNames(classes.experienceItem)}>Ensure quality by adhering to technical best practices</li>
                     <li className={classNames(classes.experienceItem)}>and pair programming to tackle difficult issues</li>
+                    <li className={classNames(classes.experienceItem)}>Collaborate with backend team in ensuaring technical feasibility</li>
                     <li className={classNames(classes.experienceItem)}>code reviews</li>
                 </ul>
             </div>
@@ -174,10 +176,19 @@ const Resume = () => {
     const responsive = useResponsive();
     const classes = useStyles();
 
+    const { setCurrentPage } = useContext(AppContext);
+
     const [ open, setOpen ] = useState({ leftSide: true, rightSide: false });
     const leftSideButtonClickHandler = () => setOpen(o => ({ leftSide: !o['leftSide'], rightSide: !o['rightSide'] }));
     //const rightSideButtonClickHandler = () => setOpen(o => ({ leftSide: !o['leftSide'], rightSide: !o['rightSide'] }))
 
+    
+    const location = useLocation();
+    useEffect(() => {
+        if(location.pathname) {
+            setCurrentPage(location.pathname);
+        }
+    }, [ setCurrentPage, location ]);
     return (
         <Paper elevation={2} component="main" className={classNames(display.flex, display.alignStretch, classes.main, 
         display.pt1, display.mb3, display.mt2, display.flexColumn, responsive.mdRow)}>

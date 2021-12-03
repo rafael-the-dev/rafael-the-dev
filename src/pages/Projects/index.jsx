@@ -7,6 +7,7 @@ import { useStyles } from './styles';
 /*import coffeeroasterImage from '../../assets/images/coffeeroaster.jpg'
 import redECommerceIcon from '../../assets/images/red-ecommerce-icon.jfif'
 import blueCoffeeIcon from '../../assets/images/coffee-cup.png'*/
+import { useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext'
 import Card from './Card';
@@ -20,7 +21,7 @@ const ProjectsContainer = () => {
     const responsive = useResponsive();
     const classes = useStyles();
 
-    const { projects } = useContext(AppContext);
+    const { projects, setCurrentPage } = useContext(AppContext);
 
     const [ numberOfVisibleProjects, setNumberOfVisibleProjects ] = useState(8);
     const [ projectsList, setProjectsList ] = useState([]);
@@ -85,6 +86,13 @@ const ProjectsContainer = () => {
 
         handlePaginationChange()
     }, [ handlePaginationChange ]);
+
+    const location = useLocation();
+    useEffect(() => {
+        if(location.pathname) {
+            setCurrentPage(location.pathname);
+        }
+    }, [ setCurrentPage, location ]);
 
     return (
        <main className={classNames(display.px5, display.pb3)}>
