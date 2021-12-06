@@ -67,7 +67,7 @@ const Header = () => {
             <Hidden mdUp>
                 <Paper elevation={0} className={classNames(display.flex, display.flexColumn, 
                     display.alignStretch, display.absolute, display.w100, bg.transparent, classes.headerDrawerBottom)}>
-                    <Link to="/register" className={classNames(text.decorationNone, classes.contactMeLink)}>
+                    <Link to="/resume" className={classNames(text.decorationNone, classes.contactMeLink)}>
                         <Button 
                             className={classNames(classes.headerGetStarted, text.font7, display.w100, classes.headerContactMe, text.textLight)}>
                             Contact me
@@ -100,7 +100,7 @@ const Header = () => {
             </Paper>
             <Paper elevation={0} className={classNames(display.flex, display.alignCenter)}>
                 <Hidden mdDown>
-                    <Link to="/register" className={classNames(text.decorationNone)}>
+                    <Link to="/resume" className={classNames(text.decorationNone)}>
                         <Button className={classNames(classes.headerGetStarted)}>Contact Me</Button>
                     </Link>
                 </Hidden>
