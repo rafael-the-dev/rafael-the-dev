@@ -10,7 +10,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import { useResponsive } from '../../styles/useResponsive';
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../context/AppContext';
-import EmailIcon from '@mui/icons-material/Email';//build-1.1.6
+import EmailIcon from '@mui/icons-material/Email';//
 
 
 const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
