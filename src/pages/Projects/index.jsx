@@ -2,11 +2,6 @@ import { Button, Grid } from '@mui/material';
 import classNames from 'classnames';
 import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles';
-//import audiophileImage from '../../assets/images/audiophile.jpg'
-//import neptuneImage from '../../assets/images/neptune.svg'
-/*import coffeeroasterImage from '../../assets/images/coffeeroaster.jpg'
-import redECommerceIcon from '../../assets/images/red-ecommerce-icon.jfif'
-import blueCoffeeIcon from '../../assets/images/coffee-cup.png'*/
 import { useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext'

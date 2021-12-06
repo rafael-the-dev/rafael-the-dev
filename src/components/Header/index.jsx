@@ -34,7 +34,7 @@ const Header = () => {
                 <Button onClick={menuClickHandler}><ArrowBackIcon classes={{ root: text.textLight}} /></Button>
             </Hidden>
             <List component="ul" className={classNames(display.flex, display.flexColumn, responsive.mdRow)}>
-                <ListItem disablePadding >
+                <ListItem disablePadding component={Link} to="/" >
                     <ListItemButton>
                         <Hidden mdUp>
                             <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
@@ -45,7 +45,7 @@ const Header = () => {
                             responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/'})}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding>
+                <ListItem disablePadding component={Link} to="/projects">
                     <ListItemButton>
                         <Hidden mdUp>
                             <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
@@ -53,10 +53,10 @@ const Header = () => {
                             </ListItemIcon>
                         </Hidden>
                         <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 
-                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/projects'})}} primary="About us" />
+                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/projects'})}} primary="Projects" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding>
+                <ListItem disablePadding component={Link} to="/resume">
                     <ListItemButton>
                         <Hidden mdUp>
                             <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
@@ -64,7 +64,7 @@ const Header = () => {
                             </ListItemIcon>
                         </Hidden>
                         <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 
-                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/resume'})}} primary="Blogs" />
+                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/resume'})}} primary="Resume" />
                     </ListItemButton>
                 </ListItem>
             </List>

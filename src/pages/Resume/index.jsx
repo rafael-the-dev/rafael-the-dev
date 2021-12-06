@@ -3,7 +3,6 @@ import { useBackground, useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import { useLocation } from 'react-router-dom';
 import classNames from 'classnames';
-import ShowMoreText from "react-show-more-text";
 import rafaelImage from '../../assets/images/home-hero.jfif';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -11,6 +10,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import { useResponsive } from '../../styles/useResponsive';
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../context/AppContext';
+import EmailIcon from '@mui/icons-material/Email';//build-1.1.6
+
 
 const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
     <div className={classNames(classes.leftSide, display.flex, display.flexColumn, display.alignCenter, 
@@ -41,6 +42,10 @@ const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
             </div>
             <div className={classNames(display.flex, display.flexColumn, display.pl2)}>
                 <a target="_blank" rel="noreferrer" className={classNames(display.flex, display.alignCenter, 
+                    text.decorationNone, classes.contactLinks)} href="mailto:luislangabusiness@gmail.com">
+                    <EmailIcon  className={classNames(text.textLight, display.mr1)} /> Gmail
+                </a>
+                <a target="_blank" rel="noreferrer" className={classNames(display.flex, display.alignCenter, 
                     text.decorationNone, classes.contactLinks)} href="https://linkedin.com/in/rafael-tivane/">
                     <LinkedInIcon  className={classNames(text.textLight, display.mr1)} /> Linkedin
                 </a>
@@ -49,7 +54,7 @@ const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
                     <GitHubIcon  className={classNames(text.textLight, display.mr1)} /> Github
                 </a>
                 <a target="_blank" rel="noreferrer" className={classNames(display.flex, display.alignCenter, 
-                    text.decorationNone, classes.contactLinks)} href="/">
+                    text.decorationNone, classes.contactLinks)} href="https://www.instagram.com/rafael_the_dev/?hl=en">
                     <InstagramIcon  className={classNames(text.textLight, display.mr1)} /> Instagram
                 </a>
             </div>

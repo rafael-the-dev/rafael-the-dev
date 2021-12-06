@@ -1,17 +1,17 @@
 import { Container, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { useBackground, useDisplay, useTypography, useResponsive } from '../../styles';
+import { useBackground, useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import classNames from 'classnames';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Footer = () => {
     const display = useDisplay();
     const text = useTypography();
     const bg = useBackground();
-    const responsive = useResponsive();
     const classes = useStyles();
 
     return (
@@ -31,19 +31,21 @@ const Footer = () => {
                 <div className={classNames(display.flex, display.flexColumn, display.alignStart, display.mt1, classes.rowSm)}>
                     <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/">Home</Link>
                     <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/projects">Projects</Link>
-                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/resume">resume</Link>
-                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/">Home</Link>
+                    <Link className={classNames(text.textLight, classes.footerPageLink, text.decorationNone, classes.mr1Sm)} to="/resume">Resume</Link>
                 </div>
             </div>
             <div className={classNames(display.flex, display.flexColumn)}>
                 <div className={classNames(display.flex, display.alignCenter, display.justifyCenter, display.mt1)}>
+                    <a target="_blank" rel="noreferrer" className={classNames(display.mr1)} href="mailto:luislangabusiness@gmail.com">
+                        <EmailIcon  className={classNames(text.textLight)} />
+                    </a>
                     <a target="_blank" rel="noreferrer" className={classNames(display.mr1)} href="https://linkedin.com/in/rafael-tivane/">
                         <LinkedInIcon  className={classNames(text.textLight)} />
                     </a>
                     <a target="_blank" rel="noreferrer" className={classNames(display.mr1)} href="https://github.com/rafael-the-dev/">
                         <GitHubIcon  className={classNames(text.textLight)} />
                     </a>
-                    <a target="_blank" rel="noreferrer" className={classNames(display.mr)} href="/">
+                    <a target="_blank" rel="noreferrer" className={classNames(display.mr)} href="https://www.instagram.com/rafael_the_dev/?hl=en">
                         <InstagramIcon  className={classNames(text.textLight)} />
                     </a>
                 </div>

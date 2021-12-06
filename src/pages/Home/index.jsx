@@ -4,11 +4,7 @@ import { useBackground, useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import { Link, useLocation } from 'react-router-dom';
 import LatestProject from './LatestProject';
-import audiophileImage from '../../assets/images/audiophile.jpg'
-import neptuneImage from '../../assets/images/neptune.svg'
-import coffeeroasterImage from '../../assets/images/coffeeroaster.jpg'
 import redECommerceIcon from '../../assets/images/red-ecommerce-icon.jfif'
-import blueCoffeeIcon from '../../assets/images/coffee-cup.png'
 import Testimonial from './Testimonial';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../context/AppContext';

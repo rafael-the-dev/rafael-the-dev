@@ -1,13 +1,12 @@
 import { Grid, Typography } from "@mui/material"
 import classNames from 'classnames';
-import { useBackground, useDisplay, useTypography } from '../../../styles';
+import { useDisplay, useTypography } from '../../../styles';
 import { useStyles } from './styles';
 
 
 const Testimonial = ({ description, author }) => {
     const display = useDisplay();
     const text = useTypography();
-    const bg = useBackground();
     const classes = useStyles();
 
     return (

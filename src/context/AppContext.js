@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState } from 'react';
 import redECommerceIcon from '../assets/images/red-ecommerce-icon.jfif'
 
 export const AppContext = createContext();
@@ -26,26 +26,36 @@ export const AppContextProvider = ({ children }) => {
                     {
                         name: 'See correct checkout totals depending on the products in the cart',
                         list: [
-                            'Shipping always adds $50 to the order'
+                            'Shipping always adds $50 to the order',
+                            'VAT is calculated as 20% of the product total, excluding shipping'
                         ]
                     },
-                    "See an order confirmation modal after checking out with an order summary"
+                    "See an order confirmation modal after checking out with an order summary",
+                    "Keep track of what's in the cart, even after refreshing the browser"
                 ],
                 tools: [
                     {
-                        name: 'Material-ui',
+                        name: 'React JS',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'HTML',
                         url: ''
                     },
                     {
-                        name: 'Material-ui',
+                        name: 'CSS',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'Redux',
+                        url: ''
+                    },
+                    {
+                        name: 'React Router Dom',
                         url: ''
                     }
                 ]
@@ -61,24 +71,39 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: 'https://i.pinimg.com/originals/c9/b9/85/c9b985bba6c9d60ab8955099bc633dcf.png',
             content: {
-                description: 'Audiophile e-commerce is a frontend project for shopping',
+                description: 'Dine Restaurant Website is a frontend project for shopping',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
-                    "Add/Remove products from the cart",
-                    "Edit product quantities in the cart",
-                    "Fill in all fields in the checkout",
+                    "See the correct content for the Family Gatherings, Special Events, and Social Events section when the user clicks each tab",
                     "Receive form validations if fields are missed or incorrect during checkout",
                     {
-                        name: 'See correct checkout totals depending on the products in the cart',
+                        name: 'Receive an error message when the booking form is submitted if:',
                         list: [
-                            'Shipping always adds $50 to the order'
+                            'The Name or Email Address fields are empty should show "This field is required"',
+                            'The Email Address is not formatted correctly should show "Please use a valid email address"',
+                            'Any of the Pick a date or Pick a time fields are empty should show "This field is incomplete"'
                         ]
                     },
-                    "See an order confirmation modal after checking out with an order summary"
                 ],
                 tools: [
                     {
+                        name: 'React JS',
+                        url: ''
+                    },
+                    {
+                        name: 'HTML',
+                        url: ''
+                    },
+                    {
+                        name: 'CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
                         name: 'Material-ui',
                         url: ''
                     },
@@ -87,11 +112,15 @@ export const AppContextProvider = ({ children }) => {
                         url: ''
                     },
                     {
-                        name: 'Material-ui',
+                        name: 'Loadable components',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'React Hook form',
+                        url: ''
+                    },
+                    {
+                        name: 'React router dom',
                         url: ''
                     }
                 ]
@@ -101,29 +130,44 @@ export const AppContextProvider = ({ children }) => {
         'coffeeroasters-subscription-site': {
             backward: 'Audiophile e-commerce',
             forward: 'Audiophile e-commerce',
-            liveURL: 'https://pro-audiophile-ecommerce.netlify.app/',
+            liveURL: 'https://pro-coffeeroasters.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/Coffeeroasters-subscription-site',
             name: 'Coffeeroasters Subscription Site',
             videoURL: '',
             imageLink: 'https://cdn1.iconfinder.com/data/icons/e-commerance-7/56/coffee__cup__mug__drink__glass-512.png',
             content: {
-                description: 'Audiophile e-commerce is a frontend project for shopping',
+                description: 'Coffeeroasters Subscription Site is a frontend project for shopping',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
-                    "Add/Remove products from the cart",
-                    "Edit product quantities in the cart",
-                    "Fill in all fields in the checkout",
-                    "Receive form validations if fields are missed or incorrect during checkout",
+                    "Make selections to create a coffee subscription and see an order summary modal of their choices (details provided below)",
                     {
-                        name: 'See correct checkout totals depending on the products in the cart',
+                        name: 'Calculating per month cost for the Order Summary modal',
                         list: [
-                            'Shipping always adds $50 to the order'
+                            'If Every Week is selected, the Order Summary modal should show the per shipment price multiplied by 4. For example, if 250g weight is selected, the price would be $28.80/month',
+                            'If Every 2 Weeks is selected, the Order Summary modal should show the per shipment price multiplied by 2. For example, if 250g weight is selected, the price would be $19.20/month',
+                            'If Every Month is selected, the Order Summary modal should show the per shipment price multiplied by 1. For example, if 250g weight is selected, the price would be $12.00/month'
                         ]
                     },
                     "See an order confirmation modal after checking out with an order summary"
                 ],
                 tools: [
+                    {
+                        name: 'React JS',
+                        url: ''
+                    },
+                    {
+                        name: 'HTML',
+                        url: ''
+                    },
+                    {
+                        name: 'CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: ''
+                    },
                     {
                         name: 'Material-ui',
                         url: ''
@@ -149,7 +193,7 @@ export const AppContextProvider = ({ children }) => {
             forward: 'Audiophile e-commerce',
             liveURL: 'https://pro-audiophile-ecommerce.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/photosnap',
-            name: 'Photosnap',
+            name: 'Photosnap multi-page website',
             videoURL: '',
             imageLink: 'https://cdn4.iconfinder.com/data/icons/traveling-and-tourism/135/Landscape-512.png',
             content: {
@@ -157,33 +201,30 @@ export const AppContextProvider = ({ children }) => {
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
-                    "Add/Remove products from the cart",
-                    "Edit product quantities in the cart",
-                    "Fill in all fields in the checkout",
-                    "Receive form validations if fields are missed or incorrect during checkout",
-                    {
-                        name: 'See correct checkout totals depending on the products in the cart',
-                        list: [
-                            'Shipping always adds $50 to the order'
-                        ]
-                    },
-                    "See an order confirmation modal after checking out with an order summary"
                 ],
                 tools: [
                     {
-                        name: 'Material-ui',
+                        name: 'React JS',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'HTML',
                         url: ''
                     },
                     {
-                        name: 'Material-ui',
+                        name: 'CSS',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'React Router Dom',
+                        url: ''
+                    },
+                    {
+                        name: 'SASS',
                         url: ''
                     }
                 ]
@@ -193,43 +234,47 @@ export const AppContextProvider = ({ children }) => {
         'devjobs-web-app': {
             backward: 'Audiophile e-commerce',
             forward: 'Audiophile e-commerce',
-            liveURL: 'https://pro-audiophile-ecommerce.netlify.app/',
+            liveURL: 'https://pro-devjobs.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/devjobs',
             name: 'Devjobs web app',
             videoURL: '',
             imageLink: 'https://png.pngitem.com/pimgs/s/133-1337753_job-vector-vacancy-job-icon-hd-png-download.png',
             content: {
-                description: 'Audiophile e-commerce is a frontend project for shopping',
+                description: 'Devjobs web app is a frontend project for shopping',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
-                    "Add/Remove products from the cart",
-                    "Edit product quantities in the cart",
-                    "Fill in all fields in the checkout",
-                    "Receive form validations if fields are missed or incorrect during checkout",
-                    {
-                        name: 'See correct checkout totals depending on the products in the cart',
-                        list: [
-                            'Shipping always adds $50 to the order'
-                        ]
-                    },
-                    "See an order confirmation modal after checking out with an order summary"
+                    "Be able to filter jobs on the index page by title, location, and whether a job is for a full-time position",
+                    "Be able to click a job from the index page so that they can read more information and apply for the job",
+                    "Toggle theme state from light to dark, vice-versa"
                 ],
                 tools: [
                     {
-                        name: 'Material-ui',
+                        name: 'React JS',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'HTML',
                         url: ''
                     },
                     {
-                        name: 'Material-ui',
+                        name: 'CSS',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'react router dom',
+                        url: ''
+                    },
+                    {
+                        name: 'React-Bootstrap',
+                        url: ''
+                    },
+                    {
+                        name: 'loadable-components',
                         url: ''
                     }
                 ]
@@ -245,37 +290,30 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLxJF47Y1wAKA4mo3dvcWrLd-rgm1KutnUg&usqp=CAU',
             content: {
-                description: 'Audiophile e-commerce is a frontend project for shopping',
+                description: 'Planects Fact Web App is a frontend project for shopping',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
-                    "See hover states for all interactive elements on the page",
-                    "Add/Remove products from the cart",
-                    "Edit product quantities in the cart",
-                    "Fill in all fields in the checkout",
-                    "Receive form validations if fields are missed or incorrect during checkout",
-                    {
-                        name: 'See correct checkout totals depending on the products in the cart',
-                        list: [
-                            'Shipping always adds $50 to the order'
-                        ]
-                    },
-                    "See an order confirmation modal after checking out with an order summary"
+                    'See hover states for all interactive elements on the page View each planet page and toggle between the "Overview", "Internal Structure", and "Surface Geology" tabs',
                 ],
                 tools: [
                     {
-                        name: 'Material-ui',
+                        name: 'React JS',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'HTML',
                         url: ''
                     },
                     {
-                        name: 'Material-ui',
+                        name: 'CSS',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'react router dom',
                         url: ''
                     }
                 ]
@@ -291,24 +329,37 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: 'https://cdn-icons-png.flaticon.com/512/236/236822.png',
             content: {
-                description: 'Audiophile e-commerce is a frontend project for shopping',
+                description: 'My Team Multipage is a frontend project that shows',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
-                    "Add/Remove products from the cart",
-                    "Edit product quantities in the cart",
-                    "Fill in all fields in the checkout",
-                    "Receive form validations if fields are missed or incorrect during checkout",
+                    "See the correct content for each team member on the About page when the + icon is clicked",
                     {
-                        name: 'See correct checkout totals depending on the products in the cart',
+                        name: 'Receive an error message when the contact form is submitted if:',
                         list: [
-                            'Shipping always adds $50 to the order'
+                            'The Name, Email Address or Message fields are empty should show "This field is required"',
+                            'The Email Address is not formatted correctly should show "Please use a valid email address"'
                         ]
-                    },
-                    "See an order confirmation modal after checking out with an order summary"
+                    }
                 ],
                 tools: [
                     {
+                        name: 'React JS',
+                        url: ''
+                    },
+                    {
+                        name: 'HTML',
+                        url: ''
+                    },
+                    {
+                        name: 'CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
                         name: 'Material-ui',
                         url: ''
                     },
@@ -317,11 +368,19 @@ export const AppContextProvider = ({ children }) => {
                         url: ''
                     },
                     {
-                        name: 'Material-ui',
+                        name: 'React hook form',
                         url: ''
                     },
                     {
-                        name: 'classnames',
+                        name: 'React router dom',
+                        url: ''
+                    },
+                    {
+                        name: 'Loadable-components',
+                        url: ''
+                    },
+                    {
+                        name: 'AOS',
                         url: ''
                     }
                 ]
