@@ -95,11 +95,11 @@ const ProjectDetail = () => {
             navigate('/projects')
         
         setDefaultIndex(index + 1)
-    }, [ name, projects ]);
+    }, [ name, projects, navigate ]);
     
     useEffect(() => {
         projectsRefs.current = Object.keys(projects);
-    }, [ ]);
+    }, [ projects ]);
 
     return (
         <Grid container component="main" className={classNames(display.pt1, display.pb3, display.px5)}>

@@ -1,6 +1,6 @@
 import { Button, Grid } from '@mui/material';
 import classNames from 'classnames';
-import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
+import { useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import { useLocation } from 'react-router-dom';
 import { useContext } from 'react';
@@ -12,7 +12,6 @@ import React, { useCallback, useEffect, useState, useRef } from 'react';
 const ProjectsContainer = () => {
     const display = useDisplay();
     const text = useTypography();
-    const bg = useBackground();
     const responsive = useResponsive();
     const classes = useStyles();
 

@@ -1,5 +1,5 @@
 import { Button, Hidden, Paper, Typography } from '@mui/material';
-import { useBackground, useDisplay, useTypography } from '../../styles';
+import { useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import { useLocation } from 'react-router-dom';
 import classNames from 'classnames';
@@ -177,7 +177,6 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
 const Resume = () => {
     const display = useDisplay();
     const text = useTypography();
-    const bg = useBackground();
     const responsive = useResponsive();
     const classes = useStyles();
 

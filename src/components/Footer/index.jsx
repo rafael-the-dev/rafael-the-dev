@@ -1,6 +1,6 @@
 import { Container, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
-import { useBackground, useDisplay, useTypography } from '../../styles';
+import { useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import classNames from 'classnames';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -11,7 +11,6 @@ import EmailIcon from '@mui/icons-material/Email';
 const Footer = () => {
     const display = useDisplay();
     const text = useTypography();
-    const bg = useBackground();
     const classes = useStyles();
 
     return (
