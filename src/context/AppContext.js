@@ -7,15 +7,15 @@ AppContext.displayName = 'AppContext';
 export const AppContextProvider = ({ children }) => {
     const projects = {
         'audiophile-e-commerce': {
-            backward: 'Audiophile e-commerce',
-            forward: 'Audiophile e-commerce',
+            backward: '/projects/myteam-multi-page-website',
+            forward: '/projects/dine-restaurant-website',
             liveURL: 'https://pro-audiophile-ecommerce.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/Audiophile-E-commerce',
             name: 'Audiophile e-commerce',
             videoURL: '',
             imageLink: `${redECommerceIcon}`,
             content: {
-                description: 'Audiophile e-commerce is a frontend project for shopping',
+                description: "Audiophile e-commerce is a frontend project for shopping with optimal layout for the app depending on their device's screen size",
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
@@ -63,8 +63,8 @@ export const AppContextProvider = ({ children }) => {
             }
         },
         'dine-restaurant-website': {
-            backward: 'Audiophile e-commerce',
-            forward: 'Audiophile e-commerce',
+            backward: '/projects/audiophile-e-commerce',
+            forward: '/projects/coffeeroasters-subscription-site',
             liveURL: 'https://pro-dine-restaurant.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/Dine-restaurant-website',
             name: 'Dine Restaurant Website',
@@ -128,15 +128,15 @@ export const AppContextProvider = ({ children }) => {
             }
         },
         'coffeeroasters-subscription-site': {
-            backward: 'Audiophile e-commerce',
-            forward: 'Audiophile e-commerce',
+            backward: '/projects/dine-restaurant-website',
+            forward: '/projects/photosnap',
             liveURL: 'https://pro-coffeeroasters.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/Coffeeroasters-subscription-site',
             name: 'Coffeeroasters Subscription Site',
             videoURL: '',
             imageLink: 'https://cdn1.iconfinder.com/data/icons/e-commerance-7/56/coffee__cup__mug__drink__glass-512.png',
             content: {
-                description: 'Coffeeroasters Subscription Site is a frontend project for shopping',
+                description: 'Coffeeroasters Subscription Site is a frontend project for coffee subscription  that users can make selections to create a coffee subscription and see an order summary modal of their choices .',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
@@ -189,8 +189,8 @@ export const AppContextProvider = ({ children }) => {
             }
         },
         'photosnap': {
-            backward: 'Audiophile e-commerce',
-            forward: 'Audiophile e-commerce',
+            backward: '/projects/coffeeroasters-subscription-site',
+            forward: '/projects/devjobs-web-app',
             liveURL: 'https://pro-audiophile-ecommerce.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/photosnap',
             name: 'Photosnap multi-page website',
@@ -232,8 +232,8 @@ export const AppContextProvider = ({ children }) => {
             }
         },
         'devjobs-web-app': {
-            backward: 'Audiophile e-commerce',
-            forward: 'Audiophile e-commerce',
+            backward: '/projects/photosnap',
+            forward: '/projects/planects-fact-web-app',
             liveURL: 'https://pro-devjobs.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/devjobs',
             name: 'Devjobs web app',
@@ -282,15 +282,15 @@ export const AppContextProvider = ({ children }) => {
             }
         },
         'planects-fact-web-app': {
-            backward: 'Audiophile e-commerce',
-            forward: 'Audiophile e-commerce',
+            backward: '/projects/devjobs-web-app',
+            forward: '/projects/myteam-multi-page-website',
             liveURL: 'https://pro-planets-fact-site.netlify.app',
             sourceCodeURL: 'https://github.com/rafael-the-dev/planect-fact-site',
             name: 'Planects Fact Web App',
             videoURL: '',
             imageLink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLxJF47Y1wAKA4mo3dvcWrLd-rgm1KutnUg&usqp=CAU',
             content: {
-                description: 'Planects Fact Web App is a frontend project for shopping',
+                description: '8-page planets fact app is a front-end app that users can view each planet page and toggle between the "Overview", "Internal Structure", and "Surface Geology" tabs.',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     'See hover states for all interactive elements on the page View each planet page and toggle between the "Overview", "Internal Structure", and "Surface Geology" tabs',
@@ -321,8 +321,8 @@ export const AppContextProvider = ({ children }) => {
             }
         },
         'myteam-multi-page-website': {
-            backward: 'Audiophile e-commerce',
-            forward: 'Audiophile e-commerce',
+            backward: '/projects/planects-fact-web-app',
+            forward: '/projects/audiophile-e-commerce',
             liveURL: 'https://pro-myteam-multi-page.netlify.app',
             sourceCodeURL: 'https://github.com/rafael-the-dev/myteam-multi-page-website',
             name: 'Myteam Multipage Website',

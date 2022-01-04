@@ -20,7 +20,7 @@ const ProjectDetail = () => {
     const text = useTypography();
     const classes = useStyles();
 
-    const [ project, setProject ] = useState({ content: { features: [], tools: [] }})
+    const [ project, setProject ] = useState({ backward: '', content: { features: [], tools: [] }, forward: ''})
     const [ expandMore, setExpandMore ] = useState(false);
 
     const { projects } = useContext(AppContext);
@@ -84,6 +84,10 @@ const ProjectDetail = () => {
     const handlePaginationChange = (event, value) => {
         navigate(`/projects/${projectsRefs.current[value - 1]}`);
     };
+
+    const handlerNavigate = prop => () => {
+        navigate(prop);
+    }
     
     const { name } = useParams();
     const [ defaultIndex, setDefaultIndex ] = useState(1);
@@ -105,7 +109,7 @@ const ProjectDetail = () => {
         <Grid container component="main" className={classNames(display.pt1, display.pb3, display.px5)}>
             <Grid item xs={12}>
                 <Paper elevation={0} className={classNames(display.flex, display.justifyBetween, display.alignCenter)}>
-                    <IconButton>
+                    <IconButton onClick={handlerNavigate(project.backward)}>
                         <ArrowBackIcon />
                     </IconButton>
                     <Typography 
@@ -115,7 +119,7 @@ const ProjectDetail = () => {
                         className={classNames(display.flexGrow1, text.alignCenter)}>
                         { project.name }
                     </Typography>
-                    <IconButton>
+                    <IconButton onClick={handlerNavigate(project.forward)}>
                         <ArrowForwardIcon />
                     </IconButton> 
                 </Paper>
