@@ -1,7 +1,7 @@
 import { Button, Hidden, Paper, Typography } from '@mui/material';
 import { useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import rafaelImage from '../../assets/images/home-hero.jfif';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -64,21 +64,20 @@ const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
                 <Typography component="h2" variant="h5">Education</Typography>
             </div>
             <div className={classNames(display.pl2, display.pr1, display.mb1, text.textLight)}>
-                <Typography component="h3" >Self-taught Programmer</Typography>
-                <Typography component="p" className={classNames(text.rem8, display.opacity8)} >
-                    Lorem, ipsum dolor sit  nulla, sint numquam id eum. Arincidunt commodi, facilis ea.
-                </Typography>
+                <Typography component="h3" >React Developer</Typography>
+                <a 
+                    href="https://www.alura.com.br/" 
+                    target="_blank" rel="noreferrer" 
+                    className={classNames(text.textLight, text.decorationNone)}>
+                    <Typography component="p" className={classNames(text.rem8, display.opacity8)} >
+                        Alura Online
+                    </Typography>
+                </a>
             </div>
             <div className={classNames(display.pl2, display.pr1, display.mb1, text.textLight)}>
                 <Typography component="h3" >Self-taught Programmer</Typography>
                 <Typography component="p" className={classNames(text.rem8, display.opacity8)} >
-                    Lorem, ipsum dolor sit  nulla, sint numquam id eum. Arincidunt commodi, facilis ea.
-                </Typography>
-            </div>
-            <div className={classNames(display.pl2, display.pr1, text.textLight)}>
-                <Typography component="h3" >Self-taught Programmer</Typography>
-                <Typography component="p" className={classNames(text.rem8, display.opacity8)} >
-                    Lorem, ipsum dolor sit  nulla, sint numquam id eum. Arincidunt commodi, facilis ea.
+                    Developed professional skills based on online researches, tutorials and udemy courses.
                 </Typography>
             </div>
         </div>
@@ -123,11 +122,12 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
                 <Typography 
                     component="h3" 
                     variant="h6" className={classNames(classes.rightSideSubtitleContainer, text.textLight)}>
-                    Objective
+                    About me
                 </Typography>
             </div>
             <Typography className={classNames(text.rem9, display.opacity9, display.pl1, display.pr1, display.pt1)}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aliquam quisquam quo deleniti commodi. Voluptas harum molestiae eos, corrupti amet earum ipsam placeat illum, deserunt tenetur voluptatibus, architecto qui vel.
+                Professional remote Web Developer focused on Front-end Developement with more than 2 years of experience in web development process, 
+                Involved in app testing, development, management and problem-solving.
             </Typography>
         </div>
         <div className={classNames(display.pt1)}>
@@ -140,9 +140,9 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
             </div>
             <div className={classNames(display.pt1, display.pl1)}>
                 <Typography component="h4" className={classNames(classes.experienceSubtitle, classes.darkBlue1)}>Frontend Developer</Typography>
-                <Typography component="p" className={classNames(classes.experienceCompa)}>RetriveAI (2021 - 3 Months)</Typography>
+                <Typography component="h5" className={classNames(classes.experienceCompa)}>RetriveAI (2021 - 4 Months)</Typography>
                 <ul className={classNames(display.flex, display.flexColumn)}>
-                    <li className={classNames(classes.experienceItem)}>Work on the fron end of enterprise applications</li>
+                    <li className={classNames(classes.experienceItem)}>Work on the front-end of enterprise applications</li>
                     <li className={classNames(classes.experienceItem)}>Meet with team to align on Sprint objectives</li>
                     <li className={classNames(classes.experienceItem)}>Ensure quality by adhering to technical best practices</li>
                     <li className={classNames(classes.experienceItem)}>and pair programming to tackle difficult issues</li>
@@ -151,23 +151,41 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
                 </ul>
             </div>
         </div>
-        <div className={classNames(display.pt1)}>
-            <div className={classNames(classes.rightSideSubtitleContainer, display.pl1)}>
-                <Typography 
-                    component="h3" 
-                    variant="h6" className={classNames(classes.rightSideSubtitleContainer, text.textLight)}>
-                    Work Experience
-                </Typography>
-            </div>
+        <div className={classNames(display.pt144)}>
             <div className={classNames(display.pt1, display.pl1)}>
-                <Typography component="h4" className={classNames(classes.experienceSubtitle, classes.darkBlue1)}>Frontend Developer</Typography>
-                <Typography component="p" className={classNames(classes.experienceCompa)}>RetriveAI (2021 - 3 Months)</Typography>
+                <Typography component="h3" className={classNames(classes.experienceSubtitle, classes.darkBlue1)}>Personal projects</Typography>
                 <ul className={classNames(display.flex, display.flexColumn)}>
-                    <li className={classNames(classes.experienceItem)}>Work on the fron end of enterprise applications</li>
-                    <li className={classNames(classes.experienceItem)}>Meet with team to align on Sprint objectives</li>
-                    <li className={classNames(classes.experienceItem)}>Ensure quality by adhering to technical best practices</li>
-                    <li className={classNames(classes.experienceItem)}>and pair programming to tackle difficult issues</li>
-                    <li className={classNames(classes.experienceItem)}>code reviews</li>
+                    <li className={classNames(classes.experienceItem)}>
+                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/dine-restaurant-website">
+                            Built out Dine Restaurant Website
+                        </Link>
+                    </li>
+                    <li className={classNames(classes.experienceItem)}>
+                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/coffeeroasters-subscription-site">
+                            Built out Coffeeroasters Subscription Site
+                        </Link>
+                    </li>
+                    <li className={classNames(classes.experienceItem)}>
+                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/myteam-multi-page-website">
+                            Built out Myteam Multipage Website
+                        </Link>
+                    </li>
+                    <li className={classNames(classes.experienceItem)}>
+                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/planects-fact-web-app">
+                            Built out Planects Fact Web App
+                        </Link>
+                    </li>
+                    <li className={classNames(classes.experienceItem)}>
+                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/photosnap">
+                            Built Photosnap multi-page website
+                        </Link>
+                    </li>
+                    <li className={classNames(classes.experienceItem)}>
+                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/devjobs-web-app">
+                            Built out Devjobs web app
+                        </Link>
+                    </li>
+                    <li className={classNames(classes.experienceItem)}>and more</li>
                 </ul>
             </div>
         </div>

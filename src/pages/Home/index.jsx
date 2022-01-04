@@ -31,7 +31,10 @@ const Home = () => {
                <div className={classNames(display.flex, display.flexColumn, display.pt1, display.px5, display.pb2,
                     classes.heroSectionContent)}>
                     <Typography component="h1" variant="h5" gutterBottom className={classNames(text.font7)}>Hello! I am Rafael Tivane</Typography>
-                    <Typography variant="body2" className={classNames(classes.heroSectionContentDescription)}>i'm remote web developer, I am focused on frontend development. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut nobis voluptatibus nulla tenetur doloremque deserunt! Aliquam officia quibusdam cumque eligendi neque in dolorem sint, eius itaque, natus laboriosam ipsam repellat.</Typography>
+                    <Typography variant="body2" className={classNames(classes.heroSectionContentDescription)}>
+                        Professional remote Web Developer focused on Front-end Developement with more than 2 years of experience in web development process, 
+                        Involved in app testing, development, management and problem-solving.
+                    </Typography>
                     <Link to="/projects" className={classNames(text.decorationNone, display.mt1)}>
                         <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>View Projects</Button>
                     </Link>

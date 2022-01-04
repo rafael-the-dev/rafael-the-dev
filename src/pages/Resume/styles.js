@@ -83,6 +83,12 @@ export const useStyles = makeStyles(theme => ({
     },
     experienceItem: {
         marginBottom: 7
+    },
+    projectsLink: {
+        color: '#11085e',
+        '&:hover': {
+            fontWeight: 700
+        }
     }
 })
 );
