@@ -4,7 +4,7 @@ import { useStyles } from './styles';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
-const LatestProject = ({ name, description, image, nameParameter }) => {
+const LatestProject = ({ name, description, image, nameParameter, imageClassName }) => {
     const display = useDisplay();
     const text = useTypography();
     const bg = useBackground();
@@ -14,7 +14,7 @@ const LatestProject = ({ name, description, image, nameParameter }) => {
         <Paper component="article" className={classNames(display.flex, display.alignCenter, display.pt1, display.pb1, 
             display.pl1, display.pr1, display.mb1)}>
             <div style={{ backgroundImage: `url(${image})`}} className={classNames(bg.center, bg.noRepeat, 
-                classes.projectImage, bg.contain)}></div>
+                classes.projectImage, bg.contain, imageClassName)}></div>
             <div className={classNames(display.flex, display.flexColumn)}>
                 <Typography align="left" component="h3" gutterBottom 
                     className={classNames(text.font7, classes.projectsTitle)}>

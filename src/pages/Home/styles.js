@@ -88,5 +88,9 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up(820)]: {
             display: 'none !important'
         }
+    },
+    audioPhileImage: {
+        height: '37px !important',
+        width: '84px !important'
     }
 }));

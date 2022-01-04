@@ -43,7 +43,7 @@ const Home = () => {
                         My latest projects
                     </Typography>
                     <Typography variant="body2" className={classNames(classes.projectsSectionDescription)}>
-                        Frontend projects built out using hottest tooks that every programmer must know.
+                        Frontend projects built out using hottest tools that every programmer must know.
                     </Typography>
                     <Link to="/register" className={classNames(text.decorationNone, display.mt1, display.none,
                         classes.projectsSectionTableLink)}>
@@ -56,19 +56,20 @@ const Home = () => {
                     classes.projectsSectionProjectsContainer)}>
                     <LatestProject 
                         name="Audiophile E-commerce"
-                        description="Frontend projects built out using hottest tooks that every programmer must know."
+                        description="Multi-page e-commerce app with optimal layout for the app depending on their device's screen size."
                         image={redECommerceIcon}
                         nameParameter="audiophile-e-commerce"
+                        imageClassName={classNames(classes.audioPhileImage)}
                     />
                     <LatestProject 
                         name="Planects Fact Web App"
-                        description="Frontend projects built out using hottest tooks that every programmer must know."
+                        description='8-page planets fact app that users can view each planet page and toggle between the "Overview", "Internal Structure", and "Surface Geology" tabs.'
                         image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLxJF47Y1wAKA4mo3dvcWrLd-rgm1KutnUg&usqp=CAU"
                         nameParameter="planects-fact-web-app"
                     />
                     <LatestProject 
                         name="Coffeeroasters Subscription Site"
-                        description="Frontend projects built out using hottest tooks that every programmer must know."
+                        description="3-page coffee subscription website that users can make selections to create a coffee subscription and see an order summary modal of their choices ."
                         image="https://cdn1.iconfinder.com/data/icons/e-commerance-7/56/coffee__cup__mug__drink__glass-512.png"
                         nameParameter="coffeeroasters-subscription-site"
                     />
