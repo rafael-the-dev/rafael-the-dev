@@ -2,6 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(theme => ({
     projectCard: {
+        height: '67%',
         [theme.breakpoints.up('sm')]: {
             marginRight: '10% !important'
         }

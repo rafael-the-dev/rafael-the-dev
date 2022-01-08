@@ -12,8 +12,8 @@ const Card = ({ project, name, description, nameParameter, imageLink }) => {
     const classes = useStyles();
 
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3}>
-            <Paper component="article" className={classNames(classes.projectCard, display.relative, display.mb3,
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames(display.mb3)}>
+            <Paper component="article" className={classNames(classes.projectCard, display.relative,
                 display.pt3, display.pb2, display.pl1)}>
                 <div style={{ backgroundImage: `url(${project.imageLink})`}} className={classNames(bg.contain, 
                     bg.noRepeat, bg.center, display.absolute, classes.projectCardIcon)}></div>
