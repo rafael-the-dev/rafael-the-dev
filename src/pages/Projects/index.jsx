@@ -91,16 +91,21 @@ const ProjectsContainer = () => {
     const [ anchorEl, setAnchorEl ] = useState(false);
     const [ state, setState ] = useState({
         advanced: false,
-        junior: true,
+        junior: false,
         guru: false,
-        intermediate: true,
+        intermediate: false,
     });
 
     const popoverId = anchorEl ? 'popover' : undefined;
     const { advanced, junior, guru, intermediate } = state;
+    //const [ isBoxChecked, setIsBoxChecked ] = useState(false);
+    const isBoxChecked = useRef(false);
+
     const checkboxSelectHandler = event => {
         const name = event.target.getAttribute('name');
         setState(oldState => ({...oldState, [name.toLowerCase()]: !oldState[name]}));
+        //setIsBoxChecked(true);
+        isBoxChecked.current = true;
     };
 
     const handleClick = (event) => {
@@ -109,18 +114,49 @@ const ProjectsContainer = () => {
 
     const handleClose = () => setAnchorEl(null);
 
-    /*const getFilteredInvoices = useCallback(() => {
-        let filter = []; 
-        Object.entries(state).forEach(currentValue => {
-            if(currentValue[1]) {
-                filter.push(...invoicesList.filter(invoice => invoice.status.toLowerCase() === currentValue[0]));
-            }
-        }, []);
-        if(filter.length > 0)
-            return filter;
-        else 
-            return invoicesList;
-    }, [ state, invoicesList ])*/
+    const getFilteredInvoices = useCallback(() => {
+        let list = Object.entries(projects);
+        let filteredList = [];
+
+        if(junior) {
+            filteredList = list.filter(item => item[1].level.toLowerCase() === 'junior');
+            console.log('junior list', list)
+
+        }
+
+        
+        if(intermediate) {
+            filteredList = [ ...filteredList, ...list.filter(item => item[1].level.toLowerCase() === 'intermediate')];
+            console.log('intermediate list', list)
+
+        }
+
+        
+        if(advanced) {
+            filteredList = [ ...filteredList, ...list.filter(item => item[1].level.toLowerCase() === 'advanced')];
+            console.log('advanced list', list)
+
+        }
+
+        
+        if(guru) {
+            filteredList = [ ...filteredList, ...list.filter(item => item[1].level.toLowerCase() === 'guru')];
+            console.log('guru list', list)
+
+        }
+        console.log(filteredList);
+        console.log(list)
+        if(filteredList.length > 0) setProjectsList(filteredList)
+        else setProjectsList(list);
+
+    }, [ advanced, junior, guru, intermediate, projects ]);
+
+    useEffect(() => {
+        if(isBoxChecked.current) {
+            isBoxChecked.current = false;
+            getFilteredInvoices();
+        }
+    }, [ getFilteredInvoices, state ]);
 
     return (
        <main className={classNames(display.px5, display.pb3)}>
