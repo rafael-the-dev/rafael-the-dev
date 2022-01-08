@@ -27,5 +27,8 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up("md")]: {
           padding: ".5rem .8rem !important",
         },
-      },
+    },
+    checkboxGroup: {
+        padding: '10px 8px 10px 15px'
+    },
 }));

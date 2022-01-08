@@ -12,6 +12,7 @@ export const AppContextProvider = ({ children }) => {
             liveURL: 'https://pro-audiophile-ecommerce.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/Audiophile-E-commerce',
             name: 'Audiophile e-commerce',
+            level: 'guru',
             videoURL: '',
             imageLink: `${redECommerceIcon}`,
             content: {
@@ -68,6 +69,7 @@ export const AppContextProvider = ({ children }) => {
             liveURL: 'https://pro-dine-restaurant.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/Dine-restaurant-website',
             name: 'Dine Restaurant Website',
+            level: 'intermediate',
             videoURL: '',
             imageLink: 'https://i.pinimg.com/originals/c9/b9/85/c9b985bba6c9d60ab8955099bc633dcf.png',
             content: {
@@ -133,6 +135,7 @@ export const AppContextProvider = ({ children }) => {
             liveURL: 'https://pro-coffeeroasters.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/Coffeeroasters-subscription-site',
             name: 'Coffeeroasters Subscription Site',
+            level: 'intermediate',
             videoURL: '',
             imageLink: 'https://cdn1.iconfinder.com/data/icons/e-commerance-7/56/coffee__cup__mug__drink__glass-512.png',
             content: {
@@ -194,6 +197,7 @@ export const AppContextProvider = ({ children }) => {
             liveURL: 'https://pro-audiophile-ecommerce.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/photosnap',
             name: 'Photosnap multi-page website',
+            level: 'advanced',
             videoURL: '',
             imageLink: 'https://cdn4.iconfinder.com/data/icons/traveling-and-tourism/135/Landscape-512.png',
             content: {
@@ -237,6 +241,7 @@ export const AppContextProvider = ({ children }) => {
             liveURL: 'https://pro-devjobs.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/devjobs',
             name: 'Devjobs web app',
+            level: 'advanced',
             videoURL: '',
             imageLink: 'https://png.pngitem.com/pimgs/s/133-1337753_job-vector-vacancy-job-icon-hd-png-download.png',
             content: {
@@ -287,6 +292,7 @@ export const AppContextProvider = ({ children }) => {
             liveURL: 'https://pro-planets-fact-site.netlify.app',
             sourceCodeURL: 'https://github.com/rafael-the-dev/planect-fact-site',
             name: 'Planects Fact Web App',
+            level: 'intermediate',
             videoURL: '',
             imageLink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLxJF47Y1wAKA4mo3dvcWrLd-rgm1KutnUg&usqp=CAU',
             content: {
@@ -326,6 +332,7 @@ export const AppContextProvider = ({ children }) => {
             liveURL: 'https://pro-myteam-multi-page.netlify.app',
             sourceCodeURL: 'https://github.com/rafael-the-dev/myteam-multi-page-website',
             name: 'Myteam Multipage Website',
+            level: 'advanced',
             videoURL: '',
             imageLink: 'https://cdn-icons-png.flaticon.com/512/236/236822.png',
             content: {

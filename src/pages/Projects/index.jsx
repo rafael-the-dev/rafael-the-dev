@@ -1,4 +1,4 @@
-import { Button, Grid } from '@mui/material';
+import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Hidden, Popover } from '@mui/material';
 import classNames from 'classnames';
 import { useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles';
@@ -43,7 +43,7 @@ const ProjectsContainer = () => {
     const searchHandler = () => {
         const searchValue = searchInputRef.current.value.toLowerCase();
         if(searchValue) {
-           setProjectsList (Object.entries(projects).filter(item => item[1].name.toLowerCase().includes(searchValue)));
+           setProjectsList(Object.entries(projects).filter(item => item[1].name.toLowerCase().includes(searchValue)));
         }
     };
 
@@ -88,9 +88,77 @@ const ProjectsContainer = () => {
         }
     }, [ setCurrentPage, location ]);
 
+    const [ anchorEl, setAnchorEl ] = useState(false);
+    const [ state, setState ] = useState({
+        advanced: false,
+        junior: true,
+        guru: false,
+        intermediate: true,
+    });
+
+    const popoverId = anchorEl ? 'popover' : undefined;
+    const { advanced, junior, guru, intermediate } = state;
+    const checkboxSelectHandler = event => {
+        const name = event.target.getAttribute('name');
+        setState(oldState => ({...oldState, [name.toLowerCase()]: !oldState[name]}));
+    };
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => setAnchorEl(null);
+
+    /*const getFilteredInvoices = useCallback(() => {
+        let filter = []; 
+        Object.entries(state).forEach(currentValue => {
+            if(currentValue[1]) {
+                filter.push(...invoicesList.filter(invoice => invoice.status.toLowerCase() === currentValue[0]));
+            }
+        }, []);
+        if(filter.length > 0)
+            return filter;
+        else 
+            return invoicesList;
+    }, [ state, invoicesList ])*/
+
     return (
        <main className={classNames(display.px5, display.pb3)}>
            <form className={classNames(display.flex, display.alignStretch, display.w100, classes.searchForm, display.mb3)}>
+                
+                <Popover
+                    id={popoverId}
+                    open={Boolean(anchorEl)}
+                    anchorEl={anchorEl}
+                    onClose={handleClose}
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'center',
+                    }}
+                    transformOrigin={{
+                        vertical: 'top',
+                        horizontal: 'center',
+                    }}
+                    >
+                    <FormGroup className={classNames(classes.checkboxGroup)}>
+                        <FormControlLabel
+                            control={<Checkbox checked={junior} onChange={checkboxSelectHandler} name="junior" />}
+                            label="Junior"
+                        />
+                        <FormControlLabel
+                            control={<Checkbox checked={intermediate} onChange={checkboxSelectHandler} name="intermediate" />}
+                            label="Intermediate"
+                        />
+                        <FormControlLabel
+                            control={<Checkbox checked={advanced} onChange={checkboxSelectHandler} name="advanced" />}
+                            label="Advanced"
+                        />
+                        <FormControlLabel
+                            control={<Checkbox checked={guru} onChange={checkboxSelectHandler} name="guru" />}
+                            label="Guru"
+                        />
+                    </FormGroup>
+                </Popover>
                 <input
                     ref={searchInputRef}
                     placeholder="Insert text here to search"
@@ -98,6 +166,13 @@ const ProjectsContainer = () => {
                     className={classNames(display.flexGrow1, display.borderNone, display.outlineNone, 
                     classes.searchInput)} 
                 />
+                <Button 
+                    aria-describedby={popoverId}
+                    aria-haspopup="true" 
+                    className={classNames()}
+                    onClick={handleClick}>
+                    Filter
+                </Button>
                <Button 
                     endIcon={<SearchIcon />} 
                      onClick={searchHandler}
