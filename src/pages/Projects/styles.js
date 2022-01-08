@@ -31,4 +31,10 @@ export const useStyles = makeStyles(theme => ({
     checkboxGroup: {
         padding: '10px 8px 10px 15px'
     },
+    filterImage: {
+        backgroundImage: 'url(https://raw.githubusercontent.com/rafael-the-dev/devjobs/ea0e61c3cf428c534c483c911abb2297c58c33ff/src/assets/icons/icon-filter.svg)',
+        height: 13,
+        marginLeft: 7,
+        width: 13
+    }
 }));

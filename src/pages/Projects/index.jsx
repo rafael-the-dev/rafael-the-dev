@@ -1,6 +1,6 @@
 import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Hidden, Popover } from '@mui/material';
 import classNames from 'classnames';
-import { useDisplay, useResponsive, useTypography } from '../../styles';
+import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import { useLocation } from 'react-router-dom';
 import { useContext } from 'react';
@@ -10,6 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import React, { useCallback, useEffect, useState, useRef } from 'react';
 
 const ProjectsContainer = () => {
+    const bg = useBackground();
     const display = useDisplay();
     const text = useTypography();
     const responsive = useResponsive();
@@ -23,6 +24,17 @@ const ProjectsContainer = () => {
 
     const currentPageRef = useRef(1);
     const indexRef = useRef(0);
+
+    const closeStates = useCallback(() => {
+        isBoxChecked.current = false;
+        setState({
+            advanced: false,
+            junior: false,
+            guru: false,
+            intermediate: false,
+        });
+    }, []);
+
     const handlePaginationChange = useCallback(() => {
         const startIndex = (currentPageRef.current - 1) * numberOfVisibleProjects;
         currentPageRef.current = currentPageRef.current + 1;
@@ -34,16 +46,17 @@ const ProjectsContainer = () => {
 
         if(currentPageRef.current > index)
             currentPageRef.current = 1;
-
+        closeStates();
         setProjectsList(Object.entries(projects).slice(startIndex, startIndex + numberOfVisibleProjects))
-    }, [ numberOfVisibleProjects, projects ]);
+    }, [ closeStates, numberOfVisibleProjects, projects ]);
 
     
     const searchInputRef = useRef(null);
     const searchHandler = () => {
         const searchValue = searchInputRef.current.value.toLowerCase();
         if(searchValue) {
-           setProjectsList(Object.entries(projects).filter(item => item[1].name.toLowerCase().includes(searchValue)));
+            setProjectsList(Object.entries(projects).filter(item => item[1].name.toLowerCase().includes(searchValue)));
+            closeStates();
         }
     };
 
@@ -95,6 +108,10 @@ const ProjectsContainer = () => {
         guru: false,
         intermediate: false,
     });
+
+    useEffect(() => {
+        closeStates();
+    }, [ closeStates ]);
 
     const popoverId = anchorEl ? 'popover' : undefined;
     const { advanced, junior, guru, intermediate } = state;
@@ -207,7 +224,7 @@ const ProjectsContainer = () => {
                     aria-haspopup="true" 
                     className={classNames()}
                     onClick={handleClick}>
-                    Filter
+                    Filter <span className={classNames(classes.filterImage, bg.contain, bg.noRepeat)}></span>
                 </Button>
                <Button 
                     endIcon={<SearchIcon />} 
