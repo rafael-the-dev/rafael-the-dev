@@ -16,7 +16,7 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: `${redECommerceIcon}`,
             content: {
-                description: "Audiophile e-commerce is a frontend project for shopping with optimal layout for the app depending on their device's screen size",
+                description: "Audiophile e-commerce is a frontend project for shopping with optimal layout for the app depending on their device's screen size. In this challenge I have been working with complex muiltipage app and states managment.",
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
@@ -73,7 +73,7 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: 'https://i.pinimg.com/originals/c9/b9/85/c9b985bba6c9d60ab8955099bc633dcf.png',
             content: {
-                description: 'Dine Restaurant Website is a frontend project for shopping',
+                description: 'Dine Restaurant Website is a frontend project for making reservaiton on a restaurant, This challenge made me more confident in my frontend skills by enabling me to use some tricks for form validation design details.',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
@@ -139,7 +139,7 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: 'https://cdn1.iconfinder.com/data/icons/e-commerance-7/56/coffee__cup__mug__drink__glass-512.png',
             content: {
-                description: 'Coffeeroasters Subscription Site is a frontend project for coffee subscription  that users can make selections to create a coffee subscription and see an order summary modal of their choices .',
+                description: 'Coffeeroasters Subscription Site is a frontend project for coffee subscription  that users can make selections to create a coffee subscription and see an order summary modal of their choices. In this challenge I tested my JS skills by making interactive subscription page.',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
@@ -201,7 +201,7 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: 'https://cdn4.iconfinder.com/data/icons/traveling-and-tourism/135/Landscape-512.png',
             content: {
-                description: 'Audiophile e-commerce is a frontend project for shopping',
+                description: 'Photosnap is a frontend project for photo-sharing, This was a perfect opportunity to put my CSS Grid skills to the test and to train my eye for detail by getting my solution as close to the design!',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
@@ -245,7 +245,7 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: 'https://png.pngitem.com/pimgs/s/133-1337753_job-vector-vacancy-job-icon-hd-png-download.png',
             content: {
-                description: 'Devjobs web app is a frontend project for shopping',
+                description: 'Devjobs web app is a frontend project that pulls data from a local JSON file or 3rd paty API, This was a great opportunity to practice JS, CSS grids and data filtering',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
@@ -296,7 +296,7 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLxJF47Y1wAKA4mo3dvcWrLd-rgm1KutnUg&usqp=CAU',
             content: {
-                description: '8-page planets fact app is a front-end app that users can view each planet page and toggle between the "Overview", "Internal Structure", and "Surface Geology" tabs.',
+                description: '8-page planets fact app is a front-end app that shows 8-page fact site for all planets in our solar system',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     'See hover states for all interactive elements on the page View each planet page and toggle between the "Overview", "Internal Structure", and "Surface Geology" tabs',
@@ -336,7 +336,7 @@ export const AppContextProvider = ({ children }) => {
             videoURL: '',
             imageLink: 'https://cdn-icons-png.flaticon.com/512/236/236822.png',
             content: {
-                description: 'My Team Multipage is a frontend project that shows',
+                description: 'My Team Multipage is a frontend project that shows Homepage, About page and a Contact page of a company.',
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",

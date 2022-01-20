@@ -37,5 +37,10 @@ export const useStyles =  makeStyles(theme => ({
     linkText: {
         color: '#1976d2',
         fontSize: '1.2rem'
+    },
+    description: {
+        [theme.breakpoints.up(850)]: {
+            width: '80%'
+        }
     }
 }));

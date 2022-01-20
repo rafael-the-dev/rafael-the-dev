@@ -142,7 +142,7 @@ const ProjectDetail = () => {
             <Grid item xs={12}>
                 <Paper elevation={0} classes={{ root: classNames(display.mr1, display.ml1, display.mt2)}} className={classNames()}>
                     <Typography component="h2" variant="h6" className={classNames(display.mt1, text.font7)}>Description</Typography>
-                    <Typography className={classNames(text.rem9)}>{ project.content?.description }</Typography>
+                    <Typography className={classNames(text.rem9, classes.description)}>{ project.content?.description }</Typography>
                     <Typography component="h2" variant="h6" className={classNames(display.mt1, text.font7)}>Features</Typography>
                     <div>
                         { getFeatures() }
