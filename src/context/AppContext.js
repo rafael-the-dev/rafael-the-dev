@@ -634,7 +634,7 @@ export const AppContextProvider = ({ children }) => {
         },
         'art-gallery-website': {
             backward: '/projects/github-user-search-app',
-            forward: '/projects/audiophile-e-commerce',
+            forward: '/projects/clock-app',
             liveURL: 'https://pro-art-gallery-website.netlify.app',
             sourceCodeURL: 'https://github.com/rafael-the-dev/art-gallery-website',
             name: 'Art gallery website',
@@ -679,6 +679,50 @@ export const AppContextProvider = ({ children }) => {
                     },
                     {
                         name: 'Loadable-components',
+                        url: ''
+                    },
+                ]
+
+            }
+        },
+        'clock-app': {
+            backward: '/projects/github-user-search-app',
+            forward: '/projects/audiophile-e-commerce',
+            liveURL: 'https://pro-clock-app-website.netlify.app',
+            sourceCodeURL: 'https://github.com/rafael-the-dev/clock-app-website',
+            name: 'Clock App',
+            level: 'junior',
+            videoURL: '',
+            imageLink: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgWH3g7EKNb80WTOENdFjaa_tcuJ16Dad5v2Xvbkc5OmBEdQmbYT1c0E0JvduFykVlfrc&usqp=CAU`,
+            content: {
+                description: "Clock App is a frontend challenge that show user's local time, location and  generate random programming quotes. In this challenge I have been working with external APIs to set data based on a visitor's location, retrieve programming quotes and show local time.",
+                features: [
+                    "View the optimal layout for the app depending on their device's screen size", 
+                    "See hover states for all interactive elements on the page",
+                    "View the current time and location information based on their IP address",
+                    "View additional information about the date and time in the expanded state",
+                    "Be shown the correct greeting and background image based on the time of day they're visiting the site",
+                    "Generate random programming quotes by clicking the refresh icon near the quote"
+                ],
+                tools: [
+                    {
+                        name: 'React JS',
+                        url: ''
+                    },
+                    {
+                        name: 'HTML',
+                        url: ''
+                    },
+                    {
+                        name: 'CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'React router dom',
                         url: ''
                     },
                 ]
