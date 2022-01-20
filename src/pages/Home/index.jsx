@@ -92,8 +92,9 @@ const Home = () => {
                 </Typography>
                <Grid container>
                    <Testimonial 
-                        author="Kady Baker"
-                        description="The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned."
+                        author="Daniel Carlos da Silva"
+                        linkedLink="https://www.linkedin.com/in/danielcarloss/"
+                        description="Rafael is a talented and dedicated professional frontend developer, his works are well made, besides this he is available to cooporate. I need his help in my project, after one hour after he was able to clear my doubts and help me to move forward."
                    />
                    <Testimonial 
                         author="Kady Baker"

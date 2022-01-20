@@ -3,12 +3,17 @@ import quote from '../../../assets/images/quote.png'
 
 export const useStyles = makeStyles(theme => ({
     testimonial: {
+        padding: '0 0 0 1rem',
+        "&:hover": {
+            backgroundColor: '#acf1ff21',
+        },
         [theme.breakpoints.up('md')]: {
             width: '90%'
         }
     },
     testimonialDescription: {
         color: '#505054 !important',
+        //width: '93`%',
         '&::before': { //https://www.vegvisits.com/assets/b50b74ef.png
             background: `url(${quote}) center / contain no-repeat `,
             content: "''",
