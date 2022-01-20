@@ -185,7 +185,7 @@ const ProjectDetail = () => {
                             target="_blank" 
                             className={classNames(display.flex, display.alignCenter, display.ml1, classes.linkText)}>
                             <WebIcon color="primary" className={classNames(classes.linkIcon)} /> 
-                            Github
+                            click here to view
                         </a>
                     </div>
                     <div className={classNames(display.mt1, display.flex, display.justifyCenter)}>
