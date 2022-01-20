@@ -130,7 +130,7 @@ const ProjectDetail = () => {
                     className={classNames( display.mlAuto, display.mrAuto)}>
                     <iframe 
                         className={classNames(display.h100, display.w100)} 
-                        src="https://www.youtube.com/embed/u9FnmBdBl5k" 
+                        src="https://www.youtube.com/emffbed/u9FnmBdBl5k" 
                         title="YouTube video player" 
                         frameborder="0" 
                         allow="autoplay; encrypted-media; fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

@@ -194,7 +194,7 @@ export const AppContextProvider = ({ children }) => {
         'photosnap': {
             backward: '/projects/coffeeroasters-subscription-site',
             forward: '/projects/devjobs-web-app',
-            liveURL: 'https://pro-audiophile-ecommerce.netlify.app/',
+            liveURL: 'https://pro-photosnap.netlify.app/',
             sourceCodeURL: 'https://github.com/rafael-the-dev/photosnap',
             name: 'Photosnap multi-page website',
             level: 'advanced',
