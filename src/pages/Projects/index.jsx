@@ -1,6 +1,6 @@
-import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Hidden, IconButton, Popover } from '@mui/material';
+import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Hidden, IconButton, Popover, Tooltip } from '@mui/material';
 import classNames from 'classnames';
-import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
+import { useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import { useLocation } from 'react-router-dom';
 import { useContext } from 'react';
@@ -11,7 +11,7 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import React, { useCallback, useEffect, useState, useRef } from 'react';
 
 const ProjectsContainer = () => {
-    const bg = useBackground();
+    //const bg = useBackground();
     const display = useDisplay();
     const text = useTypography();
     const responsive = useResponsive();
@@ -221,12 +221,16 @@ const ProjectsContainer = () => {
                     classes.searchInput)} 
                 />
                 <Hidden smUp>
-                    <IconButton  onClick={handleClick}>
-                        <FilterAltIcon className={classNames(classes.mobileIcons)} />
-                    </IconButton>
-                    <IconButton onClick={searchHandler}>
-                        <SearchIcon className={classNames(classes.mobileIcons)} />
-                    </IconButton>
+                    <Tooltip title="filter projects">
+                        <IconButton  onClick={handleClick}>
+                            <FilterAltIcon className={classNames(classes.mobileIcons)} />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="search">
+                        <IconButton onClick={searchHandler}>
+                            <SearchIcon className={classNames(classes.mobileIcons)} />
+                        </IconButton>
+                    </Tooltip>
                 </Hidden>
                 <Hidden smDown>
                     <Button 
