@@ -51,7 +51,7 @@ const Home = () => {
                     <Typography variant="body2" className={classNames(classes.projectsSectionDescription)}>
                         Frontend projects built out using hottest tools that every programmer must know.
                     </Typography>
-                    <Link to="/register" className={classNames(text.decorationNone, display.mt1, display.none,
+                    <Link to="/projects" className={classNames(text.decorationNone, display.mt1, display.none,
                         classes.projectsSectionTableLink)}>
                         <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>
                             View more
@@ -80,7 +80,7 @@ const Home = () => {
                         nameParameter="coffeeroasters-subscription-site"
                     />
                 </div>
-                <Link to="/register" className={classNames(text.decorationNone, display.mt1, classes.projectsSectionLink)}>
+                <Link to="/projects" className={classNames(text.decorationNone, display.mt1, classes.projectsSectionLink)}>
                     <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>
                         View more
                     </Button>

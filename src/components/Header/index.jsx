@@ -70,7 +70,7 @@ const Header = () => {
             <Hidden mdUp>
                 <Paper elevation={0} className={classNames(display.flex, display.flexColumn, 
                     display.alignStretch, display.absolute, display.w100, bg.transparent, classes.headerDrawerBottom)}>
-                    <Link to="/resume" className={classNames(text.decorationNone, classes.contactMeLink)}>
+                    <Link to="/resume" onClick={clickHandler} className={classNames(text.decorationNone, classes.contactMeLink)}>
                         <Button 
                             className={classNames(classes.headerGetStarted, text.font7, display.w100, classes.headerContactMe, text.textLight)}>
                             Contact me
