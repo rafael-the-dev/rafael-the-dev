@@ -185,7 +185,11 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
                             Built out Devjobs web app
                         </Link>
                     </li>
-                    <li className={classNames(classes.experienceItem)}>and more</li>
+                    <li className={classNames(classes.experienceItem)}>
+                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects">
+                            view more projects
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </div>

@@ -88,7 +88,7 @@ export const useStyles = makeStyles(theme => ({
     projectsLink: {
         color: '#11085e',
         '&:hover': {
-            fontWeight: 700
+            textDecoration: 'underline !important'
         }
     }
 })
