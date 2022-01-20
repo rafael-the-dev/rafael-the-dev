@@ -37,7 +37,7 @@ export const useStyles = makeStyles(theme => ({
     },
     imageContainer: {
         height: 144,
-        width: 137,
+        width: 144,
         [theme.breakpoints.up('md')]: {
             borderRadius: '50%',
             marginLeft: '40px !important',
@@ -45,6 +45,7 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     leftSideImage: {
+        objectFit: 'cover',
         [theme.breakpoints.up('md')]: {
             borderRadius: '50%'
         }

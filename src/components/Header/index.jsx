@@ -7,6 +7,8 @@ import React, { useState, useCallback, useMemo } from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
+import ArticleIcon from '@mui/icons-material/Article';
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import { useContext } from 'react'
 import { AppContext } from '../../context/AppContext'
 
@@ -22,6 +24,7 @@ const Header = () => {
 
     const [ canIOpenNavBar, setCanIOpenNavBar ] = useState(false);
     const menuClickHandler = useCallback(() => setCanIOpenNavBar(b => !b), [ ]);
+    const clickHandler = useCallback(() => setCanIOpenNavBar(false), []);
 
     const headerNavigation = useMemo(() => (
         <Paper elevation={0} component="nav" className={classNames(responsive.mdMl2, classes.headerNav, 
@@ -30,7 +33,7 @@ const Header = () => {
                 <Button onClick={menuClickHandler}><ArrowBackIcon classes={{ root: text.textLight}} /></Button>
             </Hidden>
             <List component="ul" className={classNames(display.flex, display.flexColumn, responsive.mdRow)}>
-                <ListItem disablePadding component={Link} to="/" >
+                <ListItem disablePadding onClick={clickHandler} component={Link} to="/" >
                     <ListItemButton>
                         <Hidden mdUp>
                             <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
@@ -41,22 +44,22 @@ const Header = () => {
                             responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/'})}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding component={Link} to="/projects">
+                <ListItem disablePadding onClick={clickHandler} component={Link} to="/projects">
                     <ListItemButton>
                         <Hidden mdUp>
                             <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                                <HomeIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/projects'})}} />
+                                <DashboardIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/projects'})}} />
                             </ListItemIcon>
                         </Hidden>
                         <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 
                             responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/projects'})}} primary="Projects" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding component={Link} to="/resume">
+                <ListItem disablePadding onClick={clickHandler} component={Link} to="/resume">
                     <ListItemButton>
                         <Hidden mdUp>
                             <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                                <HomeIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/resume'})}} />
+                                <ArticleIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/resume'})}} />
                             </ListItemIcon>
                         </Hidden>
                         <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 

@@ -3,7 +3,7 @@ import { useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
-import rafaelImage from '../../assets/images/home-hero.jfif';
+import rafaelImage from '../../assets/images/rafael-tivane.jpg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';

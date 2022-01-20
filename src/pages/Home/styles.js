@@ -1,29 +1,43 @@
 import { makeStyles } from "@mui/styles";
-import heroImage from '../../assets/images/home-hero.jfif'
+import heroImage from '../../assets/images/home-hero-mobile.jpg'
 
 export const useStyles = makeStyles(theme => ({
     heroSection: {
         [theme.breakpoints.up(900)]: {
-            alignCenter: 'center',
-            backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)), url(${heroImage})`,
+            backgroundColor: '#303030',
+            //backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)), url(${heroImage})`,
             color: '#FFF',
             display: 'flex',
-            height: 510,
+            flexDirection: 'row-reverse',
+            justifyContent: 'space-between',
+            paddingLeft: '5%',
+            paddingRight: '5%',
             
         }
     },
     heroMobileBanner: {
         backgroundImage: `url(${heroImage})`,
-        height: 415,
+        height: 465,
+        //height: 415,
         [theme.breakpoints.up(900)]: {
-            display: 'none !important'
+            height: 510,
+            width: 400
+            //display: 'none !important'
         }
     },
     heroSectionContent: {
         [theme.breakpoints.up(900)]: {
             justifyContent: 'center !important',
+            paddingLeft: '0 !important',
+            paddingRight: '0 !important',
             width: 400
         }
+    },
+    heroSectionContentTitle: {
+        [theme.breakpoints.up(900)]: {
+            fontSize: '2.2rem !important'
+        }
+
     },
     heroSectionContentDescription: {
         [theme.breakpoints.up(900)]: {

@@ -10,10 +10,11 @@ import { useContext, useEffect } from 'react';
 import { AppContext } from '../../context/AppContext';
 
 const Home = () => {
-    const display = useDisplay();
-    const text = useTypography();
     const bg = useBackground();
     const classes = useStyles();
+    const display = useDisplay();
+    //const responsive = useResponsive();
+    const text = useTypography();
 
     const { setCurrentPage } = useContext(AppContext);
 
@@ -28,17 +29,19 @@ const Home = () => {
        <main>
            <section className={classNames(classes.heroSection, bg.cover, bg.noRepeat, bg.center)}>
                 <div className={classNames(classes.heroMobileBanner, bg.noRepeat, bg.cover, bg.center)}></div>
-               <div className={classNames(display.flex, display.flexColumn, display.pt1, display.px5, display.pb2,
-                    classes.heroSectionContent)}>
-                    <Typography component="h1" variant="h5" gutterBottom className={classNames(text.font7)}>Hello! I am Rafael Tivane</Typography>
-                    <Typography variant="body2" className={classNames(classes.heroSectionContentDescription)}>
-                        Professional remote Web Developer focused on Front-end Developement with more than 2 years of experience in web development process, 
-                        Involved in app testing, development, management and problem-solving.
-                    </Typography>
-                    <Link to="/projects" className={classNames(text.decorationNone, display.mt1)}>
-                        <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>View Projects</Button>
-                    </Link>
-               </div>
+                <div className={classNames(display.flex, display.flexColumn, display.pt1, display.px5, display.pb2,
+                        classes.heroSectionContent)}>
+                        <Typography component="h1" variant="h5" gutterBottom className={classNames(text.font7, classes.heroSectionContentTitle)}>
+                            Hello! I am Rafael Tivane
+                        </Typography>
+                        <Typography variant="body2" className={classNames(classes.heroSectionContentDescription)}>
+                            Professional remote Web Developer focused on Front-end Developement with more than 2 years of experience in web development process, 
+                            Involved in app testing, development, management and problem-solving.
+                        </Typography>
+                        <Link to="/projects" className={classNames(text.decorationNone, display.mt1)}>
+                            <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>View Projects</Button>
+                        </Link>
+                </div>
            </section>
            <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, display.mb2, display.pt2, display.pb3)}>
                 <div className={classNames(display.flex, display.flexColumn, classes.projectsSectionContent)}>
