@@ -13,6 +13,7 @@ export const useStyles = makeStyles(theme => ({
         color: '#555262',
         fontFamily: "'Roboto', sans-serif",
         fontSize: '1rem',
+        height: 47,
         paddingLeft: 10
     },
     searchButton: {
@@ -36,5 +37,8 @@ export const useStyles = makeStyles(theme => ({
         height: 13,
         marginLeft: 7,
         width: 13
+    },
+    mobileIcons: {
+        color: '#1976d2 !important'
     }
 }));

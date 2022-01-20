@@ -1,4 +1,4 @@
-import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Hidden, Popover } from '@mui/material';
+import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Hidden, IconButton, Popover } from '@mui/material';
 import classNames from 'classnames';
 import { useBackground, useDisplay, useResponsive, useTypography } from '../../styles';
 import { useStyles } from './styles';
@@ -7,6 +7,7 @@ import { useContext } from 'react';
 import { AppContext } from '../../context/AppContext'
 import Card from './Card';
 import SearchIcon from '@mui/icons-material/Search';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import React, { useCallback, useEffect, useState, useRef } from 'react';
 
 const ProjectsContainer = () => {
@@ -219,19 +220,30 @@ const ProjectsContainer = () => {
                     className={classNames(display.flexGrow1, display.borderNone, display.outlineNone, 
                     classes.searchInput)} 
                 />
+                <Hidden smUp>
+                    <IconButton  onClick={handleClick}>
+                        <FilterAltIcon className={classNames(classes.mobileIcons)} />
+                    </IconButton>
+                    <IconButton onClick={searchHandler}>
+                        <SearchIcon className={classNames(classes.mobileIcons)} />
+                    </IconButton>
+                </Hidden>
+                <Hidden smDown>
+                    <Button 
+                        aria-describedby={popoverId}
+                        aria-haspopup="true" 
+                        endIcon={<FilterAltIcon />} 
+                        className={classNames()}
+                        onClick={handleClick}>
+                        Filter
+                    </Button>
                 <Button 
-                    aria-describedby={popoverId}
-                    aria-haspopup="true" 
-                    className={classNames()}
-                    onClick={handleClick}>
-                    Filter <span className={classNames(classes.filterImage, bg.contain, bg.noRepeat)}></span>
-                </Button>
-               <Button 
-                    endIcon={<SearchIcon />} 
-                     onClick={searchHandler}
-                    className={classNames(display.outlineNone, classes.searchButton)}>
-                    Search
-                </Button>
+                        endIcon={<SearchIcon />} 
+                        onClick={searchHandler}
+                        className={classNames(display.outlineNone, classes.searchButton)}>
+                        Search
+                    </Button>
+                </Hidden>
            </form>
            <Grid container className={classNames(display.mt2, responsive.mdMt2)}>
                {
