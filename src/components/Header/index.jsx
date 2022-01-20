@@ -79,7 +79,7 @@ const Header = () => {
                 </Paper>
             </Hidden>
         </Paper>
-    ), [ classes, display, responsive, text, menuClickHandler, bg, currentPage]);
+    ), [ classes, clickHandler, display, responsive, text, menuClickHandler, bg, currentPage]);
 
     return (
         <Paper elevation={0} component="header" className={classNames(display.flex, display.alignCenter, 
