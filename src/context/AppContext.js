@@ -689,7 +689,7 @@ export const AppContextProvider = ({ children }) => {
             backward: '/projects/github-user-search-app',
             forward: '/projects/audiophile-e-commerce',
             liveURL: 'https://pro-clock-app.netlify.app',
-            sourceCodeURL: 'https://github.com/rafael-the-dev/clock-app-website',
+            sourceCodeURL: 'https://github.com/rafael-the-dev/clock-app',
             name: 'Clock App',
             level: 'junior',
             videoURL: '',
