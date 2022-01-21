@@ -1,0 +1,25 @@
+@keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
+.spinner::before {
+    animation: 1.5s linear infinite spinner;
+    animation-play-state: inherit;
+
+    //border-radius: 50%;
+    background-image: url(../../assets//images/spinner-image.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+    left: 50%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}

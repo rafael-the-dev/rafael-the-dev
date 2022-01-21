@@ -10,6 +10,7 @@ import { StylesProvider } from '@mui/styles';
 import { AppContextProvider } from '../../context/AppContext';
 import Header from '../../components/Header'
 import Footer from "../../components/Footer";
+import ColorSwitcher from "../../components/ColorSwitcher";
 
 const App = () => {
     const theme = createTheme();
@@ -33,6 +34,7 @@ const App = () => {
                         </Routes>
                         <Footer />
                     </Router>
+                    <ColorSwitcher />
                 </AppContextProvider>
             </ThemeProvider>
         </StylesProvider>
