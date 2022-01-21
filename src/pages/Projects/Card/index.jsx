@@ -28,7 +28,7 @@ const Card = ({ project, name, description, nameParameter, imageLink }) => {
                     { project.content.description }
                 </Typography>
                 <Link to={`/projects/${nameParameter}`} 
-                    className={classNames(text.decorationNone, classes.projectCardLink)}>
+                    className={classNames(text.decorationNone, classes.projectCardLink, 'color-transition')}>
                     view details
                 </Link>
             </Paper>

@@ -15,7 +15,7 @@ const Testimonial = ({ author, description, linkedLink }) => {
             <Tooltip title="Click to contact testimonial author on linkedIN">
                 <a href={linkedLink} target="_blank" rel="noreferrer" className={classNames(display.mb1, display.mg, classes.testimonial, text.noUnderline,
                     display.block, classes.container, display.h100)}>
-                    <FormatQuoteIcon className={classNames(classes.quoteIcon)} />
+                    <FormatQuoteIcon className={classNames(classes.quoteIcon, 'color-transition')} />
                     <Typography 
                         component="blockquote" 
                         className={classNames(classes.testimonialDescription, display.mb1, text.rem9)}>

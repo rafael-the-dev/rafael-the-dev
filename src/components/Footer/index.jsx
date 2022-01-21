@@ -16,7 +16,7 @@ const Footer = () => {
     return (
         <Container maxWidth={false} component="footer" className={classNames(display.flex, display.flexColumn, display.alignStart,
             display.pt2, display.pb2, classes.footer, display.relative, classes.rowSm, classes.justifyBetweenSm, 
-            display.px5, 'footer')}>
+            display.px5, 'footer', 'bg-transition')}>
             <div className={classNames(classes.footerBar, display.absolute)}></div>
             <div className={classNames(display.flex, display.flexColumn , display.alignStart)}>
                 <Link to="/" className={classNames(text.decorationNone)}>

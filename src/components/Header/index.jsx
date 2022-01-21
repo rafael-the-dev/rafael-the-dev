@@ -40,7 +40,7 @@ const Header = () => {
                                 <HomeIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/'})}} />
                             </ListItemIcon>
                         </Hidden>
-                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 
+                        <ListItemText classes={{ root: classNames(text.textLight, 'color-transition', classes.headerNavItemText, 
                             responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/'})}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
@@ -51,7 +51,7 @@ const Header = () => {
                                 <DashboardIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/projects'})}} />
                             </ListItemIcon>
                         </Hidden>
-                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 
+                        <ListItemText classes={{ root: classNames(text.textLight, 'color-transition', classes.headerNavItemText, 
                             responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/projects'})}} primary="Projects" />
                     </ListItemButton>
                 </ListItem>
@@ -62,7 +62,7 @@ const Header = () => {
                                 <ArticleIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/resume'})}} />
                             </ListItemIcon>
                         </Hidden>
-                        <ListItemText classes={{ root: classNames(text.textLight, classes.headerNavItemText, 
+                        <ListItemText classes={{ root: classNames(text.textLight, 'color-transition', classes.headerNavItemText, 
                             responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/resume'})}} primary="Resume" />
                     </ListItemButton>
                 </ListItem>
@@ -72,7 +72,8 @@ const Header = () => {
                     display.alignStretch, display.absolute, display.w100, bg.transparent, classes.headerDrawerBottom)}>
                     <Link to="/resume" onClick={clickHandler} className={classNames(text.decorationNone, classes.contactMeLink)}>
                         <Button 
-                            className={classNames(classes.headerGetStarted, text.font7, display.w100, classes.headerContactMe, text.textLight)}>
+                            className={classNames(classes.headerGetStarted, text.font7, display.w100, 
+                            classes.headerContactMe, text.textLight, 'bg-transition')}>
                             Contact me
                         </Button>
                     </Link>
@@ -89,7 +90,7 @@ const Header = () => {
                 variant="h5" 
                 component={Link} 
                 to="/" 
-                className={classNames(text.noUnderline, text.font7, classes.headerLogo, 'text-color')}>
+                className={classNames(text.noUnderline, text.font7, classes.headerLogo, 'text-color', 'color-transition')}>
                 Rafael Tivane
             </Typography>
                 <Hidden mdDown>

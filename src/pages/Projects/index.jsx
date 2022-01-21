@@ -237,14 +237,14 @@ const ProjectsContainer = () => {
                         aria-describedby={popoverId}
                         aria-haspopup="true" 
                         endIcon={<FilterAltIcon />} 
-                        className={classNames('text-color')}
+                        className={classNames('text-color', 'color-transition')}
                         onClick={handleClick}>
                         Filter
                     </Button>
                 <Button 
                         endIcon={<SearchIcon />} 
                         onClick={searchHandler}
-                        className={classNames(display.outlineNone, classes.searchButton, 'text-color')}>
+                        className={classNames(display.outlineNone, classes.searchButton, 'text-color', 'color-transition')}>
                         Search
                     </Button>
                 </Hidden>
@@ -256,7 +256,10 @@ const ProjectsContainer = () => {
                     ))
                }
            </Grid>
-            <Button onClick={handlePaginationChange} disabled={!hasMoreProjects} className={classNames(classes.loadMoreButton, text.textLight, text.rem8)}>
+            <Button 
+                onClick={handlePaginationChange} 
+                disabled={!hasMoreProjects} 
+                className={classNames(classes.loadMoreButton, text.textLight, text.rem8, 'bg-transition')}>
                 View more
             </Button>
        </main>

@@ -40,11 +40,12 @@ const Home = () => {
                             Involved in app testing, development, management and problem-solving.
                         </Typography>
                         <Link to="/projects" className={classNames(text.decorationNone, display.mt1)}>
-                            <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>View Projects</Button>
+                            <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8, 'bg-transition')}>View Projects</Button>
                         </Link>
                 </div>
            </section>
-           <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, display.mb2, display.pt2, display.pb3)}>
+           <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, 
+                display.mb2, display.pt2, display.pb3, 'bg-transition')}>
                 <div className={classNames(display.flex, display.flexColumn, classes.projectsSectionContent)}>
                     <Typography component="h2" variant="h6" gutterBottom className={classNames(text.font7, classes.projectsSectionTitle)}>
                         My latest projects
@@ -54,13 +55,13 @@ const Home = () => {
                     </Typography>
                     <Link to="/projects" className={classNames(text.decorationNone, display.mt1, display.none,
                         classes.projectsSectionTableLink)}>
-                        <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>
+                        <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8, 'bg-transition')}>
                             View more
                         </Button>
                     </Link>
                 </div>
                 <div className={classNames(display.flex, display.flexColumn, display.alignStretch, display.mt2, 
-                    classes.projectsSectionProjectsContainer)}>
+                    classes.projectsSectionProjectsContainer, 'bg-transition')}>
                     <LatestProject 
                         name="Audiophile E-commerce"
                         description="Multi-page e-commerce app with optimal layout for the app depending on their device's screen size."
@@ -82,7 +83,7 @@ const Home = () => {
                     />
                 </div>
                 <Link to="/projects" className={classNames(text.decorationNone, display.mt1, classes.projectsSectionLink)}>
-                    <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8)}>
+                    <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8, 'bg-transition')}>
                         View more
                     </Button>
                 </Link>

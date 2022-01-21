@@ -1,9 +1,9 @@
-.color-transitions, .footer {
-    transition: background 2s ease-in-out;
+.bg-transition {
+    transition: background 2s ease-in-out !important;
 }
 
-.text-color {
-    transition: color 2s ease-in-out;
+.color-transition {
+    transition: color 2s ease-in-out !important;
 }
 
 .pink-theme .text-color {
