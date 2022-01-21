@@ -43,7 +43,7 @@ export const useStyles =  makeStyles(theme =>
                 },
                 [theme.breakpoints.up("md")]: {
                   width: "auto !important",
-                  '.pink-theme &, &': {
+                  '.pink-theme &, .blue-theme &': {
                     backgroundImage: 'none !important',
                   }
                 },

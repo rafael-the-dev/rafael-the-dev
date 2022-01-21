@@ -22,6 +22,9 @@ export const useStyles = makeStyles(theme => ({
     },
     projectCardLink: {
         color: '#9f2395',
+        '.pink-theme &': {
+            color: '#E7816B',
+        },
         '&:hover': {
             color: '#d70077'
         }

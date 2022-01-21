@@ -4,23 +4,34 @@ import quote from '../../../assets/images/quote.png'
 export const useStyles = makeStyles(theme => ({
     testimonial: {
         padding: '0 0 0 1rem',
+        //backgroundColor: '#ef907b6b',
         "&:hover": {
             backgroundColor: '#acf1ff21',
+        },
+        '.pink-theme &:hover': {
+            backgroundColor: '#ef907b54',
         },
         [theme.breakpoints.up('md')]: {
             width: '90%'
         }
     },
+    quoteIcon: {
+        color: '#186bbdad',
+        fontSize: '5.5rem !important',
+        '.pink-theme &': {
+            color: '#ef907b54',
+        },
+    },
     testimonialDescription: {
         color: '#505054 !important',
         //width: '93`%',
-        '&::before': { //https://www.vegvisits.com/assets/b50b74ef.png
+        /*'&::before': { //https://www.vegvisits.com/assets/b50b74ef.png
             background: `url(${quote}) center / contain no-repeat `,
             content: "''",
             display: 'block',
             height: 80,
             width: 80
-        }
+        }*/
     },
     testimonialAuthor: {
         color: '#051c34 !important',
