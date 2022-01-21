@@ -4,7 +4,7 @@ export const useStyles = makeStyles(theme => ({
     container: {
         left: 0,
         position: 'fixed',
-        top: '48vh',
+        top: '46vh',
         zIndex: 1000
     },
     spinner: {

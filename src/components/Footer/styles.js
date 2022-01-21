@@ -24,6 +24,16 @@ export const useStyles = makeStyles(theme => ({
   },
   footer: {
       backgroundImage: 'linear-gradient(to bottom, #0b4681 , #186bbd ) !important',
+      '.pink-theme &': {
+        backgroundImage: 'linear-gradient(to bottom, #b3604eeb, #E7816B) !important',
+
+      },
+      [theme.breakpoints.up('md')]: {
+        '.pink-theme &': {
+          backgroundImage: 'linear-gradient(to bottom, #bd4b32eb, #c16b58f7) !important',
+  
+        },
+      }
   },
   footerBar: {
       backgroundImage: 'linear-gradient(to right, #cf2d09 , #0b099b)',

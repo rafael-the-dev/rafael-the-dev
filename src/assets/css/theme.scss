@@ -1,0 +1,11 @@
+.color-transitions, .footer {
+    transition: background 2s ease-in-out;
+}
+
+.text-color {
+    transition: color 2s ease-in-out;
+}
+
+.pink-theme .text-color {
+    color: #E7816B !important;
+}

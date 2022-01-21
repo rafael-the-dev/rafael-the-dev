@@ -49,6 +49,9 @@ export const useStyles = makeStyles(theme => ({
         backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2)',
         padding: ".4rem .7rem !important",
         textTransform: "capitalize",
+        '.pink-theme &': {
+          backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B)',
+        },
         [theme.breakpoints.up("md")]: {
             color: "#FFF !important",
             fontWeight: '700 !important',
@@ -58,11 +61,17 @@ export const useStyles = makeStyles(theme => ({
     },
     projectsSection: {
         backgroundColor: '#acf1ff4f',
+        '.pink-theme &': {
+            backgroundColor: '#e7816b8f',
+        },
         [theme.breakpoints.up(820)]: {
             backgroundColor: 'transparent',
             flexDirection: 'row-reverse !important',
             justifyContent: 'center',
-            marginTop: '2rem'
+            marginTop: '2rem',
+            '.pink-theme &, &': {
+                backgroundColor: 'transparent',
+            }
         }
     },
     projectsSectionContent: {
@@ -92,7 +101,10 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up(820)]: {
             backgroundColor: '#acf1ff4f',
             marginTop: '0 !important',
-            padding: '2rem'
+            padding: '2rem',
+            '.pink-theme &': {
+                backgroundColor: '#e7816b8f',
+            }
         },
         [theme.breakpoints.up(1050)]: {
             width: 400

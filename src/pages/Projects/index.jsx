@@ -237,14 +237,14 @@ const ProjectsContainer = () => {
                         aria-describedby={popoverId}
                         aria-haspopup="true" 
                         endIcon={<FilterAltIcon />} 
-                        className={classNames()}
+                        className={classNames('text-color')}
                         onClick={handleClick}>
                         Filter
                     </Button>
                 <Button 
                         endIcon={<SearchIcon />} 
                         onClick={searchHandler}
-                        className={classNames(display.outlineNone, classes.searchButton)}>
+                        className={classNames(display.outlineNone, classes.searchButton, 'text-color')}>
                         Search
                     </Button>
                 </Hidden>

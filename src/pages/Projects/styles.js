@@ -25,6 +25,9 @@ export const useStyles = makeStyles(theme => ({
         fontSize: ".8rem",
         padding: ".3rem .5rem !important",
         textTransform: "capitalize",
+        '.pink-theme &': {
+          backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B)',
+        },
         [theme.breakpoints.up("md")]: {
           padding: ".5rem .8rem !important",
         },

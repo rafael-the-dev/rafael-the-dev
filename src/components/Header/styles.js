@@ -29,7 +29,12 @@ export const useStyles =  makeStyles(theme =>
             headerNav: {
                 // top: 0,
                 //right: 9999,
-                backgroundImage: 'linear-gradient(to bottom, #0b4681 , #186bbd ) !important',
+                '.blue-theme &': {
+                  backgroundImage: 'linear-gradient(to bottom, #0b4681 , #186bbd ) !important',
+                },
+                '.pink-theme &': {
+                  backgroundImage: 'linear-gradient(to bottom, #c9553d , #b3533e ) !important',
+                },
                 transition: "all 1s",
                 [theme.breakpoints.up("sm")]: {
                   top: 0,
@@ -37,8 +42,10 @@ export const useStyles =  makeStyles(theme =>
                   width: "300px !important",
                 },
                 [theme.breakpoints.up("md")]: {
-                  backgroundImage: 'none !important',
                   width: "auto !important",
+                  '.pink-theme &, &': {
+                    backgroundImage: 'none !important',
+                  }
                 },
               },
               headerNavDisplay: {
@@ -71,6 +78,9 @@ export const useStyles =  makeStyles(theme =>
                   fontWeight: '700 !important',
                   marginLeft: 16,
                   padding: ".5rem .8rem !important",
+                  '.pink-theme &': {
+                    backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B)',
+                  }
                 },
               },
               headerGetStartedDesktop: {},
@@ -87,7 +97,10 @@ export const useStyles =  makeStyles(theme =>
               },
               currentPage: {
                 color: '#27b1bf !important',
-                fontWeight: '700 !important'
+                fontWeight: '700 !important',
+                '.pink-theme &': {
+                  color: '#E7816B !important'
+                }
               }
         }
     )
