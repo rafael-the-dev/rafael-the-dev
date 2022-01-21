@@ -8,6 +8,7 @@ import redECommerceIcon from '../../assets/images/red-ecommerce-icon.jfif'
 import Testimonial from './Testimonial';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../context/AppContext';
+import './styles.scss'
 
 const Home = () => {
     const bg = useBackground();
@@ -87,7 +88,7 @@ const Home = () => {
                 </Link>
            </section>
            <section className={classNames(display.px5, display.pb3)}>
-               <Typography component="h2" variant="h6" className={classNames(text.font7, display.mb2, classes.projectsSectionTitle)}>
+               <Typography component="h2" variant="h6" className={classNames(text.font7, display.mb2, 'projectsSectionTitle', classes.testimonialsSectionTitle)}>
                    Testimonials
                 </Typography>
                <Grid container>

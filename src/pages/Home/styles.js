@@ -118,5 +118,5 @@ export const useStyles = makeStyles(theme => ({
     audioPhileImage: {
         height: '37px !important',
         width: '84px !important'
-    }
+    },
 }));
