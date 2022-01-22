@@ -28,7 +28,10 @@ export const useStyles = makeStyles(theme => ({
         },
     },
     darkBlue1: {
-        color: '#0f4e6c'
+        color: '#0f4e6c',
+        '.pink-theme &': {
+            color: '#d36b55 !important',
+        }
     },
     leftSide: {
         backgroundColor: '#1976d2',
@@ -76,6 +79,9 @@ export const useStyles = makeStyles(theme => ({
     },
     rightSideTitle: {
         color: '#081f3e',
+        '.pink-theme &': {
+            color: '#56251a !important',
+        },
         [theme.breakpoints.up('md')]: {
             fontSize: '3.75rem !important'
         }
@@ -101,6 +107,9 @@ export const useStyles = makeStyles(theme => ({
     },
     projectsLink: {
         color: '#11085e',
+        '.pink-theme &': {
+            color: '#201310d9 !important',
+        },
         '&:hover': {
             textDecoration: 'underline !important'
         }

@@ -110,10 +110,10 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
     <div className={classNames(responsive.mdPl3, responsive.mdPt2, display.flex, display.alignStretch,
         display.flexColumn, display.flexGrow1, { [display.none]: !open.rightSide && isMobile })}>
         <Typography component="h2" variant="h4" className={classNames(text.font7, classes.rightSideTitle, 
-            display.pl1, responsive.mdPl0)}>
+            display.pl1, responsive.mdPl0, 'color-transition')}>
             Rafael Tivane
         </Typography>
-        <Typography component="p" variant="h6" className={classNames(classes.darkBlue1, 
+        <Typography component="p" variant="h6" className={classNames(classes.darkBlue1, 'color-transition', 
             classes.rightSidePosition, display.pl1, responsive.mdPl0)}>
             Frontend Developer
         </Typography>
@@ -139,7 +139,7 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
                 </Typography>
             </div>
             <div className={classNames(display.pt1, display.pl1)}>
-                <Typography component="h4" className={classNames(classes.experienceSubtitle, classes.darkBlue1)}>Frontend Developer</Typography>
+                <Typography component="h4" className={classNames(classes.experienceSubtitle, classes.darkBlue1, 'color-transition')}>Frontend Developer</Typography>
                 <Typography component="h5" className={classNames(classes.experienceCompa)}>RetriveAI (2021 - 4 Months)</Typography>
                 <ul className={classNames(display.flex, display.flexColumn)}>
                     <li className={classNames(classes.experienceItem)}>Work on the front-end of enterprise applications</li>
@@ -153,40 +153,40 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
         </div>
         <div className={classNames(display.pt144)}>
             <div className={classNames(display.pt1, display.pl1)}>
-                <Typography component="h3" className={classNames(classes.experienceSubtitle, classes.darkBlue1)}>Personal projects</Typography>
+                <Typography component="h3" className={classNames(classes.experienceSubtitle, classes.darkBlue1, 'color-transition')}>Personal projects</Typography>
                 <ul className={classNames(display.flex, display.flexColumn)}>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/dine-restaurant-website">
+                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/dine-restaurant-website">
                             Built out Dine Restaurant Website
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/coffeeroasters-subscription-site">
+                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/coffeeroasters-subscription-site">
                             Built out Coffeeroasters Subscription Site
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/myteam-multi-page-website">
+                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/myteam-multi-page-website">
                             Built out Myteam Multipage Website
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/planects-fact-web-app">
+                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/planects-fact-web-app">
                             Built out Planects Fact Web App
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/photosnap">
+                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/photosnap">
                             Built Photosnap multi-page website
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects/devjobs-web-app">
+                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/devjobs-web-app">
                             Built out Devjobs web app
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, classes.projectsLink)} to="/projects">
+                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects">
                             view more projects
                         </Link>
                     </li>
