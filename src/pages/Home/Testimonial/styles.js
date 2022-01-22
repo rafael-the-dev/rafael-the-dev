@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import quote from '../../../assets/images/quote.png'
 
 export const useStyles = makeStyles(theme => ({
     testimonial: {
