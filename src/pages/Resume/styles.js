@@ -15,15 +15,26 @@ export const useStyles = makeStyles(theme => ({
             width: 800
         }
     },
+    notSelectedButton: {
+        '.pink-theme &': {
+            color: '#c55239 !important',
+        }
+    },
     selectedButton: {
         backgroundColor: '#03304a !important',
-        color: '#FFF !important'
+        color: '#FFF !important',
+        '.pink-theme &': {
+            backgroundColor: '#c55239 !important',
+        },
     },
     darkBlue1: {
         color: '#0f4e6c'
     },
     leftSide: {
         backgroundColor: '#1976d2',
+        '.pink-theme &': {
+            backgroundColor: '#E7816B',
+        },
         [theme.breakpoints.up('md')]: {
             borderRadius: '100px 100px 0 0',
             width: 200
@@ -77,7 +88,10 @@ export const useStyles = makeStyles(theme => ({
     },
     rightSideSubtitleContainer: {
         backgroundColor: '#294468',
-        borderRadius: '100px 0 0 100px'
+        borderRadius: '100px 0 0 100px',
+        '.pink-theme &': {
+            backgroundColor: '#d36b55 !important',
+        }
     },
     experienceSubtitle: {
         fontSize: '1.2rem !important'

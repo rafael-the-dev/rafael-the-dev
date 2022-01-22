@@ -15,7 +15,7 @@ import EmailIcon from '@mui/icons-material/Email';//
 
 const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
     <div className={classNames(classes.leftSide, display.flex, display.flexColumn, display.alignCenter, 
-        display.pt2, responsive.mdPt1, { [display.none]: !open.leftSide && isMobile })}>
+        display.pt2, responsive.mdPt1, { [display.none]: !open.leftSide && isMobile }, 'bg-transition')}>
         <div className={classNames(display.flex, classes.leftSideIntro, display.pl1, responsive.mdPl0, display.mb1)}>
             <figure className={classNames(classes.imageContainer, display.mr0, display.ml0)}>
                 <img 
@@ -118,10 +118,10 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
             Frontend Developer
         </Typography>
         <div className={classNames(display.pt1)}>
-            <div className={classNames(classes.rightSideSubtitleContainer, display.pl1)}>
+            <div className={classNames(classes.rightSideSubtitleContainer, 'bg-transition', display.pl1)}>
                 <Typography 
                     component="h3" 
-                    variant="h6" className={classNames(classes.rightSideSubtitleContainer, text.textLight)}>
+                    variant="h6" className={classNames(classes.rightSideSubtitleContainer, 'bg-transition', text.textLight)}>
                     About me
                 </Typography>
             </div>
@@ -131,10 +131,10 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
             </Typography>
         </div>
         <div className={classNames(display.pt1)}>
-            <div className={classNames(classes.rightSideSubtitleContainer, display.pl1)}>
+            <div className={classNames(classes.rightSideSubtitleContainer, 'bg-transition', display.pl1)}>
                 <Typography 
                     component="h3" 
-                    variant="h6" className={classNames(classes.rightSideSubtitleContainer, text.textLight)}>
+                    variant="h6" className={classNames(classes.rightSideSubtitleContainer, 'bg-transition', text.textLight)}>
                     Work Experience
                 </Typography>
             </div>
@@ -222,12 +222,12 @@ const Resume = () => {
                 <div style={{ marginLeft: 7}} className={classNames(display.flex, display.alignStretch, display.mb1)}>
                     <Button 
                         onClick={leftSideButtonClickHandler}
-                        className={classNames(classes.button, { [classes.selectedButton]: open.leftSide})}>
+                        className={classNames(classes.button, { [classes.selectedButton]: open.leftSide, [classes.notSelectedButton]: !open.leftSide}, 'bg-transition', 'color-transition')}>
                         Left Side
                     </Button>
                     <Button 
                         onClick={leftSideButtonClickHandler}
-                        className={classNames(classes.button, { [classes.selectedButton]: open.rightSide})}>
+                        className={classNames(classes.button, { [classes.selectedButton]: open.rightSide, [classes.notSelectedButton]: !open.rightSide}, 'bg-transition', 'color-transition')}>
                         Right Side
                     </Button>
                 </div>
