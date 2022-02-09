@@ -687,7 +687,7 @@ export const AppContextProvider = ({ children }) => {
         },
         'clock-app': {
             backward: '/projects/github-user-search-app',
-            forward: '/projects/audiophile-e-commerce',
+            forward: '/projects/payAPI-multi-page website',
             liveURL: 'https://pro-clock-app.netlify.app',
             sourceCodeURL: 'https://github.com/rafael-the-dev/clock-app',
             name: 'Clock App',
@@ -723,6 +723,69 @@ export const AppContextProvider = ({ children }) => {
                     },
                     {
                         name: 'React router dom',
+                        url: ''
+                    },
+                ]
+
+            }
+        },
+        'payAPI-multi-page website': {
+            backward: '/projects/clock-app',
+            forward: '/projects/audiophile-e-commerce',
+            liveURL: 'https://pro-payapi-multi-page-website.netlify.app/',
+            sourceCodeURL: 'https://github.com/rafael-the-dev/payapi-multi-page-website',
+            name: 'PayAPI multi-page website',
+            level: 'advanced',
+            videoURL: '',
+            imageLink: `https://findicons.com/files/icons/1261/sticker_system/256/home.png`,
+            content: {
+                description: "PayAPI multi-page website is a frontend  4-page website challenge for a marketing purpose..",
+                features: [
+                    "View the optimal layout for the app depending on their device's screen size", 
+                    "See hover states for all interactive elements on the page",
+                    {
+                        name: 'Receive an error message when the contact form is submitted if:',
+                        list: [
+                            `The Name, Email Address or Message fields are empty should show "This field can't be empty"`,
+                            'The Email Address is not formatted correctly should show "Please use a valid email address"'
+                        ]
+                    }
+                ],
+                tools: [
+                    {
+                        name: 'React JS',
+                        url: ''
+                    },
+                    {
+                        name: 'HTML',
+                        url: ''
+                    },
+                    {
+                        name: 'CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'React router dom',
+                        url: ''
+                    },
+                    {
+                        name: 'Tailwind CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'React hook form',
+                        url: ''
+                    },
+                    {
+                        name: 'classnames',
+                        url: ''
+                    },
+                    {
+                        name: 'Material UI',
                         url: ''
                     },
                 ]
