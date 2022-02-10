@@ -42,5 +42,20 @@ export const useStyles =  makeStyles(theme => ({
         [theme.breakpoints.up(850)]: {
             width: '80%'
         }
+    },
+    itemShortcut: {
+        backgroundColor: "#000246 !important",
+        bottom: 31,
+        borderRadius: 9999,
+        boxShadow:
+        "0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)",
+        fontSize: '1.02rem',
+        padding: '.7rem 1rem',
+        position: "fixed",
+        right: 14,
+        zIndex: 50,
+    },
+    itemShortcutIcon: {
+        marginRight: 8
     }
 }));

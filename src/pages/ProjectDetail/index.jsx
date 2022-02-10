@@ -196,6 +196,15 @@ const ProjectDetail = () => {
                             page={defaultIndex}
                         /> 
                     </div>
+                    <a 
+                        href={project.liveURL} 
+                        rel="noreferrer" 
+                        target="_blank" 
+                        className={classNames(display.flex, display.alignCenter, classes.itemShortcut,
+                        text.textLight, text.noUnderline)}>
+                        <WebIcon color="primary" className={classNames(classes.itemShortcutIcon)} /> 
+                        view the live app
+                    </a>
                 </Paper>
             </Grid>
         </Grid>
