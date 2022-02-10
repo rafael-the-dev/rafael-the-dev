@@ -27,24 +27,36 @@ export const useStyles =  makeStyles(theme => ({
     },
     toolsItem: {
         border: '1px solid #1976d2',
-        borderRadius: 15,
+        borderRadius: 9999,//15
         color: '#1976d2',
         padding: '0.4rem 0.8rem',
+        '.pink-theme &': {
+            borderColor: '#E7816B !important',
+            color: '#E7816B'
+        }
     },
     linkIcon: {
-        marginRight: 5
+        marginRight: 5,
+        '.pink-theme &': {
+            color: '#E7816B !important'
+        }
     },
     linkText: {
         color: '#1976d2',
-        fontSize: '1.2rem'
+        fontSize: '1.2rem',
+        '.pink-theme &': {
+            color: '#E7816B !important'
+        }
     },
     description: {
         [theme.breakpoints.up(850)]: {
             width: '80%'
         }
     },
+    liveAndGitURL: {
+    },
     itemShortcut: {
-        backgroundColor: "#000246 !important",
+        backgroundColor: "#000246",
         bottom: 31,
         borderRadius: 9999,
         boxShadow:
@@ -54,6 +66,9 @@ export const useStyles =  makeStyles(theme => ({
         position: "fixed",
         right: 14,
         zIndex: 50,
+        '.pink-theme &': {
+            backgroundColor: '#d3624a'
+        }
     },
     itemShortcutIcon: {
         marginRight: 8

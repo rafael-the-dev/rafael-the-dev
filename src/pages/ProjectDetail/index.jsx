@@ -70,7 +70,7 @@ const ProjectDetail = () => {
          display.listStyleNone, display.pl1, display.flexWrap)}>
             {
                 project.content.tools.map((tool, index) => (
-                    <li key={index} className={classNames(display.mb1, display.mr1,  classes.toolsItem)} >{ tool.name }</li>
+                    <li key={index} className={classNames(display.mb1, display.mr1, 'color-transition',classes.toolsItem)} >{ tool.name }</li>
                 ))
             }
         </ul>
@@ -167,8 +167,8 @@ const ProjectDetail = () => {
                             href={project.sourceCodeURL} 
                             rel="noreferrer" 
                             target="_blank" 
-                            className={classNames(display.flex, display.alignCenter, display.ml1, classes.linkText)}>
-                            <GitHubIcon color="primary" className={classNames(classes.linkIcon)}/> 
+                            className={classNames(display.flex, display.alignCenter, display.ml1, classes.linkText, 'color-transition')}>
+                            <GitHubIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')}/> 
                             Github
                         </a>
                     </div>
@@ -183,8 +183,8 @@ const ProjectDetail = () => {
                             href={project.liveURL} 
                             rel="noreferrer" 
                             target="_blank" 
-                            className={classNames(display.flex, display.alignCenter, display.ml1, classes.linkText)}>
-                            <WebIcon color="primary" className={classNames(classes.linkIcon)} /> 
+                            className={classNames(display.flex, display.alignCenter, display.ml1, classes.linkText, 'color-transition')}>
+                            <WebIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')} /> 
                             click here to view
                         </a>
                     </div>
@@ -201,8 +201,8 @@ const ProjectDetail = () => {
                         rel="noreferrer" 
                         target="_blank" 
                         className={classNames(display.flex, display.alignCenter, classes.itemShortcut,
-                        text.textLight, text.noUnderline)}>
-                        <WebIcon color="primary" className={classNames(classes.itemShortcutIcon)} /> 
+                        text.textLight, text.noUnderline, 'bg-transition', 'color-transition')}>
+                        <WebIcon color="primary" className={classNames(text.textLight, classes.itemShortcutIcon, 'color-transition')} /> 
                         view the live app
                     </a>
                 </Paper>
