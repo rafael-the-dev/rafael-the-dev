@@ -14,6 +14,18 @@ export const useStyles =  makeStyles(theme => ({
             height: 440
         }
     },
+    video: {
+        height: 250,
+        [theme.breakpoints.up('sm')]: {
+            height: 290
+        },
+        [theme.breakpoints.up(780)]: {
+            height: 350
+        },
+        [theme.breakpoints.up('md')]: {
+            height: 440
+        }
+    },
     list: {
         listStyle: 'disc !important',
         maxHeight: 170,

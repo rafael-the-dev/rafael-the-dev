@@ -128,15 +128,17 @@ const ProjectDetail = () => {
                 <Paper elevation={0} 
                     classes={{ root: classNames(classes.videoContainer, display.mt1) }} 
                     className={classNames( display.mlAuto, display.mrAuto)}>
-                    <iframe 
-                        className={classNames(display.h100, display.w100)} 
-                        src="https://www.youtube.com/emffbed/u9FnmBdBl5k" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="autoplay; encrypted-media; fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen
-                        >
-                    </iframe>
+                        <iframe 
+                            className={classNames(display.w100, classes.video)}
+                            frameborder="0" 
+                            height="100%"
+                            allow="autoplay; fullscreen; picture-in-picture" 
+                            allowfullscreen
+                            title={`${project.title} video`}
+                            src={project.videoURL}
+                            width="100%">
+                        </iframe>
+                    
                 </Paper>
             </Grid>
             <Grid item xs={12}>
@@ -212,3 +214,17 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+
+/**
+ * <iframe 
+        className={classNames(display.h100, display.w100)} 
+        src={project.videoURL}
+        title={`${project.title} video`} 
+        frameborder="0" 
+        X-Frame-Options=""
+        allow="autoplay; encrypted-media; fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+        >
+    </iframe>
+ * 
+ */
