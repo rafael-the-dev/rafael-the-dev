@@ -70,7 +70,7 @@ export const AppContextProvider = ({ children }) => {
             sourceCodeURL: 'https://github.com/rafael-the-dev/Dine-restaurant-website',
             name: 'Dine Restaurant Website',
             level: 'intermediate',
-            videoURL: '',
+            videoURL: 'https://player.vimeo.com/video/678032007?h=e90765791e',
             imageLink: 'https://i.pinimg.com/originals/c9/b9/85/c9b985bba6c9d60ab8955099bc633dcf.png',
             content: {
                 description: 'Dine Restaurant Website is a frontend project for making reservaiton on a restaurant, This challenge made me more confident in my frontend skills by enabling me to use some tricks for form validation design details.',
@@ -198,7 +198,7 @@ export const AppContextProvider = ({ children }) => {
             sourceCodeURL: 'https://github.com/rafael-the-dev/photosnap',
             name: 'Photosnap multi-page website',
             level: 'advanced',
-            videoURL: '',
+            videoURL: 'https://player.vimeo.com/video/678033509?h=d8f2dfe75d',
             imageLink: 'https://cdn4.iconfinder.com/data/icons/traveling-and-tourism/135/Landscape-512.png',
             content: {
                 description: 'Photosnap is a frontend project for photo-sharing, This was a perfect opportunity to put my CSS Grid skills to the test and to train my eye for detail by getting my solution as close to the design!',
