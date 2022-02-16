@@ -13,7 +13,7 @@ export const AppContextProvider = ({ children }) => {
             sourceCodeURL: 'https://github.com/rafael-the-dev/Audiophile-E-commerce',
             name: 'Audiophile e-commerce',
             level: 'guru',
-            videoURL: '',
+            videoURL: 'https://player.vimeo.com/video/678030551?h=5c859c8006',
             imageLink: `${redECommerceIcon}`,
             content: {
                 description: "Audiophile e-commerce is a frontend project for shopping with optimal layout for the app depending on their device's screen size. In this challenge I have been working with complex muiltipage app and states managment.",
