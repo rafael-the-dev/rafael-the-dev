@@ -105,7 +105,7 @@ const Header = () => {
             <Paper elevation={0} className={classNames(display.flex, display.alignCenter)}>
                 <Hidden mdDown>
                     <Link to="/resume" className={classNames(text.decorationNone)}>
-                        <Button className={classNames(classes.headerGetStarted)}>Contact Me</Button>
+                        <Button className={classNames(classes.headerGetStarted, `py-2 uppercase px-4`)}>Contact Me</Button>
                     </Link>
                 </Hidden>
                 <Hidden mdUp>

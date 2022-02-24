@@ -27,8 +27,8 @@ const Home = () => {
     }, [ setCurrentPage, location ]);
 
     return (
-       <main>
-           <section className={classNames(display.px5, `sm:relative`)}>
+       <main className={classNames(display.px5, )}>
+           <section className={classNames(`sm:relative`)}>
                 <div 
                     aria-label='illustration image'
                     className={classNames(classes.heroIllustration, `bg-cover bg-no-repeat bg-center`)}>
@@ -36,9 +36,9 @@ const Home = () => {
                 <div className={classNames(classes.heroContent, `flex flex-col py-6 sm:absolute sm:bottom-0 
                     sm:left-0 sm:bg-white sm:pr-8 md:py-8`)}>
                     <Typography 
-                        className={classNames(`font-bold text-blue-500 text-3xl`)}
+                        className={classNames(`font-bold text-blue-900 text-3xl`)}
                         component="h1">
-                        Hey, I’m Alex Spencer and I love building beautiful websites
+                        Hey, I’m <b>Rafael Tivane</b> and I love building beautiful websites
                     </Typography>
                     <a 
                         className={classNames(classes.heroLink, `uppercase text-slate-50 bg-blue-700 flex 
@@ -52,22 +52,6 @@ const Home = () => {
                     </a>
                 </div>
             </section>
-           <section className={classNames(classes.heroSection, bg.cover, bg.noRepeat, bg.center)}>
-                <div className={classNames(classes.heroMobileBanner, bg.noRepeat, bg.cover, bg.center)}></div>
-                <div className={classNames(display.flex, display.flexColumn, display.pt1, display.px5, display.pb2,
-                        classes.heroSectionContent)}>
-                        <Typography component="h1" variant="h5" gutterBottom className={classNames(text.font7, classes.heroSectionContentTitle)}>
-                            Hello! I am Rafael Tivane
-                        </Typography>
-                        <Typography variant="body2" className={classNames(classes.heroSectionContentDescription)}>
-                            Professional remote Web Developer focused on Front-end Developement with more than 2 years of experience in web development process, 
-                            Involved in app testing, development, management and problem-solving.
-                        </Typography>
-                        <Link to="/projects" className={classNames(text.decorationNone, display.mt1)}>
-                            <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8, 'bg-transition')}>View Projects</Button>
-                        </Link>
-                </div>
-           </section>
            <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, 
                 display.mb2, display.pt2, display.pb3, 'bg-transition')}>
                 <div className={classNames(display.flex, display.flexColumn, classes.projectsSectionContent)}>
@@ -137,3 +121,23 @@ const Home = () => {
 };
 
 export default Home;
+
+
+/**
+ * <section className={classNames(classes.heroSection, bg.cover, bg.noRepeat, bg.center)}>
+                <div className={classNames(classes.heroMobileBanner, bg.noRepeat, bg.cover, bg.center)}></div>
+                <div className={classNames(display.flex, display.flexColumn, display.pt1, display.px5, display.pb2,
+                        classes.heroSectionContent)}>
+                        <Typography component="h1" variant="h5" gutterBottom className={classNames(text.font7, classes.heroSectionContentTitle)}>
+                            Hello! I am Rafael Tivane
+                        </Typography>
+                        <Typography variant="body2" className={classNames(classes.heroSectionContentDescription)}>
+                            Professional remote Web Developer focused on Front-end Developement with more than 2 years of experience in web development process, 
+                            Involved in app testing, development, management and problem-solving.
+                        </Typography>
+                        <Link to="/projects" className={classNames(text.decorationNone, display.mt1)}>
+                            <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8, 'bg-transition')}>View Projects</Button>
+                        </Link>
+                </div>
+           </section>
+ */
