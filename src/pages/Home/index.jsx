@@ -28,6 +28,30 @@ const Home = () => {
 
     return (
        <main>
+           <section className={classNames(display.px5, `sm:relative`)}>
+                <div 
+                    aria-label='illustration image'
+                    className={classNames(classes.heroIllustration, `bg-cover bg-no-repeat bg-center`)}>
+                </div>
+                <div className={classNames(classes.heroContent, `flex flex-col py-6 sm:absolute sm:bottom-0 
+                    sm:left-0 sm:bg-white sm:pr-8 md:py-8`)}>
+                    <Typography 
+                        className={classNames(`font-bold text-blue-500 text-3xl`)}
+                        component="h1">
+                        Hey, I’m Alex Spencer and I love building beautiful websites
+                    </Typography>
+                    <a 
+                        className={classNames(classes.heroLink, `uppercase text-slate-50 bg-blue-700 flex 
+                        items-center mt-6`)}
+                        href="#about-me" >
+                        <span 
+                            aria-label='arrow icon'
+                            className={classNames(classes.heroLinkIcon, `bg-no-repeat bg-center`)}>
+                        </span>
+                        <span className={classNames(`grow text-center`)}>About me</span>
+                    </a>
+                </div>
+            </section>
            <section className={classNames(classes.heroSection, bg.cover, bg.noRepeat, bg.center)}>
                 <div className={classNames(classes.heroMobileBanner, bg.noRepeat, bg.cover, bg.center)}></div>
                 <div className={classNames(display.flex, display.flexColumn, display.pt1, display.px5, display.pb2,

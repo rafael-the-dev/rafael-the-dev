@@ -22,8 +22,7 @@ const Footer = () => {
                 <Link to="/" className={classNames(text.decorationNone)}>
                     <Typography 
                         variant="h5" 
-                        component={Link} 
-                        to="/" 
+                        component="h2" 
                         className={classNames(text.textLight, text.noUnderline, text.font7, classes.footerLogo)}>
                         Rafael Tivane
                     </Typography>
