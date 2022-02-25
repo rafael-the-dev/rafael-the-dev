@@ -140,7 +140,7 @@ export const useStyles = makeStyles(theme => ({
             }
         },
         [theme.breakpoints.up(1050)]: {
-            width: 400
+            width: 504
         }
     },
     projectsSectionLink: {
@@ -152,4 +152,12 @@ export const useStyles = makeStyles(theme => ({
         height: '37px !important',
         width: '84px !important'
     },
+    contactMeTitle: {
+        [theme.breakpoints.up('sm')]: {
+            maxWidth: '50%'
+        },
+        [theme.breakpoints.up('md')]: {
+            maxWidth: 300
+        }
+    }
 }));

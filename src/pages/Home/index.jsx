@@ -52,7 +52,7 @@ const Home = () => {
                     </a>
                 </div>
             </section>
-           <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, 
+           <section className={classNames(display.flex, display.flexColumn, classes.projectsSection, 
                 display.mb2, display.pt2, display.pb3, 'bg-transition')}>
                 <div className={classNames(display.flex, display.flexColumn, classes.projectsSectionContent)}>
                     <Typography component="h2" variant="h6" gutterBottom className={classNames(text.font7, classes.projectsSectionTitle)}>
@@ -96,7 +96,7 @@ const Home = () => {
                     </Button>
                 </Link>
            </section>
-           <section className={classNames(display.px5, display.pb3)}>
+           <section className={classNames(display.pb3)}>
                <Typography component="h2" variant="h6" className={classNames(text.font7, display.mb2, 'projectsSectionTitle', classes.testimonialsSectionTitle)}>
                    Testimonials
                 </Typography>
@@ -116,6 +116,22 @@ const Home = () => {
                    />
                </Grid>
            </section>
+           <section className={classNames(`flex flex-col items-center pb-16 sm:flex-row sm:justify-between`)}>
+                <Typography 
+                    className={classNames(classes.contactMeTitle, `font-bold text-center sm:text-left text-blue-500 text-3xl sm:mt-0`)}
+                    component="h2">
+                    Interested in doing a project together?
+                </Typography>
+                <Link 
+                    className={classNames(`mt-6 sm:mt-0 inline-block`)}
+                    to="/">
+                    <Button 
+                        className={classNames(`text-blue-500 border-blue-500 py-2.5 px-4`)}
+                        variant="outlined">
+                        Contact me
+                    </Button>
+                </Link>
+            </section>
        </main>
     );
 };
