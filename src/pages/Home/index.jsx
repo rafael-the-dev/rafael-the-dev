@@ -38,11 +38,11 @@ const Home = () => {
                     <Typography 
                         className={classNames(`font-bold text-blue-900 text-3xl`)}
                         component="h1">
-                        Hey, I’m <b>Rafael Tivane</b> and I love building beautiful websites
+                        Hey, I’m <b>Rafael Tivane</b> and I love building beautiful and responsive websites
                     </Typography>
                     <a 
-                        className={classNames(classes.heroLink, `uppercase text-slate-50 bg-blue-700 flex 
-                        items-center mt-6`)}
+                        className={classNames(classes.heroLink, `uppercase text-slate-50 bg-blue-900 flex 
+                        items-center mt-6 py-1`)}
                         href="#about-me" >
                         <span 
                             aria-label='arrow icon'
