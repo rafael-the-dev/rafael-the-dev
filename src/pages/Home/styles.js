@@ -101,18 +101,21 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up(820)]: {
             backgroundColor: 'transparent',
             flexDirection: 'row-reverse !important',
-            justifyContent: 'space-around',
+            justifyContent: 'space-between',
             marginTop: '2rem',
             '.pink-theme &, &': {
                 backgroundColor: 'transparent',
             }
+        },
+        [theme.breakpoints.up(1024)]: {
+            justifyContent: 'space-around',
         }
     },
     projectsSectionContent: {
         [theme.breakpoints.up(820)]: {
             justifyContent: 'center',
             //marginLeft: 83,
-            width: 384
+            width: '30%'
         }
 
     },
@@ -136,9 +139,13 @@ export const useStyles = makeStyles(theme => ({
             backgroundColor: '#acf1ff4f',
             marginTop: '0 !important',
             padding: '2rem',
+            width: 450,
             '.pink-theme &': {
                 backgroundColor: '#e7816b8f',
             }
+        },
+        [theme.breakpoints.up(950)]: {
+            width: 504
         },
         [theme.breakpoints.up(1050)]: {
             width: 504
@@ -179,7 +186,11 @@ export const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.up(1000)]: {
             flexGrow: 0,
-            marginLeft: 0,
+            width: '43%'
+        },
+        [theme.breakpoints.up(1024)]: {
+            flexGrow: 0,
+            marginRight: 0,
             width: '43%'
         },
         [theme.breakpoints.up(1100)]: {
