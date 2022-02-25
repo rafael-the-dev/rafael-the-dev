@@ -23,6 +23,7 @@ export const useStyles = makeStyles(theme => ({
     },
     heroContent: {
         [theme.breakpoints.up('sm')]: {
+            left: '5%', 
             width: 430
         }
     },
@@ -79,16 +80,16 @@ export const useStyles = makeStyles(theme => ({
     },
     headerGetStarted: {
         backgroundColor: "transparent !important",
-        backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2)',
+        backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2) !important',
         padding: ".4rem .7rem !important",
         textTransform: "capitalize",
         '.pink-theme &': {
-          backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B)',
+          backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B) !important',
         },
         [theme.breakpoints.up("md")]: {
             color: "#FFF !important",
             fontWeight: '700 !important',
-            marginLeft: 16,
+            //marginLeft: 16,
             padding: ".5rem .8rem !important",
         },
     },
@@ -100,7 +101,7 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up(820)]: {
             backgroundColor: 'transparent',
             flexDirection: 'row-reverse !important',
-            justifyContent: 'center',
+            justifyContent: 'space-around',
             marginTop: '2rem',
             '.pink-theme &, &': {
                 backgroundColor: 'transparent',
@@ -110,7 +111,7 @@ export const useStyles = makeStyles(theme => ({
     projectsSectionContent: {
         [theme.breakpoints.up(820)]: {
             justifyContent: 'center',
-            marginLeft: 83,
+            //marginLeft: 83,
             width: 384
         }
 
@@ -195,5 +196,11 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             maxWidth: 300
         }
+    },
+    testimonialsContainer: {
+        [theme.breakpoints.up('sm')]: {
+            paddingLeft: 'calc(5% - 1rem)',
+            paddingRight: 'calc(5% - 1rem)'
+        },
     }
 }));

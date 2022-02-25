@@ -453,6 +453,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .relative {
   position: relative;
 }
+.left-0 {
+  left: 0px;
+}
+.top-0 {
+  top: 0px;
+}
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -646,6 +652,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity));
 }
+.hover\:opacity-90:hover {
+  opacity: 0.9;
+}
 @media (min-width: 600px) {
 
   .sm\:absolute {
@@ -684,6 +693,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: column;
   }
 
+  .sm\:items-center {
+    align-items: center;
+  }
+
   .sm\:items-stretch {
     align-items: stretch;
   }
@@ -699,6 +712,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .sm\:pr-8 {
@@ -755,5 +773,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:pb-20 {
     padding-bottom: 5rem;
+  }
+
+  .lg\:pb-16 {
+    padding-bottom: 4rem;
   }
 }

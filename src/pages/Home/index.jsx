@@ -38,14 +38,14 @@ const Home = () => {
     }, [ setCurrentPage, location ]);
 
     return (
-       <main className={classNames(display.px5, )}>
-           <section className={classNames(`sm:relative`)}>
+       <main className={classNames()}>
+           <section className={classNames(display.px5, `sm:relative`)}>
                 <div 
                     aria-label='illustration image'
                     className={classNames(classes.heroIllustration, `bg-cover bg-no-repeat bg-center`)}>
                 </div>
                 <div className={classNames(classes.heroContent, `flex flex-col py-6 sm:absolute sm:bottom-0 
-                    sm:left-0 sm:bg-white sm:pr-8 md:py-8`)}>
+                    sm:bg-white sm:pr-8 md:py-8`)}>
                     <Typography 
                         className={classNames(`font-bold text-blue-900 text-3xl`)}
                         component="h1">
@@ -53,7 +53,7 @@ const Home = () => {
                     </Typography>
                     <a 
                         className={classNames(classes.heroLink, `uppercase text-slate-50 bg-blue-900 flex 
-                        items-center mt-6 py-1`)}
+                        items-center mt-6 py-1 hover:opacity-90`)}
                         href="#about-me" >
                         <span 
                             aria-label='arrow icon'
@@ -64,8 +64,8 @@ const Home = () => {
                 </div>
             </section>
             <section 
-                className={classNames(`py-16 sm:flex sm:items-stretch sm:justify-between md:justify-center
-                md:py-20 lg:pt-32 lg:pb-20 sm:flex-row-reverse lg:justify-around`)}
+                className={classNames(display.px5, `py-16 sm:flex sm:items-stretch sm:justify-between md:justify-center
+                md:py-20 lg:pt-32 lg:pb-16 sm:flex-row-reverse lg:justify-around`)}
                 >
                 <Hidden smUp>
                     <Image src={rafaelTivaneImage} />
@@ -112,7 +112,7 @@ const Home = () => {
                     </Link>
                 </div>
             </section>
-           <section className={classNames(display.flex, display.flexColumn, classes.projectsSection, 
+           <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, 
                 display.mb2, display.pt2, display.pb3, 'bg-transition')}>
                 <div className={classNames(display.flex, display.flexColumn, classes.projectsSectionContent)}>
                     <Typography component="h2" variant="h6" gutterBottom className={classNames(text.font7, classes.projectsSectionTitle)}>
@@ -156,8 +156,9 @@ const Home = () => {
                     </Button>
                 </Link>
            </section>
-           <section className={classNames(display.pb3)}>
-               <Typography component="h2" variant="h6" className={classNames(text.font7, display.mb2, 'projectsSectionTitle', classes.testimonialsSectionTitle)}>
+           <section className={classNames(display.pb3, classes.testimonialsContainer)}>
+               <Typography component="h2" variant="h6" className={classNames(display.px5, text.font7, display.mb2, 
+                'projectsSectionTitle sm:px-0', classes.testimonialsSectionTitle)}>
                    Testimonials
                 </Typography>
                <Grid container>
@@ -176,10 +177,10 @@ const Home = () => {
                    />
                </Grid>
            </section>
-           <section className={classNames(`flex flex-col items-center pb-16 sm:flex-row sm:justify-between`)}>
+           <section className={classNames(display.px5, `flex flex-col sm:items-center pb-16 sm:flex-row sm:justify-between`)}>
                 <Typography 
-                    className={classNames(classes.contactMeTitle, `font-bold text-center 
-                    sm:text-left text-blue-800 text-3xl sm:mt-0`)}
+                    className={classNames(classes.contactMeTitle, `font-bold
+                    text-blue-800 text-3xl sm:mt-0`)}
                     component="h2">
                     Interested in doing a project together?
                 </Typography>
