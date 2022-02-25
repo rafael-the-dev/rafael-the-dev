@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from '@mui/material';
+import { Button, Divider, Grid, Hidden, Typography } from '@mui/material';
 import classNames from 'classnames';
 import { useBackground, useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
@@ -8,6 +8,7 @@ import redECommerceIcon from '../../assets/images/red-ecommerce-icon.jfif'
 import Testimonial from './Testimonial';
 import { useContext, useEffect } from 'react';
 import { AppContext } from '../../context/AppContext';
+import rafaelTivaneImage from '../../assets/images/home-hero-mobile.jpg'
 import './styles.scss'
 
 const Home = () => {
@@ -18,6 +19,16 @@ const Home = () => {
     const text = useTypography();
 
     const { setCurrentPage } = useContext(AppContext);
+
+    const Image = ({ src }) => (
+        <div className={classNames(classes.aboutMeImageContainer)}>
+            <img 
+                alt="Alex Spencer"
+                className={classNames(`block h-full w-full`)}
+                src={src}
+            />
+        </div>
+    );
 
     const location = useLocation();
     useEffect(() => {
@@ -50,6 +61,54 @@ const Home = () => {
                         </span>
                         <span className={classNames(`grow text-center`)}>About me</span>
                     </a>
+                </div>
+            </section>
+            <section 
+                className={classNames(`py-16 sm:flex sm:items-stretch sm:justify-between md:justify-center
+                md:py-20 lg:pt-32 lg:pb-20 sm:flex-row-reverse lg:justify-around`)}
+                >
+                <Hidden smUp>
+                    <Image src={rafaelTivaneImage} />
+                </Hidden>
+                <Hidden mdUp smDown>
+                    <Image src={rafaelTivaneImage} />
+                </Hidden>
+                <Hidden mdDown>
+                    <Image src={rafaelTivaneImage} />
+                </Hidden>
+                <div 
+                    className={classNames(classes.aboutMeContent, `py-8 sm:flex 
+                    sm:flex-col sm:justify-center`)}
+                    id="about-me">
+                    <Hidden smUp>
+                        <Divider className={classNames(classes.aboutMeDivider, `bg-blue-500 opacity-50`)} />
+                    </Hidden>
+                    <Typography 
+                        className={classNames(`font-bold text-blue-900 text-3xl mt-6 sm:mt-0`)}
+                        component="h2">
+                        About me
+                    </Typography>
+                    <Typography 
+                        className={classNames(`text-sm sm:text-base leading-7 sm:leading-8 text-blue-800 mt-4`)}
+                        component="p">
+                        I’m a front-end developer looking for a new role in an exciting company. 
+                        I focus on writing accessible HTML, using modern CSS practices and writing 
+                        clean JavaScript. When writing JavaScript code, I mostly use React, 
+                        but I can adapt to whatever tools are required. I’m based in London, 
+                        UK, but I’m happy working remotely and have experience in remote teams. 
+                        When I’m not coding, you’ll find me outdoors. I love being out in 
+                        nature whether that’s going for a walk, run or cycling. I’d love you to 
+                        check out my work.
+                    </Typography>
+                    <Link 
+                        className={classNames(`mt-4 inline-block`)}
+                        to="/">
+                        <Button 
+                            className={classNames(`text-blue-800 border-blue-900 py-2.5 px-4`)}
+                            variant="outlined">
+                            Go to portfolio
+                        </Button>
+                    </Link>
                 </div>
             </section>
            <section className={classNames(display.flex, display.flexColumn, classes.projectsSection, 

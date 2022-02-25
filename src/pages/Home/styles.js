@@ -152,6 +152,42 @@ export const useStyles = makeStyles(theme => ({
         height: '37px !important',
         width: '84px !important'
     },
+    aboutMeImageContainer: {
+        //height: 270
+        [theme.breakpoints.up('sm')]: {
+            width: 250
+        },
+        [theme.breakpoints.up(724)]: {
+            width: 289
+        },
+        [theme.breakpoints.up('md')]: {
+            width: 381
+        },
+        [theme.breakpoints.up(1100)]: {
+            width: 418
+        }
+    },
+    aboutMeContent: {
+        [theme.breakpoints.up('sm')]: {
+            borderColor: 'rgb(51 50 61 / .4)',
+            width: 250
+        },
+        [theme.breakpoints.up(679)]: {
+            flexGrow: 1,
+            marginLeft: '4rem'
+        },
+        [theme.breakpoints.up(1000)]: {
+            flexGrow: 0,
+            marginLeft: 0,
+            width: '43%'
+        },
+        [theme.breakpoints.up(1100)]: {
+            width: 462
+        }
+    },
+    aboutMeDivider: {
+        height: 1
+    },
     contactMeTitle: {
         [theme.breakpoints.up('sm')]: {
             maxWidth: '50%'
