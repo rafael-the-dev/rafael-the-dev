@@ -104,7 +104,8 @@ const Home = () => {
                         className={classNames(`mt-4 inline-block`)}
                         to="/">
                         <Button 
-                            className={classNames(`text-blue-800 border-blue-900 py-2.5 px-4`)}
+                            className={classNames(`text-blue-800 border-blue-900 py-2.5 px-4 
+                            hover:bg-blue-900 hover:text-slate-50 hover:border-0`)}
                             variant="outlined">
                             Go to portfolio
                         </Button>
@@ -177,7 +178,8 @@ const Home = () => {
            </section>
            <section className={classNames(`flex flex-col items-center pb-16 sm:flex-row sm:justify-between`)}>
                 <Typography 
-                    className={classNames(classes.contactMeTitle, `font-bold text-center sm:text-left text-blue-500 text-3xl sm:mt-0`)}
+                    className={classNames(classes.contactMeTitle, `font-bold text-center 
+                    sm:text-left text-blue-800 text-3xl sm:mt-0`)}
                     component="h2">
                     Interested in doing a project together?
                 </Typography>
@@ -185,7 +187,8 @@ const Home = () => {
                     className={classNames(`mt-6 sm:mt-0 inline-block`)}
                     to="/">
                     <Button 
-                        className={classNames(`text-blue-500 border-blue-500 py-2.5 px-4`)}
+                        className={classNames(`text-blue-500 border-blue-500 py-2.5 px-4 hover:bg-blue-600
+                        hover:text-slate-50`)}
                         variant="outlined">
                         Contact me
                     </Button>
