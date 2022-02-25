@@ -24,7 +24,7 @@ const Home = () => {
         <div className={classNames(classes.aboutMeImageContainer)}>
             <img 
                 alt="Alex Spencer"
-                className={classNames(`block h-full w-full`)}
+                className={classNames(`block h-full w-full sm:object-contain`)}
                 src={src}
             />
         </div>

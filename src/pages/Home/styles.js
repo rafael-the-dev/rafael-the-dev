@@ -159,7 +159,7 @@ export const useStyles = makeStyles(theme => ({
             width: 250
         },
         [theme.breakpoints.up(724)]: {
-            width: 289
+            width: 305
         },
         [theme.breakpoints.up('md')]: {
             width: 381
@@ -175,7 +175,7 @@ export const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.up(679)]: {
             flexGrow: 1,
-            marginLeft: '4rem'
+            marginRight: '4rem'
         },
         [theme.breakpoints.up(1000)]: {
             flexGrow: 0,
@@ -194,7 +194,7 @@ export const useStyles = makeStyles(theme => ({
             maxWidth: '50%'
         },
         [theme.breakpoints.up('md')]: {
-            maxWidth: 300
+            //maxWidth: 300
         }
     },
     testimonialsContainer: {
