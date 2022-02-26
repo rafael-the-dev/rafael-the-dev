@@ -7,21 +7,6 @@ export const useStyles = makeStyles(theme => ({
       justifyContent: 'space-between !important'
     }
   },
-  mt0Sm: {
-    [theme.breakpoints.up(650)]: {
-      //marginTop: '0 !important'
-    }
-  },
-  mr1Sm: {
-    [theme.breakpoints.up(650)]: {
-      marginRight: '1rem !important'
-    }
-  },
-  rowSm: {
-    [theme.breakpoints.up(650)]: {
-      flexDirection: 'row !important'
-    }
-  },
   footer: {
       backgroundImage: 'linear-gradient(to bottom, #0b4681 , #186bbd ) !important',
       '.pink-theme &': {
