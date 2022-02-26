@@ -6,10 +6,6 @@ export const useStyles =  makeStyles(theme =>
             header: {
                 paddingBottom: ".9rem",
                 paddingTop: ".9rem",
-                [theme.breakpoints.up("md")]: {
-                  paddingBottom: 0,
-                  paddingTop: 0,
-                },
             },
             headerLogo: {
               color: '#1976d2',
@@ -76,10 +72,10 @@ export const useStyles =  makeStyles(theme =>
                 //textTransform: "capitalize",
                 [theme.breakpoints.up("md")]: {
                   backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2) !important',
-                  backgroundColor: "transparent !important",
+                  //backgroundColor: "transparent !important",
                   color: "#FFF !important",
                   //fontWeight: '700 !important',
-                  marginLeft: 16,
+                  //marginLeft: 16,
                   //padding: ".5rem .8rem !important",
                   '.pink-theme &': {
                     backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B) !important',

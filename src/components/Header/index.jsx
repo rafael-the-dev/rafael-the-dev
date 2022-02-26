@@ -1,7 +1,7 @@
 import { Button, Drawer, Hidden, List, ListItem, ListItemButton, ListItemIcon , ListItemText, Paper, Typography } from '@mui/material';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import { useBackground, useDisplay, useTypography, useResponsive } from '../../styles';
+import { useDisplay } from '../../styles';
 import { useStyles } from './styles'
 import React, { useState, useCallback, useMemo } from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -15,9 +15,9 @@ import { AppContext } from '../../context/AppContext'
 
 const Header = () => {
     const display = useDisplay();
-    const text = useTypography();
-    const bg = useBackground();
-    const responsive = useResponsive();
+    //const text = useTypography();
+    //const bg = useBackground();
+    //const responsive = useResponsive();
     const classes = useStyles();
 
     const { currentPage } = useContext(AppContext);
@@ -85,14 +85,14 @@ const Header = () => {
     ), [ classes, clickHandler, menuClickHandler, currentPage]);
 
     return (
-        <Paper elevation={0} component="header" className={classNames(display.flex, display.alignCenter, 
-            display.justifyBetween, display.px5, classes.header, responsive.mdPy1)}>
-            <Paper elevation={0} className={classNames(display.flex, display.alignCenter)}>
+        <Paper elevation={0} component="header" className={classNames( 
+            display.px5, classes.header, `flex items-center justify-between md:py-4`)}>
+            <Paper elevation={0} className={classNames(`flex items-center`)}>
             <Typography 
                 variant="h5" 
                 component={Link} 
                 to="/" 
-                className={classNames(text.noUnderline, text.font7, classes.headerLogo, 'text-color', 'color-transition')}>
+                className={classNames(classes.headerLogo, 'font-bold no-underline text-color', 'color-transition')}>
                 Rafael Tivane
             </Typography>
                 <Hidden mdDown>
@@ -104,18 +104,20 @@ const Header = () => {
                     </Drawer>
                 </Hidden>
             </Paper>
-            <Paper elevation={0} className={classNames(display.flex, display.alignCenter)}>
+            <Paper elevation={0} className={classNames('flex items-center')}>
                 <Hidden mdDown>
-                    <Link to="/resume" className={classNames(text.decorationNone)}>
+                    <Link to="/resume" className={classNames('no-underline')}>
                         <Button className={classNames(classes.headerGetStarted, `py-2.5 uppercase px-4 md:font-bold
-                        md:ml-4 text-sm`)}>
+                        md:ml-4 md:bg-transparent text-sm`)}>
                             Contact Me
                         </Button>
                     </Link>
                 </Hidden>
                 <Hidden mdUp>
-                    <button aria-label="menu" className={classNames(bg.transparent, display.outlineNone, 
-                        display.borderNone)} onClick={menuClickHandler}>
+                    <button 
+                        aria-label="menu" 
+                        className={classNames('bg-transparent outline-none border-0')} 
+                        onClick={menuClickHandler}>
                         <MenuIcon />
                     </button>
                 </Hidden>

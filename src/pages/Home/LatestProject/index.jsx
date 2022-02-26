@@ -1,29 +1,28 @@
 import { Paper, Typography } from '@mui/material';
-import { useBackground, useDisplay, useTypography } from '../../../styles';
+//import { useBackground, useDisplay, useTypography } from '../../../styles';
 import { useStyles } from './styles';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 const LatestProject = ({ name, description, image, nameParameter, imageClassName }) => {
-    const display = useDisplay();
-    const text = useTypography();
-    const bg = useBackground();
     const classes = useStyles();
 
     return (
-        <Paper component="article" className={classNames(display.flex, display.alignCenter, display.pt1, display.pb1, 
-            display.pl1, display.pr1, display.mb1)}>
-            <div style={{ backgroundImage: `url(${image})`}} className={classNames(bg.center, bg.noRepeat, 
-                classes.projectImage, bg.contain, imageClassName)}></div>
-            <div className={classNames(display.flex, display.flexColumn)}>
+        <Paper component="article" className={classNames( `flex items-center p-4 mb-4`)}>
+            <div 
+                aria-label="project icon"
+                style={{ backgroundImage: `url(${image})`}} 
+                className={classNames(classes.projectImage, imageClassName, 
+                `bg-center bg-no-repeat bg-contain`)}></div>
+            <div className={classNames('flex flex-col')}>
                 <Typography align="left" component="h3" gutterBottom 
-                    className={classNames(text.font7, classes.projectsTitle)}>
+                    className={classNames(classes.projectsTitle, 'font-bold')}>
                     { name }
                 </Typography>
-                <Typography gutterBottom className={classNames(text.rem9)}>
+                <Typography gutterBottom className={classNames('text-base')}>
                     { description }
                 </Typography>
-                <Link to={`/projects/${nameParameter}`} className={classNames(text.decorationNone, classes.projectLink)}>
+                <Link to={`/projects/${nameParameter}`} className={classNames('no-underline', classes.projectLink)}>
                     view details
                 </Link>
             </div>

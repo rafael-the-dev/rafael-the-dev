@@ -23,14 +23,6 @@ export const useStyles = makeStyles(theme => ({
     },
     testimonialDescription: {
         color: '#505054 !important',
-        //width: '93`%',
-        /*'&::before': { //https://www.vegvisits.com/assets/b50b74ef.png
-            background: `url(${quote}) center / contain no-repeat `,
-            content: "''",
-            display: 'block',
-            height: 80,
-            width: 80
-        }*/
     },
     testimonialAuthor: {
         color: '#051c34 !important',

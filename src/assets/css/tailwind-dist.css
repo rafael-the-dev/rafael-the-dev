@@ -474,6 +474,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mr-4 {
   margin-right: 1rem;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .block {
   display: block;
 }
@@ -516,8 +519,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .items-stretch {
   align-items: stretch;
 }
+.justify-between {
+  justify-content: space-between;
+}
 .border {
   border-width: 1px;
+}
+.border-0 {
+  border-width: 0px;
 }
 .border-y {
   border-top-width: 1px;
@@ -552,11 +561,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-cover {
   background-size: cover;
 }
+.bg-contain {
+  background-size: contain;
+}
 .bg-center {
   background-position: center;
 }
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+.p-4 {
+  padding: 1rem;
 }
 .py-2 {
   padding-top: 0.5rem;
@@ -617,6 +632,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -663,6 +682,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .opacity-50 {
   opacity: 0.5;
+}
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 .outline {
   outline-style: solid;
@@ -833,6 +856,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     justify-content: center;
   }
 
+  .md\:bg-transparent {
+    background-color: transparent;
+  }
+
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -841,6 +868,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .md\:pt-0 {
