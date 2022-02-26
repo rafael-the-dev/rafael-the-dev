@@ -183,7 +183,7 @@ const Home = () => {
            <section className={classNames(display.px5, `flex flex-col sm:items-center pb-16 sm:flex-row sm:justify-between`)}>
                 <Typography 
                     className={classNames(classes.contactMeTitle, `font-bold
-                    text-blue-800 text-3xl sm:mt-0`)}
+                    text-blue-800 text-3xl sm:mt-0 text-color`)}
                     component="h2">
                     Interested in doing a project together?
                 </Typography>
@@ -192,7 +192,7 @@ const Home = () => {
                     to="/">
                     <Button 
                         className={classNames(`text-blue-500 border-blue-500 py-2.5 px-4 hover:bg-blue-600
-                        hover:text-slate-50`)}
+                        hover:text-slate-50 hover:border-0`, classes.contactMeButton)}
                         variant="outlined">
                         Contact me
                     </Button>

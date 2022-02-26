@@ -208,6 +208,16 @@ export const useStyles = makeStyles(theme => ({
             //maxWidth: 300
         }
     },
+    contactMeButton: {
+        '.pink-theme &': {
+            borderColor: '#E7816B !important',
+            color: '#E7816B !important'
+        },
+        '.pink-theme &:hover': {
+            backgroundColor: '#E7816B !important',
+            color: '#FFF !important'
+        }
+    },
     testimonialsContainer: {
         [theme.breakpoints.up('sm')]: {
             paddingLeft: 'calc(5% - 1rem)',
