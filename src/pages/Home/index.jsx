@@ -115,15 +115,21 @@ const Home = () => {
            <section className={classNames(display.px5, `flex flex-col mb-8 pt-8 pb-12`, classes.projectsSection, 
                'bg-transition')}>
                 <div className={classNames(`flex flex-col`, classes.projectsSectionContent)}>
-                    <Typography component="h2" variant="h6" gutterBottom className={classNames(`font-bold`, classes.projectsSectionTitle)}>
+                    <Typography 
+                        component="h2" 
+                        variant="h6" 
+                        gutterBottom 
+                        className={classNames(`font-bold sm:text-3xl`, classes.projectsSectionTitle)}>
                         My latest projects
                     </Typography>
-                    <Typography variant="body2" className={classNames(classes.projectsSectionDescription)}>
+                    <Typography variant="body2" className={classNames(classes.projectsSectionDescription, `text-sm sm:text-base leading-7 sm:leading-8`)}>
                         Frontend projects built out using hottest tools that every programmer must know.
                     </Typography>
                     <Link to="/projects" className={classNames(`mt-4 no-underline hidden`,
                         classes.projectsSectionTableLink)}>
-                        <Button className={classNames(classes.headerGetStarted, `text-white text-sm`, 'bg-transition')}>
+                        <Button 
+                            className={classNames(classes.headerGetStarted, `bg-transition text-white text-sm
+                            px-6 py-3 md:font-bold`)}>
                             View more
                         </Button>
                     </Link>
@@ -150,15 +156,15 @@ const Home = () => {
                         nameParameter="coffeeroasters-subscription-site"
                     />
                 </div>
-                <Link to="/projects" className={classNames(text.decorationNone, display.mt1, classes.projectsSectionLink)}>
-                    <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8, 'bg-transition')}>
+                <Link to="/projects" className={classNames(`mt-4 no-underline`, classes.projectsSectionLink)}>
+                    <Button className={classNames(`text-white text-sm`, classes.headerGetStarted, 'bg-transition')}>
                         View more
                     </Button>
                 </Link>
            </section>
-           <section className={classNames(display.pb3, classes.testimonialsContainer)}>
-               <Typography component="h2" variant="h6" className={classNames(display.px5, text.font7, display.mb2, 
-                'projectsSectionTitle sm:px-0', classes.testimonialsSectionTitle)}>
+           <section className={classNames(classes.testimonialsContainer, `pb-12`)}>
+               <Typography component="h2" variant="h6" className={classNames(display.px5, 
+                'projectsSectionTitle sm:px-0', `font-bold mb-8`, classes.testimonialsSectionTitle)}>
                    Testimonials
                 </Typography>
                <Grid container>

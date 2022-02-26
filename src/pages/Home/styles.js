@@ -81,16 +81,16 @@ export const useStyles = makeStyles(theme => ({
     headerGetStarted: {
         backgroundColor: "transparent !important",
         backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2) !important',
-        padding: ".4rem .7rem !important",
+        //padding: ".4rem .7rem !important",
         textTransform: "capitalize",
         '.pink-theme &': {
           backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B) !important',
         },
         [theme.breakpoints.up("md")]: {
             color: "#FFF !important",
-            fontWeight: '700 !important',
+            //fontWeight: '700 !important',
             //marginLeft: 16,
-            padding: ".5rem .8rem !important",
+            //padding: ".5rem .8rem !important",
         },
     },
     projectsSection: {
@@ -122,7 +122,7 @@ export const useStyles = makeStyles(theme => ({
     projectsSectionTitle: {
         color: '#00000e',
         fontFamily: "'Abril Fatface', cursive !important",
-        fontSize: '1.4rem !important'
+        //fontSize: '1.4rem !important'
         //font-family: 'Mochiy Pop P One', sans-serif;
     },
     projectsSectionDescription: {

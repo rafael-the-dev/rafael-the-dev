@@ -576,6 +576,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -758,6 +766,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.5rem;
   }
 
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .sm\:leading-8 {
     line-height: 2rem;
   }
@@ -780,6 +793,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .md\:font-bold {
+    font-weight: 700;
   }
 }
 @media (min-width: 1024px) {
