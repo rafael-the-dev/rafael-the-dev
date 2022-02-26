@@ -82,7 +82,7 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: "transparent !important",
         backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2) !important',
         //padding: ".4rem .7rem !important",
-        textTransform: "capitalize",
+        //textTransform: "capitalize",
         '.pink-theme &': {
           backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B) !important',
         },

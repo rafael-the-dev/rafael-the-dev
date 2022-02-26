@@ -69,15 +69,15 @@ export const useStyles =  makeStyles(theme =>
                 backgroundColor: "#FFF !important",
                 color: "#186bbd !important",
                 fontSize: ".8rem",
-                padding: ".3rem .5rem !important",
+                //padding: ".3rem .5rem !important",
                 textTransform: "capitalize",
                 [theme.breakpoints.up("md")]: {
                   backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2) !important',
                   backgroundColor: "transparent !important",
                   color: "#FFF !important",
-                  fontWeight: '700 !important',
+                  //fontWeight: '700 !important',
                   marginLeft: 16,
-                  padding: ".5rem .8rem !important",
+                  //padding: ".5rem .8rem !important",
                   '.pink-theme &': {
                     backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B) !important',
                   }

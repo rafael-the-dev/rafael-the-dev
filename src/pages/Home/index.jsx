@@ -129,7 +129,7 @@ const Home = () => {
                         classes.projectsSectionTableLink)}>
                         <Button 
                             className={classNames(classes.headerGetStarted, `bg-transition text-white text-sm
-                            px-6 py-3 md:font-bold`)}>
+                            px-6 py-3 md:font-bold `)}>
                             View more
                         </Button>
                     </Link>

@@ -27,12 +27,12 @@ const Header = () => {
     const clickHandler = useCallback(() => setCanIOpenNavBar(false), []);
 
     const headerNavigation = useMemo(() => (
-        <Paper elevation={0} component="nav" className={classNames(responsive.mdMl2, classes.headerNav, 
-             responsive.mdRelative, display.h100, display.pt1, responsive.mdPt0)}>
+        <Paper elevation={0} component="nav" className={classNames(classes.headerNav, 
+            `md:ml-8 md:relative h-full pt-4 md:pt-0`)}>
             <Hidden mdUp>
-                <Button onClick={menuClickHandler}><ArrowBackIcon classes={{ root: text.textLight}} /></Button>
+                <Button onClick={menuClickHandler}><ArrowBackIcon classes={{ root: 'text-white'}} /></Button>
             </Hidden>
-            <List component="ul" className={classNames(display.flex, display.flexColumn, responsive.mdRow)}>
+            <List component="ul" className={classNames(`flex flex-col md:flex-row`)}>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/" >
                     <ListItemButton>
                         <Hidden mdUp>
@@ -105,7 +105,10 @@ const Header = () => {
             <Paper elevation={0} className={classNames(display.flex, display.alignCenter)}>
                 <Hidden mdDown>
                     <Link to="/resume" className={classNames(text.decorationNone)}>
-                        <Button className={classNames(classes.headerGetStarted, `py-2 uppercase px-4`)}>Contact Me</Button>
+                        <Button className={classNames(classes.headerGetStarted, `py-2.5 uppercase px-4 md:font-bold
+                        `)}>
+                            Contact Me
+                        </Button>
                     </Link>
                 </Hidden>
                 <Hidden mdUp>
