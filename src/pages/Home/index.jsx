@@ -112,23 +112,23 @@ const Home = () => {
                     </Link>
                 </div>
             </section>
-           <section className={classNames(display.px5, display.flex, display.flexColumn, classes.projectsSection, 
-                display.mb2, display.pt2, display.pb3, 'bg-transition')}>
-                <div className={classNames(display.flex, display.flexColumn, classes.projectsSectionContent)}>
-                    <Typography component="h2" variant="h6" gutterBottom className={classNames(text.font7, classes.projectsSectionTitle)}>
+           <section className={classNames(display.px5, `flex flex-col mb-8 pt-8 pb-12`, classes.projectsSection, 
+               'bg-transition')}>
+                <div className={classNames(`flex flex-col`, classes.projectsSectionContent)}>
+                    <Typography component="h2" variant="h6" gutterBottom className={classNames(`font-bold`, classes.projectsSectionTitle)}>
                         My latest projects
                     </Typography>
                     <Typography variant="body2" className={classNames(classes.projectsSectionDescription)}>
                         Frontend projects built out using hottest tools that every programmer must know.
                     </Typography>
-                    <Link to="/projects" className={classNames(text.decorationNone, display.mt1, display.none,
+                    <Link to="/projects" className={classNames(`mt-4 no-underline hidden`,
                         classes.projectsSectionTableLink)}>
-                        <Button className={classNames(classes.headerGetStarted, text.textLight, text.rem8, 'bg-transition')}>
+                        <Button className={classNames(classes.headerGetStarted, `text-white text-sm`, 'bg-transition')}>
                             View more
                         </Button>
                     </Link>
                 </div>
-                <div className={classNames(display.flex, display.flexColumn, display.alignStretch, display.mt2, 
+                <div className={classNames(`flex flex-col items-stretch mt-8`, 
                     classes.projectsSectionProjectsContainer, 'bg-transition')}>
                     <LatestProject 
                         name="Audiophile E-commerce"
