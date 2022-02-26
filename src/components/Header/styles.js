@@ -62,15 +62,18 @@ export const useStyles =  makeStyles(theme =>
               headerNavItemText: {
                 width: 'max-content',
                 [theme.breakpoints.up('md')]: {
-                  color: '#000 !important'
+                  //color: '#000 !important'
                 }
               },
               headerGetStarted: {
-                backgroundColor: "#FFF !important",
+                //backgroundColor: "#FFF !important",
                 color: "#186bbd !important",
-                fontSize: ".8rem",
+                '&:hover': {
+                  color: "#FFF !important",
+                },
+                //fontSize: ".8rem",
                 //padding: ".3rem .5rem !important",
-                textTransform: "capitalize",
+                //textTransform: "capitalize",
                 [theme.breakpoints.up("md")]: {
                   backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2) !important',
                   backgroundColor: "transparent !important",
@@ -93,7 +96,7 @@ export const useStyles =  makeStyles(theme =>
                   width: '80%'
               },
               headerContactMe: {
-                padding: ".55rem .5rem !important",
+                //padding: ".55rem .5rem !important",
               },
               currentPage: {
                 color: '#27b1bf !important',

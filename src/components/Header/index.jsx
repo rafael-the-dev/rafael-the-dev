@@ -36,51 +36,53 @@ const Header = () => {
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/" >
                     <ListItemButton>
                         <Hidden mdUp>
-                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                                <HomeIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/'})}} />
+                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames('mr-4')}>
+                                <HomeIcon classes={{ root: classNames('text-white', { [classes.currentPage]: currentPage === '/'})}} />
                             </ListItemIcon>
                         </Hidden>
-                        <ListItemText classes={{ root: classNames(text.textLight, 'color-transition', classes.headerNavItemText, 
-                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/'})}} primary="Home" />
+                        <ListItemText classes={{ root: classNames('text-white md:my-0 md:text-black', 'color-transition', classes.headerNavItemText, 
+                            { [classes.currentPage]: currentPage === '/'})}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/projects">
                     <ListItemButton>
                         <Hidden mdUp>
-                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                                <DashboardIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/projects'})}} />
+                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames('mr-4')}>
+                                <DashboardIcon classes={{ root: classNames('text-white', { [classes.currentPage]: currentPage === '/projects'})}} />
                             </ListItemIcon>
                         </Hidden>
-                        <ListItemText classes={{ root: classNames(text.textLight, 'color-transition', classes.headerNavItemText, 
-                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/projects'})}} primary="Projects" />
+                        <ListItemText classes={{ root: classNames('text-white md:my-0 md:text-black', 'color-transition', classes.headerNavItemText, 
+                            { [classes.currentPage]: currentPage === '/projects'})}} primary="Projects" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/resume">
                     <ListItemButton>
                         <Hidden mdUp>
-                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames(display.mr1)}>
-                                <ArticleIcon classes={{ root: classNames(text.textLight, { [classes.currentPage]: currentPage === '/resume'})}} />
+                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames('mr-4')}>
+                                <ArticleIcon classes={{ root: classNames('text-white', { [classes.currentPage]: currentPage === '/resume'})}} />
                             </ListItemIcon>
                         </Hidden>
-                        <ListItemText classes={{ root: classNames(text.textLight, 'color-transition', classes.headerNavItemText, 
-                            responsive.mdMb0, responsive.mdMt0, { [classes.currentPage]: currentPage === '/resume'})}} primary="Resume" />
+                        <ListItemText classes={{ root: classNames('text-white md:my-0 md:text-black ', 'color-transition', classes.headerNavItemText, 
+                            { [classes.currentPage]: currentPage === '/resume'})}} primary="Resume" />
                     </ListItemButton>
                 </ListItem>
             </List>
             <Hidden mdUp>
-                <Paper elevation={0} className={classNames(display.flex, display.flexColumn, 
-                    display.alignStretch, display.absolute, display.w100, bg.transparent, classes.headerDrawerBottom)}>
-                    <Link to="/resume" onClick={clickHandler} className={classNames(text.decorationNone, classes.contactMeLink)}>
+                <Paper elevation={0} className={classNames(`flex flex-col items-stretch absolute w-full 
+                    bg-transparent`, classes.headerDrawerBottom)}>
+                    <Link to="/resume" onClick={clickHandler} 
+                        className={classNames(classes.contactMeLink, `no-underline`)}>
                         <Button 
-                            className={classNames(classes.headerGetStarted, text.font7, display.w100, 
-                            classes.headerContactMe, text.textLight, 'bg-transition')}>
+                            className={classNames(classes.headerGetStarted, classes.headerContactMe, 
+                            'bg-transition', `bg-white text-sm capitalize font-bold w-full text-white py-3
+                            hover:border hover:border-white hover:border-solid`)}>
                             Contact me
                         </Button>
                     </Link>
                 </Paper>
             </Hidden>
         </Paper>
-    ), [ classes, clickHandler, display, responsive, text, menuClickHandler, bg, currentPage]);
+    ), [ classes, clickHandler, menuClickHandler, currentPage]);
 
     return (
         <Paper elevation={0} component="header" className={classNames(display.flex, display.alignCenter, 
@@ -106,7 +108,7 @@ const Header = () => {
                 <Hidden mdDown>
                     <Link to="/resume" className={classNames(text.decorationNone)}>
                         <Button className={classNames(classes.headerGetStarted, `py-2.5 uppercase px-4 md:font-bold
-                        `)}>
+                        md:ml-4 text-sm`)}>
                             Contact Me
                         </Button>
                     </Link>
