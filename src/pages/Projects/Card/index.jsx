@@ -12,15 +12,15 @@ const Card = ({ project, name, description, nameParameter, imageLink }) => {
     const classes = useStyles();
 
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames(display.mb3)}>
-            <Paper component="article" className={classNames(classes.projectCard, display.relative,
-                display.pt3, display.pb2, display.pl1)}>
-                <div style={{ backgroundImage: `url(${project.imageLink})`}} className={classNames(bg.contain, 
-                    bg.noRepeat, bg.center, display.absolute, classes.projectCardIcon)}></div>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-12')}>
+            <Paper component="article" className={classNames(classes.projectCard,
+               `relative pb-8 pl-4 pt-12`)}>
+                <div aria-label='project icon' style={{ backgroundImage: `url(${project.imageLink})`}} className={classNames( 
+                    classes.projectCardIcon, `bg-contain bg-center bg-no-repeat absolute`)}></div>
                 <Typography gutterBottom component="h2" variant="h6" className={classNames(text.font7, classes.projectCardTitle)}>
                     { project.name }
                 </Typography>
-                <Typography className={classNames(text.rem9, classes.projectCardDescription, display.mb1, "content-css")}
+                <Typography className={classNames(text.rem9, classes.projectCardDescription, "mb-4 content-css")}
                     component={ShowMoreText}
                     lines={3}
                     more="Show more"

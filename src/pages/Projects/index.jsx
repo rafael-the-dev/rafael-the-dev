@@ -243,7 +243,7 @@ const ProjectsContainer = () => {
                 <Button 
                         endIcon={<SearchIcon />} 
                         onClick={searchHandler}
-                        className={classNames(display.outlineNone, classes.searchButton, 'text-color', 'color-transition')}>
+                        className={classNames(classes.searchButton, 'outline-none text-color', 'color-transition')}>
                         Search
                     </Button>
                 </Hidden>
@@ -258,7 +258,7 @@ const ProjectsContainer = () => {
             <Button 
                 onClick={handlePaginationChange} 
                 disabled={!hasMoreProjects} 
-                className={classNames(classes.loadMoreButton, text.textLight, text.rem8, 'bg-transition')}>
+                className={classNames(classes.loadMoreButton, 'text-white text-sm bg-transition')}>
                 View more
             </Button>
        </main>
