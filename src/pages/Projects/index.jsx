@@ -217,8 +217,7 @@ const ProjectsContainer = () => {
                     ref={searchInputRef}
                     placeholder="Insert text here to search"
                     onChange={inputOnChangeHandler}
-                    className={classNames(display.flexGrow1, display.borderNone, display.outlineNone, 
-                    classes.searchInput)} 
+                    className={classNames(classes.searchInput, `grow border-0 outline-none`)} 
                 />
                 <Hidden smUp>
                     <Tooltip title="filter projects">
