@@ -248,7 +248,7 @@ const ProjectsContainer = () => {
                     </Button>
                 </Hidden>
            </form>
-           <Grid container className={classNames(display.mt2, responsive.mdMt2)}>
+           <Grid container className={classNames('mt-8')}>
                {
                     projectsList.map((project, index) => (
                        <Card nameParameter={project[0]} project={project[1]} key={index}/>
