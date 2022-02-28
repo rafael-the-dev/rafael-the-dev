@@ -203,7 +203,7 @@ const ProjectDetail = () => {
                             href={project.sourceCodeURL} 
                             rel="noreferrer" 
                             target="_blank" 
-                            className={classNames(`flex items-center ml4`, classes.linkText, 'color-transition')}>
+                            className={classNames(`flex items-center ml-4`, classes.linkText, 'color-transition')}>
                             <GitHubIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')}/> 
                             Github
                         </a>

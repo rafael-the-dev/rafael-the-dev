@@ -14,78 +14,77 @@ import EmailIcon from '@mui/icons-material/Email';//
 
 
 const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
-    <div className={classNames(classes.leftSide, display.flex, display.flexColumn, display.alignCenter, 
-        display.pt2, responsive.mdPt1, { [display.none]: !open.leftSide && isMobile }, 'bg-transition')}>
-        <div className={classNames(display.flex, classes.leftSideIntro, display.pl1, responsive.mdPl0, display.mb1)}>
-            <figure className={classNames(classes.imageContainer, display.mr0, display.ml0)}>
+    <div className={classNames(classes.leftSide, `flex flex-col items-center pt-8 md:pt-4`, 
+        { 'hidden': !open.leftSide && isMobile }, 'bg-transition')}>
+        <div className={classNames(classes.leftSideIntro, `flex pl-4 mb-4 md:pl-0`)}>
+            <figure className={classNames(classes.imageContainer, 'mx-0')}>
                 <img 
                     src={rafaelImage}
                     alt="rafael tivane" 
-                    className={classNames(display.block, display.h100, display.w100, classes.leftSideImage)}
+                    className={classNames('block h-full w-full', classes.leftSideImage)}
                 />
             </figure>
             <Hidden mdUp>
-                <div className={classNames(display.ml1, display.pt1, text.textLight)}>
-                    <Typography component="h2" variant="h5" className={classNames(text.font7, 
-                        display.pl)}>
+                <div className={classNames('ml-4 pt-4 text-white')}>
+                    <Typography component="h2" variant="h5" className={classNames('font-bold')}>
                         Rafael Tivane
                     </Typography>
-                    <Typography component="p" variant="h6" className={classNames(display.opacity8)}>
+                    <Typography component="p" variant="h6" className={classNames('opacity-80')}>
                         Frontend Developer
                     </Typography>
                 </div>
             </Hidden>
         </div>
-        <div className={classNames(display.flex, display.flexColumn, display.w100, display.mb1)}>
-            <div className={classNames(classes.leftSideSubtitleContainer, display.pl2, display.mb1)}>
+        <div className={classNames('flex flex-col w-full mb-4')}>
+            <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
                 <Typography component="h2" variant="h5">Contact</Typography>
             </div>
-            <div className={classNames(display.flex, display.flexColumn, display.pl2)}>
-                <a target="_blank" rel="noreferrer" className={classNames(display.flex, display.alignCenter, 
-                    text.decorationNone, classes.contactLinks)} href="mailto:luislangabusiness@gmail.com">
+            <div className={classNames('flex flex-col pl-8')}>
+                <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline', 
+                    classes.contactLinks)} href="mailto:luislangabusiness@gmail.com">
                     <EmailIcon  className={classNames(text.textLight, display.mr1)} /> Gmail
                 </a>
-                <a target="_blank" rel="noreferrer" className={classNames(display.flex, display.alignCenter, 
-                    text.decorationNone, classes.contactLinks)} href="https://linkedin.com/in/rafael-tivane/">
+                <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline' 
+                    ,classes.contactLinks)} href="https://linkedin.com/in/rafael-tivane/">
                     <LinkedInIcon  className={classNames(text.textLight, display.mr1)} /> Linkedin
                 </a>
-                <a target="_blank" rel="noreferrer" className={classNames(display.flex, display.alignCenter, 
-                    text.decorationNone, classes.contactLinks)} href="https://github.com/rafael-the-dev/">
+                <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline' 
+                    ,classes.contactLinks)} href="https://github.com/rafael-the-dev/">
                     <GitHubIcon  className={classNames(text.textLight, display.mr1)} /> Github
                 </a>
-                <a target="_blank" rel="noreferrer" className={classNames(display.flex, display.alignCenter, 
-                    text.decorationNone, classes.contactLinks)} href="https://www.instagram.com/rafael_the_dev/?hl=en">
-                    <InstagramIcon  className={classNames(text.textLight, display.mr1)} /> Instagram
+                <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline' 
+                    ,classes.contactLinks)} href="https://www.instagram.com/rafael_the_dev/?hl=en">
+                    <InstagramIcon  className={classNames('text-white mr-4')} /> Instagram
                 </a>
             </div>
         </div>
-        <div className={classNames(display.flex, display.flexColumn, display.w100, display.mb1)}>
-            <div className={classNames(classes.leftSideSubtitleContainer, display.pl2, display.mb1)}>
+        <div className={classNames('flex flex-col w-full mb-4')}>
+            <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
                 <Typography component="h2" variant="h5">Education</Typography>
             </div>
-            <div className={classNames(display.pl2, display.pr1, display.mb1, text.textLight)}>
+            <div className={classNames('pl-2 pr-1 mb-4 text-white')}>
                 <Typography component="h3" >React Developer</Typography>
                 <a 
                     href="https://www.alura.com.br/" 
                     target="_blank" rel="noreferrer" 
-                    className={classNames(text.textLight, text.decorationNone)}>
-                    <Typography component="p" className={classNames(text.rem8, display.opacity8)} >
+                    className={classNames('text-white no-underline')}>
+                    <Typography component="p" className={classNames('text-sm opacity-80')} >
                         Alura Online
                     </Typography>
                 </a>
             </div>
-            <div className={classNames(display.pl2, display.pr1, display.mb1, text.textLight)}>
+            <div className={classNames('pl-8 pr-4 mb-4 text-white')}>
                 <Typography component="h3" >Self-taught Programmer</Typography>
-                <Typography component="p" className={classNames(text.rem8, display.opacity8)} >
+                <Typography component="p" className={classNames('text-sm opacity-80')} >
                     Developed professional skills based on online researches, tutorials and udemy courses.
                 </Typography>
             </div>
         </div>
-        <div className={classNames(display.flex, display.flexColumn, display.w100)}>
-            <div className={classNames(classes.leftSideSubtitleContainer, display.pl2, display.mb1)}>
+        <div className={classNames('flex flex-col w-full', )}>
+            <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
                 <Typography component="h2" variant="h5">Expertise</Typography>
             </div>
-            <ul className={classNames(display.flex, display.flexColumn, display.pl2, text.textLight, display.opacity9, display.mt0)}>
+            <ul className={classNames(`flex flex-col pl-8 text-white opacity-90 mt-0`)}>
                 <li className={classNames(classes.expertiseItem)}>JavaScript</li>
                 <li className={classNames(classes.expertiseItem)}>HTML5</li>
                 <li className={classNames(classes.expertiseItem)}>CSS3</li>
@@ -94,11 +93,11 @@ const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
                 <li className={classNames(classes.expertiseItem)}>Bootstrap 5</li>
             </ul>
         </div>
-        <div className={classNames(display.flex, display.flexColumn, display.w100)}>
-            <div className={classNames(classes.leftSideSubtitleContainer, display.pl2, display.mb1)}>
+        <div className={classNames('flex flex-col w-full')}>
+            <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
                 <Typography component="h2" variant="h5">Languages</Typography>
             </div>
-            <ul className={classNames(display.flex, display.flexColumn, display.pl2, text.textLight, display.opacity9, display.mt0)}>
+            <ul className={classNames(`flex flex-col pl-8 text-white opacity-90 mt-0`)}>
                 <li className={classNames(classes.expertiseItem)}>English</li>
                 <li className={classNames(classes.expertiseItem)}>Portuguese</li>
             </ul>
@@ -216,10 +215,10 @@ const Resume = () => {
         }
     }, [ setCurrentPage, location ]);
     return (
-        <Paper elevation={2} component="main" className={classNames(display.flex, display.alignStretch, classes.main, 
-        display.pt1, display.mb3, display.mt2, display.flexColumn, responsive.mdRow)}>
+        <Paper elevation={2} component="main" className={classNames(classes.main, `flex flex-col items-stretch 
+            pt-4 mb-12 mt-8 md:flex-row`)}>
             <Hidden mdUp>
-                <div style={{ marginLeft: 7}} className={classNames(display.flex, display.alignStretch, display.mb1)}>
+                <div style={{ marginLeft: 7}} className={classNames('flex items-stretch mb-4')}>
                     <Button 
                         onClick={leftSideButtonClickHandler}
                         className={classNames(classes.button, { [classes.selectedButton]: open.leftSide, [classes.notSelectedButton]: !open.leftSide}, 'bg-transition', 'color-transition')}>
