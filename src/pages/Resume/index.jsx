@@ -123,9 +123,17 @@ const RightSide = ({ open, classes, isMobile}) => (
                     About me
                 </Typography>
             </div>
-            <Typography className={classNames(`sm:text-base opacity-90 px-4 pt-4`)}>
-                Professional remote Web Developer focused on Front-end Developement with more than 2 years of experience in web development process, 
-                Involved in app testing, development, management and problem-solving.
+            <Typography className={classNames(`sm:text-base opacity-90 px-4 pt-4 mb-4`)}>
+                I’m a front-end developer looking for a new role in an exciting company. 
+                I focus on writing accessible HTML, using modern CSS practices and writing 
+                clean JavaScript. When writing JavaScript code, I mostly use React. 
+                Besides these I spend time working on personal projects, challenges and learning new skills.
+            </Typography>
+            <Typography className={classNames(`sm:text-base opacity-90 px-4`)}>
+                I’m based in Maputo, 
+                Mozambique, but I’m happy working remotely and have experience in remote teams. 
+                When I’m not coding, you’ll find me outdoors. I love being out in 
+                nature whether that’s going for a walk, run or reading. 
             </Typography>
         </div>
         <div className={classNames('pt-4')}>
@@ -256,3 +264,9 @@ const Resume = () => {
 };
 
 export default Resume;
+
+/*
+
+                Professional remote Web Developer focused on Front-end Developement with more than 2 years of experience in web development process, 
+                Involved in app testing, development, management and problem-solving.
+    */

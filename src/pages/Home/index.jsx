@@ -99,7 +99,7 @@ const Home = () => {
                     </Typography>
                     <Link 
                         className={classNames(`mt-4 inline-block`)}
-                        to="/">
+                        to="/projects">
                         <Button 
                             className={classNames(`text-blue-800 border-blue-900 py-2.5 px-4 
                             hover:bg-blue-900 hover:text-slate-50 hover:border-0`)}
@@ -189,7 +189,7 @@ const Home = () => {
                 </Typography>
                 <Link 
                     className={classNames(`mt-6 sm:mt-0 inline-block`)}
-                    to="/">
+                    to="/resume">
                     <Button 
                         className={classNames(`text-blue-500 border-blue-500 py-2.5 px-4 hover:bg-blue-600
                         hover:text-slate-50 hover:border-0`, classes.contactMeButton)}
@@ -205,8 +205,8 @@ const Home = () => {
 export default Home;
 
 
-/**
- * <section className={classNames(classes.heroSection, bg.cover, bg.noRepeat, bg.center)}>
+/*
+ <section className={classNames(classes.heroSection, bg.cover, bg.noRepeat, bg.center)}>
                 <div className={classNames(classes.heroMobileBanner, bg.noRepeat, bg.cover, bg.center)}></div>
                 <div className={classNames(display.flex, display.flexColumn, display.pt1, display.px5, display.pb2,
                         classes.heroSectionContent)}>
