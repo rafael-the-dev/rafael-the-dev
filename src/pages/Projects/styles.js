@@ -12,7 +12,6 @@ export const useStyles = makeStyles(theme => ({
     searchInput: {
         color: '#555262',
         fontFamily: "'Roboto', sans-serif",
-        fontSize: '1rem',
         height: 47,
         paddingLeft: 10
     },
@@ -20,16 +19,9 @@ export const useStyles = makeStyles(theme => ({
         height: '53px !important'
     },
     loadMoreButton: {
-        backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2)',
-        backgroundColor: "transparent !important",
-        fontSize: ".8rem",
-        padding: ".3rem .5rem !important",
-        textTransform: "capitalize",
+        backgroundImage: 'linear-gradient(to right, #9f2395, #1976d2) !important',
         '.pink-theme &': {
-          backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B)',
-        },
-        [theme.breakpoints.up("md")]: {
-          padding: ".5rem .8rem !important",
+          backgroundImage: 'linear-gradient(to right, #8d1983, #E7816B) !important',
         },
     },
     checkboxGroup: {

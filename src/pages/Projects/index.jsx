@@ -1,6 +1,6 @@
 import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Hidden, IconButton, Popover, Tooltip } from '@mui/material';
 import classNames from 'classnames';
-import { useDisplay, useResponsive, useTypography } from '../../styles';
+import { useDisplay } from '../../styles';
 import { useStyles } from './styles';
 import { useLocation } from 'react-router-dom';
 import { useContext } from 'react';
@@ -13,8 +13,6 @@ import React, { useCallback, useEffect, useState, useRef } from 'react';
 const ProjectsContainer = () => {
     //const bg = useBackground();
     const display = useDisplay();
-    const text = useTypography();
-    const responsive = useResponsive();
     const classes = useStyles();
 
     const { projects, setCurrentPage } = useContext(AppContext);
@@ -177,9 +175,8 @@ const ProjectsContainer = () => {
     }, [ getFilteredInvoices, state ]);
 
     return (
-       <main className={classNames(display.px5, display.pb3)}>
-           <form className={classNames(display.flex, display.alignStretch, display.w100, classes.searchForm, display.mb3)}>
-                
+       <main className={classNames(display.px5, 'pb-12 pt-6')}>
+           <form className={classNames(`flex items-stretch mb-16`, classes.searchForm,)}>
                 <Popover
                     id={popoverId}
                     open={Boolean(anchorEl)}
@@ -217,7 +214,7 @@ const ProjectsContainer = () => {
                     ref={searchInputRef}
                     placeholder="Insert text here to search"
                     onChange={inputOnChangeHandler}
-                    className={classNames(classes.searchInput, `grow border-0 outline-none`)} 
+                    className={classNames(classes.searchInput, `text-base grow border-0 outline-none`)} 
                 />
                 <Hidden smUp>
                     <Tooltip title="filter projects">
@@ -248,7 +245,7 @@ const ProjectsContainer = () => {
                     </Button>
                 </Hidden>
            </form>
-           <Grid container className={classNames('mt-8')}>
+           <Grid container className={classNames('mt-8 sm:justify-between')}>
                {
                     projectsList.map((project, index) => (
                        <Card nameParameter={project[0]} project={project[1]} key={index}/>
@@ -258,7 +255,8 @@ const ProjectsContainer = () => {
             <Button 
                 onClick={handlePaginationChange} 
                 disabled={!hasMoreProjects} 
-                className={classNames(classes.loadMoreButton, 'text-white text-sm bg-transition')}>
+                className={classNames(classes.loadMoreButton, `text-white text-sm bg-transition
+                bg-transparent py-2.5 px-4 capitalize hover:opacity-90`)}>
                 View more
             </Button>
        </main>

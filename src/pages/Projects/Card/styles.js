@@ -1,10 +1,21 @@
 import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(theme => ({
+    card: {
+        [theme.breakpoints.up('sm')]: {
+            maxWidth: '48.5%'
+        },
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '31.5%'
+        },
+        [theme.breakpoints.up('lg')]: {
+            maxWidth: '23.5%'
+        }
+    },
     projectCard: {
         //height: '67% !important',
         [theme.breakpoints.up('sm')]: {
-            marginRight: '10% !important'
+            //marginRight: '10% !important'
         }
     },
     projectCardIcon: {
@@ -19,6 +30,14 @@ export const useStyles = makeStyles(theme => ({
         //overflow: 'hidden',
         width: 245,
         //whiteSpace: 'nowrap'
+    },
+    projectCardDescription: {
+        '& a': {
+            color: '#186bbd',
+            "&:hover": {
+                textDecoration: 'underline'
+            }
+        }
     },
     projectCardLink: {
         color: '#9f2395 !important',

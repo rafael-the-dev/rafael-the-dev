@@ -1,20 +1,16 @@
 import { Grid, Paper, Typography } from '@mui/material';
-import { useBackground, useDisplay, useTypography } from '../../../styles';
 import { useStyles } from './styles';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import ShowMoreText from "react-show-more-text";
 
 const Card = ({ project, name, description, nameParameter, imageLink }) => {
-    const display = useDisplay();
-    const text = useTypography();
-    const bg = useBackground();
     const classes = useStyles();
 
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-12')}>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16', classes.card)}>
             <Paper component="article" className={classNames(classes.projectCard,
-               `relative pb-8 pl-4 pt-12 h-full flex flex-col`)}>
+               `relative pb-8 px-4 pt-12 h-full flex flex-col`)}>
                 <div
                      aria-label='project icon' 
                      style={{ backgroundImage: `url(${project.imageLink})`}} 
