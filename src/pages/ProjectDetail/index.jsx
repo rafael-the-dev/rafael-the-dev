@@ -1,7 +1,7 @@
 import { Button, Grid, IconButton, List, ListItem, ListItemText, Paper, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useDisplay, useTypography } from '../../styles';
+import { useDisplay } from '../../styles';
 import classNames from 'classnames';
 import { useStyles } from './styles'
 import { AppContext } from '../../context/AppContext';
@@ -17,7 +17,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 const ProjectDetail = () => {
     const display = useDisplay();
-    const text = useTypography();
     const classes = useStyles();
 
     const [ project, setProject ] = useState({ backward: '', content: { features: [], tools: [] }, forward: ''})
@@ -32,17 +31,29 @@ const ProjectDetail = () => {
                     project.content.features.map((feature, index) => {
                         if(typeof feature === 'object') {
                             return (
-                                <ListItem key={index} classes={{ root: display.pt0}} className={classNames(display.flex, display.flexColumn, display.alignStart)}>
-                                    <ListItemText classes={{ primary: classNames(display.flex, display.alignBaseline, text.rem9) }}>
-                                        <CircleIcon  sx={{ fontSize: '.7rem' }}  className={classNames(text.rem7, classes.listItemCircle)} /> { feature.name }
+                                <ListItem 
+                                    key={index} 
+                                    classes={{ root: 'pt-0'}} 
+                                    className={classNames('flex flex-col items-start')}>
+                                    <ListItemText 
+                                        classes={{ primary: classNames('flex items-baseline text-sm sm:text-base') }}>
+                                        <CircleIcon  
+                                            sx={{ fontSize: '.7rem' }}  
+                                            className={classNames('text-sm', classes.listItemCircle)} 
+                                        /> 
+                                        { feature.name }
                                     </ListItemText>
                                     <List>
                                         {
                                             feature.list.map((item, subIndex) => (
-                                                <ListItem key={subIndex} classes={{ root: display.pt0}} >
+                                                <ListItem key={subIndex} classes={{ root: 'pt-0'}} >
                                                     <ListItemText 
-                                                        classes={{ primary: classNames(display.flex, display.alignBaseline, text.rem9) }}>
-                                                         <CircleOutlinedIcon  sx={{ fontSize: '.7rem' }}  className={classNames(text.rem7, classes.listItemCircle)} /> { item }
+                                                        classes={{ primary: classNames('flex items-baseline text-sm sm:text-base') }}>
+                                                         <CircleOutlinedIcon  
+                                                            sx={{ fontSize: '.7rem' }}  
+                                                            className={classNames('text-sm', classes.listItemCircle)} 
+                                                        /> 
+                                                            { item }
                                                     </ListItemText>
                                                 </ListItem>
                                             ))
@@ -52,9 +63,14 @@ const ProjectDetail = () => {
                             );
                         } else {
                             return (
-                                <ListItem key={index} classes={{ root: display.pt0}} >
-                                    <ListItemText classes={{ primary: classNames(display.flex, display.alignBaseline, text.rem9) }} >
-                                        <CircleIcon  sx={{ fontSize: '.7rem' }}  className={classNames(text.rem7, classes.listItemCircle)} /> { feature }
+                                <ListItem key={index} classes={{ root: 'pt-0'}} >
+                                    <ListItemText 
+                                        classes={{ primary: classNames('flex items-baseline text-sm sm:text-base') }} >
+                                        <CircleIcon  
+                                            sx={{ fontSize: '.7rem' }}  
+                                            className={classNames('text-sm', classes.listItemCircle)} 
+                                        /> 
+                                        { feature }
                                     </ListItemText>
                                 </ListItem>
                             );
@@ -63,18 +79,21 @@ const ProjectDetail = () => {
                 }
             </List>
         );
-    }, [ project, text, classes, display, expandMore ]);
+    }, [ project, classes, expandMore ]);
 
     const getTools = useCallback(() => (
-        <ul classes={{ root: classes.list }} className={classNames(display.flex, display.alignCenter,
-         display.listStyleNone, display.pl1, display.flexWrap)}>
+        <ul classes={{ root: classes.list }} className={classNames('flex items-center list-none pl-4 flex-wrap')}>
             {
                 project.content.tools.map((tool, index) => (
-                    <li key={index} className={classNames(display.mb1, display.mr1, 'color-transition',classes.toolsItem)} >{ tool.name }</li>
+                    <li 
+                        key={index} 
+                        className={classNames('mb-4 mr-4 color-transition',classes.toolsItem)} >
+                        { tool.name }
+                    </li>
                 ))
             }
         </ul>
-    ), [ project, classes, display ]);
+    ), [ project, classes ]);
 
     //['audiophile-e-commerce', 'dine-restaurant-website', 'photosnap', 'devjobs-web-app',
     //'coffeeroasters-subscription-site']
@@ -106,17 +125,19 @@ const ProjectDetail = () => {
     }, [ projects ]);
 
     return (
-        <Grid container component="main" className={classNames(display.pt1, display.pb3, display.px5)}>
+        <Grid container component="main" className={classNames(display.px5, 'pt-4 pb-12')}>
             <Grid item xs={12}>
-                <Paper elevation={0} className={classNames(display.flex, display.justifyBetween, display.alignCenter)}>
+                <Paper 
+                    elevation={0} 
+                    className={classNames('flex justify-between items-center')}>
                     <IconButton onClick={handlerNavigate(project.backward)}>
                         <ArrowBackIcon />
                     </IconButton>
                     <Typography 
                         component="h1" 
                         variant="h6" 
-                        classes={{ h6: text.font7 }}
-                        className={classNames(display.flexGrow1, text.alignCenter)}>
+                        classes={{ h6: 'font-bold' }}
+                        className={classNames('grow text-center')}>
                         { project.name }
                     </Typography>
                     <IconButton onClick={handlerNavigate(project.forward)}>
@@ -126,10 +147,10 @@ const ProjectDetail = () => {
             </Grid>
             <Grid item xs={12}>
                 <Paper elevation={0} 
-                    classes={{ root: classNames(classes.videoContainer, display.mt1) }} 
-                    className={classNames( display.mlAuto, display.mrAuto)}>
+                    classes={{ root: classNames(classes.videoContainer, 'mt-4') }} 
+                    className={classNames('mx-auto')}>
                         <iframe 
-                            className={classNames(display.w100, classes.video)}
+                            className={classNames(classes.video, 'w-full')}
                             frameborder="0" 
                             height="100%"
                             allow="autoplay; fullscreen; picture-in-picture" 
@@ -142,55 +163,68 @@ const ProjectDetail = () => {
                 </Paper>
             </Grid>
             <Grid item xs={12}>
-                <Paper elevation={0} classes={{ root: classNames(display.mr1, display.ml1, display.mt2)}} className={classNames()}>
-                    <Typography component="h2" variant="h6" className={classNames(display.mt1, text.font7)}>Description</Typography>
-                    <Typography className={classNames(text.rem9, classes.description)}>{ project.content?.description }</Typography>
-                    <Typography component="h2" variant="h6" className={classNames(display.mt1, text.font7)}>Features</Typography>
+                <Paper elevation={0} classes={{ root: classNames('mx-4 mt-8')}} className={classNames()}>
+                    <Typography 
+                        component="h2" 
+                        variant="h6" 
+                        className={classNames('mt-4 font-bold')}>
+                            Description
+                        </Typography>
+                    <Typography 
+                        className={classNames('text-sm sm:text-base', classes.description)}>
+                        { project.content?.description }
+                    </Typography>
+                    <Typography 
+                        component="h2" 
+                        variant="h6" 
+                        className={classNames('mt-4 font-bold')}>
+                        Features
+                    </Typography>
                     <div>
                         { getFeatures() }
                         <Button onClick={() => setExpandMore(b => !b)}  
                             endIcon={ expandMore ? <ExpandLessIcon />: <ExpandMoreIcon /> }
-                            classes={{ root: text.rem9}} 
+                            classes={{ root: 'text-sm sm:text-base'}} 
                             className={classNames()}>
                             Show { expandMore ? 'Less' : 'More'}
                         </Button>
                     </div>
-                    <Typography component="h2" variant="h6" className={classNames(display.mt1, text.font7)}>Tools</Typography>
+                    <Typography component="h2" variant="h6" className={classNames('mt-4 font-bold')}>Tools</Typography>
                     { getTools() }
-                    <div className={classNames(display.mt1, display.flex, display.alignCenter)}>
+                    <div className={classNames('mt-4 flex items-center')}>
                         <Typography 
                             component="h2" 
                             variant="h6" 
                             gutterBottom
-                            className={classNames(text.font7)}>
+                            className={classNames('font-bold')}>
                             Source Code:
                         </Typography>
                         <a 
                             href={project.sourceCodeURL} 
                             rel="noreferrer" 
                             target="_blank" 
-                            className={classNames(display.flex, display.alignCenter, display.ml1, classes.linkText, 'color-transition')}>
+                            className={classNames(`flex items-center ml4`, classes.linkText, 'color-transition')}>
                             <GitHubIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')}/> 
                             Github
                         </a>
                     </div>
-                    <div className={classNames(display.flex, display.alignCenter)}>
+                    <div className={classNames('flex items-center')}>
                         <Typography 
                             component="h2" 
                             variant="h6" 
-                            className={classNames(text.font7)}>
+                            className={classNames('font-bold')}>
                             Live site:
                         </Typography>
                         <a 
                             href={project.liveURL} 
                             rel="noreferrer" 
                             target="_blank" 
-                            className={classNames(display.flex, display.alignCenter, display.ml1, classes.linkText, 'color-transition')}>
+                            className={classNames(`flex items-center ml-4`, classes.linkText, 'color-transition')}>
                             <WebIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')} /> 
                             click here to view
                         </a>
                     </div>
-                    <div className={classNames(display.mt1, display.flex, display.justifyCenter)}>
+                    <div className={classNames('mt-4 flex justify-center')}>
                         <Pagination 
                             count={Object.keys(projects).length} 
                             size="small" 
@@ -202,9 +236,12 @@ const ProjectDetail = () => {
                         href={project.liveURL} 
                         rel="noreferrer" 
                         target="_blank" 
-                        className={classNames(display.flex, display.alignCenter, classes.itemShortcut,
-                        text.textLight, text.noUnderline, 'bg-transition', 'color-transition')}>
-                        <WebIcon color="primary" className={classNames(text.textLight, classes.itemShortcutIcon, 'color-transition')} /> 
+                        className={classNames(classes.itemShortcut,
+                        'flex items-center no-underline text-white bg-transition', 'color-transition')}>
+                        <WebIcon 
+                            color="primary" 
+                            className={classNames(classes.itemShortcutIcon, 'text-white color-transition')} 
+                        /> 
                         view the live app
                     </a>
                 </Paper>
