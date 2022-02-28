@@ -16,7 +16,7 @@ import EmailIcon from '@mui/icons-material/Email';//
 const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
     <div className={classNames(classes.leftSide, `flex flex-col items-center pt-8 md:pt-4`, 
         { 'hidden': !open.leftSide && isMobile }, 'bg-transition')}>
-        <div className={classNames(classes.leftSideIntro, `flex pl-4 mb-4 md:pl-0`)}>
+        <div className={classNames(classes.leftSideIntro, `flex pl-4 mb-8 md:pl-0`)}>
             <figure className={classNames(classes.imageContainer, 'mx-0')}>
                 <img 
                     src={rafaelImage}
@@ -93,7 +93,7 @@ const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
                 <li className={classNames(classes.expertiseItem)}>Bootstrap 5</li>
             </ul>
         </div>
-        <div className={classNames('flex flex-col w-full')}>
+        <div className={classNames('flex flex-col w-full pb-8 md:pb-0')}>
             <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
                 <Typography component="h2" variant="h5">Languages</Typography>
             </div>
@@ -106,41 +106,50 @@ const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
 );
 
 const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
-    <div className={classNames(responsive.mdPl3, responsive.mdPt2, display.flex, display.alignStretch,
-        display.flexColumn, display.flexGrow1, { [display.none]: !open.rightSide && isMobile })}>
-        <Typography component="h2" variant="h4" className={classNames(text.font7, classes.rightSideTitle, 
-            display.pl1, responsive.mdPl0, 'color-transition')}>
+    <div className={classNames(`md:pl-12 md:pt-8 flex items-stretch flex-col grow pb-8`, 
+        { 'hidden': !open.rightSide && isMobile })}>
+        <Typography component="h2" variant="h4" className={classNames(classes.rightSideTitle, 
+            'font-bold pl-4 md:pl-0 color-transition')}>
             Rafael Tivane
         </Typography>
-        <Typography component="p" variant="h6" className={classNames(classes.darkBlue1, 'color-transition', 
-            classes.rightSidePosition, display.pl1, responsive.mdPl0)}>
+        <Typography component="p" variant="h6" className={classNames(classes.darkBlue1, 'color-transition pl-4 md:pl-0', 
+            classes.rightSidePosition)}>
             Frontend Developer
         </Typography>
-        <div className={classNames(display.pt1)}>
-            <div className={classNames(classes.rightSideSubtitleContainer, 'bg-transition', display.pl1)}>
+        <div className={classNames('pt-4')}>
+            <div className={classNames(classes.rightSideSubtitleContainer, 'bg-transition pl-4')}>
                 <Typography 
                     component="h3" 
-                    variant="h6" className={classNames(classes.rightSideSubtitleContainer, 'bg-transition', text.textLight)}>
+                    variant="h6" 
+                    className={classNames(classes.rightSideSubtitleContainer, 'bg-transition text-white')}>
                     About me
                 </Typography>
             </div>
-            <Typography className={classNames(text.rem9, display.opacity9, display.pl1, display.pr1, display.pt1)}>
+            <Typography className={classNames(`sm:text-base opacity-90 px-4 pt-4`)}>
                 Professional remote Web Developer focused on Front-end Developement with more than 2 years of experience in web development process, 
                 Involved in app testing, development, management and problem-solving.
             </Typography>
         </div>
-        <div className={classNames(display.pt1)}>
-            <div className={classNames(classes.rightSideSubtitleContainer, 'bg-transition', display.pl1)}>
+        <div className={classNames('pt-4')}>
+            <div className={classNames(classes.rightSideSubtitleContainer, 'bg-transition pl-4')}>
                 <Typography 
                     component="h3" 
-                    variant="h6" className={classNames(classes.rightSideSubtitleContainer, 'bg-transition', text.textLight)}>
+                    variant="h6" className={classNames(classes.rightSideSubtitleContainer, 'bg-transition text-white')}>
                     Work Experience
                 </Typography>
             </div>
-            <div className={classNames(display.pt1, display.pl1)}>
-                <Typography component="h4" className={classNames(classes.experienceSubtitle, classes.darkBlue1, 'color-transition')}>Frontend Developer</Typography>
-                <Typography component="h5" className={classNames(classes.experienceCompa)}>RetriveAI (2021 - 4 Months)</Typography>
-                <ul className={classNames(display.flex, display.flexColumn)}>
+            <div className={classNames('pt-4 pl-4')}>
+                <Typography 
+                    component="h4" 
+                    className={classNames(classes.experienceSubtitle, classes.darkBlue1, 'color-transition')}>
+                    Frontend Developer
+                </Typography>
+                <Typography 
+                    component="h5" 
+                    className={classNames(classes.experienceCompa, 'mb-2')}>
+                    RetriveAI (2022 - 2021)
+                </Typography>
+                <ul className={classNames('flex flex-col pl-8 pr-4 list-disc')}>
                     <li className={classNames(classes.experienceItem)}>Work on the front-end of enterprise applications</li>
                     <li className={classNames(classes.experienceItem)}>Meet with team to align on Sprint objectives</li>
                     <li className={classNames(classes.experienceItem)}>Ensure quality by adhering to technical best practices</li>
@@ -150,42 +159,46 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
                 </ul>
             </div>
         </div>
-        <div className={classNames(display.pt144)}>
-            <div className={classNames(display.pt1, display.pl1)}>
-                <Typography component="h3" className={classNames(classes.experienceSubtitle, classes.darkBlue1, 'color-transition')}>Personal projects</Typography>
-                <ul className={classNames(display.flex, display.flexColumn)}>
+        <div className={classNames()}>
+            <div className={classNames('pt-4 pl-4')}>
+                <Typography 
+                    component="h3" 
+                    className={classNames(classes.experienceSubtitle, classes.darkBlue1, 'mb-2 color-transition')}>
+                    Personal projects
+                </Typography>
+                <ul className={classNames('flex flex-col pl-8 pr-4 list-disc')}>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/dine-restaurant-website">
+                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/dine-restaurant-website">
                             Built out Dine Restaurant Website
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/coffeeroasters-subscription-site">
+                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/coffeeroasters-subscription-site">
                             Built out Coffeeroasters Subscription Site
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/myteam-multi-page-website">
+                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/myteam-multi-page-website">
                             Built out Myteam Multipage Website
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/planects-fact-web-app">
+                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/planects-fact-web-app">
                             Built out Planects Fact Web App
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/photosnap">
+                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/photosnap">
                             Built Photosnap multi-page website
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects/devjobs-web-app">
+                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/devjobs-web-app">
                             Built out Devjobs web app
                         </Link>
                     </li>
                     <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames(text.decorationNone, 'color-transition', classes.projectsLink)} to="/projects">
+                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects">
                             view more projects
                         </Link>
                     </li>

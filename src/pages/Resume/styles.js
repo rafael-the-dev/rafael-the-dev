@@ -67,7 +67,7 @@ export const useStyles = makeStyles(theme => ({
     leftSideSubtitleContainer: {
         borderRadius: '0 65px 69px 0',
         background: '#FFF',
-        width: '73%'
+        width: '80%'
     },
     contactLinks: {
         color: '#e7e6e9',
