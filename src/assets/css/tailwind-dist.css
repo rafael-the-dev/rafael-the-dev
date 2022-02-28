@@ -834,6 +834,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:opacity-90:hover {
   opacity: 0.9;
 }
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
 @media (min-width: 600px) {
 
   .sm\:absolute {

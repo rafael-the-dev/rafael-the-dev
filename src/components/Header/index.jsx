@@ -108,7 +108,7 @@ const Header = () => {
                 <Hidden mdDown>
                     <Link to="/resume" className={classNames('no-underline')}>
                         <Button className={classNames(classes.headerGetStarted, `py-2.5 uppercase px-4 md:font-bold
-                        md:ml-4 md:bg-transparent text-sm`)}>
+                        md:ml-4 md:bg-transparent text-sm hover:opacity-80`)}>
                             Contact Me
                         </Button>
                     </Link>

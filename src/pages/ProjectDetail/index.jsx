@@ -203,7 +203,7 @@ const ProjectDetail = () => {
                             href={project.sourceCodeURL} 
                             rel="noreferrer" 
                             target="_blank" 
-                            className={classNames(`flex items-center ml-4`, classes.linkText, 'color-transition')}>
+                            className={classNames(`flex items-center ml-4 hover:underline`, classes.linkText, 'color-transition')}>
                             <GitHubIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')}/> 
                             Github
                         </a>
@@ -219,7 +219,7 @@ const ProjectDetail = () => {
                             href={project.liveURL} 
                             rel="noreferrer" 
                             target="_blank" 
-                            className={classNames(`flex items-center ml-4`, classes.linkText, 'color-transition')}>
+                            className={classNames(`flex items-center ml-4 hover:underline`, classes.linkText, 'color-transition')}>
                             <WebIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')} /> 
                             click here to view
                         </a>

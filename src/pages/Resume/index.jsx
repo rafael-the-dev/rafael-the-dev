@@ -1,5 +1,4 @@
 import { Button, Hidden, Paper, Typography } from '@mui/material';
-import { useDisplay, useTypography } from '../../styles';
 import { useStyles } from './styles';
 import { Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
@@ -7,13 +6,12 @@ import rafaelImage from '../../assets/images/rafael-tivane.jpg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { useResponsive } from '../../styles/useResponsive';
 import { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../../context/AppContext';
 import EmailIcon from '@mui/icons-material/Email';//
 
 
-const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
+const LeftSide = ({ classes, open, isMobile}) => (
     <div className={classNames(classes.leftSide, `flex flex-col items-center pt-8 md:pt-4`, 
         { 'hidden': !open.leftSide && isMobile }, 'bg-transition')}>
         <div className={classNames(classes.leftSideIntro, `flex pl-4 mb-8 md:pl-0`)}>
@@ -42,15 +40,15 @@ const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
             <div className={classNames('flex flex-col pl-8')}>
                 <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline', 
                     classes.contactLinks)} href="mailto:luislangabusiness@gmail.com">
-                    <EmailIcon  className={classNames(text.textLight, display.mr1)} /> Gmail
+                    <EmailIcon  className={classNames('text-white mr-4')} /> Gmail
                 </a>
                 <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline' 
                     ,classes.contactLinks)} href="https://linkedin.com/in/rafael-tivane/">
-                    <LinkedInIcon  className={classNames(text.textLight, display.mr1)} /> Linkedin
+                    <LinkedInIcon  className={classNames('text-white mr-4')} /> Linkedin
                 </a>
                 <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline' 
                     ,classes.contactLinks)} href="https://github.com/rafael-the-dev/">
-                    <GitHubIcon  className={classNames(text.textLight, display.mr1)} /> Github
+                    <GitHubIcon  className={classNames('text-white mr-4')} /> Github
                 </a>
                 <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline' 
                     ,classes.contactLinks)} href="https://www.instagram.com/rafael_the_dev/?hl=en">
@@ -62,7 +60,7 @@ const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
             <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
                 <Typography component="h2" variant="h5">Education</Typography>
             </div>
-            <div className={classNames('pl-2 pr-1 mb-4 text-white')}>
+            <div className={classNames('pl-8 pr-1 mb-4 text-white')}>
                 <Typography component="h3" >React Developer</Typography>
                 <a 
                     href="https://www.alura.com.br/" 
@@ -105,7 +103,7 @@ const LeftSide = ({ classes, display, open, isMobile, text, responsive}) => (
     </div>
 );
 
-const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
+const RightSide = ({ open, classes, isMobile}) => (
     <div className={classNames(`md:pl-12 md:pt-8 flex items-stretch flex-col grow pb-8`, 
         { 'hidden': !open.rightSide && isMobile })}>
         <Typography component="h2" variant="h4" className={classNames(classes.rightSideTitle, 
@@ -209,9 +207,6 @@ const RightSide = ({ responsive, display, open, classes, text, isMobile}) => (
 )
 
 const Resume = () => {
-    const display = useDisplay();
-    const text = useTypography();
-    const responsive = useResponsive();
     const classes = useStyles();
 
     const { setCurrentPage } = useContext(AppContext);
@@ -245,16 +240,16 @@ const Resume = () => {
                 </div>
             </Hidden>
             <Hidden mdUp>
-                <LeftSide classes={classes} display={display} text={text} open={open} responsive={responsive} isMobile /> 
+                <LeftSide classes={classes} open={open} isMobile /> 
             </Hidden>
             <Hidden mdDown>
-                <LeftSide classes={classes} display={display} text={text} open={open} responsive={responsive} /> 
+                <LeftSide classes={classes} open={open} /> 
             </Hidden>
             <Hidden mdUp>
-                <RightSide classes={classes} display={display} text={text} open={open} responsive={responsive} isMobile /> 
+                <RightSide classes={classes} open={open} isMobile /> 
             </Hidden>
             <Hidden mdDown>
-                <RightSide classes={classes} display={display} text={text} open={open} responsive={responsive} /> 
+                <RightSide classes={classes} open={open} /> 
             </Hidden>
         </Paper>
     );

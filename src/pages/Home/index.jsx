@@ -126,7 +126,7 @@ const Home = () => {
                         classes.projectsSectionTableLink)}>
                         <Button 
                             className={classNames(classes.headerGetStarted, `bg-transition text-white text-sm
-                            px-6 py-3 md:font-bold `)}>
+                            px-6 py-3 md:font-bold hover:opacity-90`)}>
                             View more
                         </Button>
                     </Link>
@@ -154,7 +154,7 @@ const Home = () => {
                     />
                 </div>
                 <Link to="/projects" className={classNames(`mt-4 no-underline`, classes.projectsSectionLink)}>
-                    <Button className={classNames(`text-white text-sm`, classes.headerGetStarted, 'bg-transition')}>
+                    <Button className={classNames(`text-white text-sm hover:opacity-90`, classes.headerGetStarted, 'bg-transition')}>
                         View more
                     </Button>
                 </Link>
