@@ -237,12 +237,12 @@ const ProjectDetail = () => {
                         rel="noreferrer" 
                         target="_blank" 
                         className={classNames(classes.itemShortcut,
-                        'flex items-center no-underline text-white bg-transition', 'color-transition')}>
+                        'flex items-center uppercase no-underline text-white bg-transition', 'color-transition')}>
                         <WebIcon 
                             color="primary" 
                             className={classNames(classes.itemShortcutIcon, 'text-white color-transition')} 
                         /> 
-                        view the live app
+                        Visit website
                     </a>
                 </Paper>
             </Grid>
