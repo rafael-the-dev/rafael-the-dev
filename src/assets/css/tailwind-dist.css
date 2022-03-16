@@ -471,6 +471,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0px;
   margin-right: 0px;
 }
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
@@ -895,6 +899,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .sm\:leading-8 {
