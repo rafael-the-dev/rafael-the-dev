@@ -36,7 +36,7 @@ const ProjectDetail = () => {
                                     classes={{ root: 'pt-0'}} 
                                     className={classNames('flex flex-col items-start')}>
                                     <ListItemText 
-                                        classes={{ primary: classNames('flex items-baseline text-sm sm:text-base') }}>
+                                        classes={{ primary: classNames('flex items-baseline text-base') }}>
                                         <CircleIcon  
                                             sx={{ fontSize: '.7rem' }}  
                                             className={classNames('text-sm', classes.listItemCircle)} 
@@ -48,7 +48,7 @@ const ProjectDetail = () => {
                                             feature.list.map((item, subIndex) => (
                                                 <ListItem key={subIndex} classes={{ root: 'pt-0'}} >
                                                     <ListItemText 
-                                                        classes={{ primary: classNames('flex items-baseline text-sm sm:text-base') }}>
+                                                        classes={{ primary: classNames('flex items-baseline text-base') }}>
                                                          <CircleOutlinedIcon  
                                                             sx={{ fontSize: '.7rem' }}  
                                                             className={classNames('text-sm', classes.listItemCircle)} 
@@ -65,7 +65,7 @@ const ProjectDetail = () => {
                             return (
                                 <ListItem key={index} classes={{ root: 'pt-0'}} >
                                     <ListItemText 
-                                        classes={{ primary: classNames('flex items-baseline text-sm sm:text-base') }} >
+                                        classes={{ primary: classNames('flex items-baseline text-base') }} >
                                         <CircleIcon  
                                             sx={{ fontSize: '.7rem' }}  
                                             className={classNames('text-sm', classes.listItemCircle)} 
@@ -162,17 +162,17 @@ const ProjectDetail = () => {
                     
                 </Paper>
             </Grid>
-            <Grid container item xs={12}>
-                <Grid item xs={12}>
+            <Grid container item xs={12} className={classNames('md:pt-8')}>
+                <Grid item xs={12} md={7}>
                     <Paper elevation={0} classes={{ root: classNames('mx-4 mt-8')}} className={classNames()}>
                         <Typography 
                             component="h2" 
                             variant="h6" 
-                            className={classNames('mt-4 font-bold')}>
+                            className={classNames('mt-4 font-bold sm:text-2xl')}>
                             Description
                         </Typography>
                         <Typography 
-                            className={classNames('text-sm sm:text-base', classes.description)}>
+                            className={classNames('mt-4 text-base', classes.description)}>
                             { project.content?.description }
                         </Typography>
                         <Typography 
@@ -190,7 +190,12 @@ const ProjectDetail = () => {
                                 Show { expandMore ? 'Less' : 'More'}
                             </Button>
                         </div>
-                        <Typography component="h2" variant="h6" className={classNames('mt-4 font-bold')}>Tools</Typography>
+                        <Typography 
+                            component="h2"
+                            variant="h6" 
+                            className={classNames('my-4 font-bold')}>
+                            Tools
+                        </Typography>
                         { getTools() }
                         <div className={classNames('mt-4 flex items-center')}>
                             <Typography 
@@ -225,14 +230,6 @@ const ProjectDetail = () => {
                                 click here to view
                             </a>
                         </div>
-                        <div className={classNames('mt-4 flex justify-center')}>
-                            <Pagination 
-                                count={Object.keys(projects).length} 
-                                size="small" 
-                                onChange={handlePaginationChange} 
-                                page={defaultIndex}
-                            /> 
-                        </div>
                         <a 
                             href={project.liveURL} 
                             rel="noreferrer" 
@@ -247,16 +244,16 @@ const ProjectDetail = () => {
                         </a>
                     </Paper>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} md={5}>
                     <Paper elevation={0} classes={{ root: classNames('mx-4 mt-8')}} className={classNames()}>
                         <Typography 
                             component="h2" 
                             variant="h6" 
-                            className={classNames('mt-4 font-bold')}>
+                            className={classNames('mt-4 font-bold sm:text-2xl')}>
                             Project background
                         </Typography>
                         <Typography 
-                            className={classNames('text-sm sm:text-base', classes.description)}>
+                            className={classNames('mt-4 text-base',)}>
                             This project was a front-end  challenge from Frontend Mentor. It’s a 
                             platform that enables you to practice building websites to a design 
                             and project brief. Each challenge includes mobile and desktop 
@@ -285,5 +282,15 @@ export default ProjectDetail;
         allowfullscreen
         >
     </iframe>
+
+    
+                        <div className={classNames('mt-4 flex justify-center')}>
+                            <Pagination 
+                                count={Object.keys(projects).length} 
+                                size="small" 
+                                onChange={handlePaginationChange} 
+                                page={defaultIndex}
+                            /> 
+                        </div>
  * 
  */
