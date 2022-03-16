@@ -162,89 +162,111 @@ const ProjectDetail = () => {
                     
                 </Paper>
             </Grid>
-            <Grid item xs={12}>
-                <Paper elevation={0} classes={{ root: classNames('mx-4 mt-8')}} className={classNames()}>
-                    <Typography 
-                        component="h2" 
-                        variant="h6" 
-                        className={classNames('mt-4 font-bold')}>
+            <Grid container item xs={12}>
+                <Grid item xs={12}>
+                    <Paper elevation={0} classes={{ root: classNames('mx-4 mt-8')}} className={classNames()}>
+                        <Typography 
+                            component="h2" 
+                            variant="h6" 
+                            className={classNames('mt-4 font-bold')}>
                             Description
                         </Typography>
-                    <Typography 
-                        className={classNames('text-sm sm:text-base', classes.description)}>
-                        { project.content?.description }
-                    </Typography>
-                    <Typography 
-                        component="h2" 
-                        variant="h6" 
-                        className={classNames('mt-4 font-bold')}>
-                        Features
-                    </Typography>
-                    <div>
-                        { getFeatures() }
-                        <Button onClick={() => setExpandMore(b => !b)}  
-                            endIcon={ expandMore ? <ExpandLessIcon />: <ExpandMoreIcon /> }
-                            classes={{ root: 'text-sm sm:text-base'}} 
-                            className={classNames()}>
-                            Show { expandMore ? 'Less' : 'More'}
-                        </Button>
-                    </div>
-                    <Typography component="h2" variant="h6" className={classNames('mt-4 font-bold')}>Tools</Typography>
-                    { getTools() }
-                    <div className={classNames('mt-4 flex items-center')}>
+                        <Typography 
+                            className={classNames('text-sm sm:text-base', classes.description)}>
+                            { project.content?.description }
+                        </Typography>
                         <Typography 
                             component="h2" 
                             variant="h6" 
-                            gutterBottom
-                            className={classNames('font-bold')}>
-                            Source Code:
+                            className={classNames('mt-4 font-bold')}>
+                            Features
                         </Typography>
-                        <a 
-                            href={project.sourceCodeURL} 
-                            rel="noreferrer" 
-                            target="_blank" 
-                            className={classNames(`flex items-center ml-4 hover:underline`, classes.linkText, 'color-transition')}>
-                            <GitHubIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')}/> 
-                            Github
-                        </a>
-                    </div>
-                    <div className={classNames('flex items-center')}>
-                        <Typography 
-                            component="h2" 
-                            variant="h6" 
-                            className={classNames('font-bold')}>
-                            Live site:
-                        </Typography>
+                        <div>
+                            { getFeatures() }
+                            <Button onClick={() => setExpandMore(b => !b)}  
+                                endIcon={ expandMore ? <ExpandLessIcon />: <ExpandMoreIcon /> }
+                                classes={{ root: 'text-sm sm:text-base'}} 
+                                className={classNames()}>
+                                Show { expandMore ? 'Less' : 'More'}
+                            </Button>
+                        </div>
+                        <Typography component="h2" variant="h6" className={classNames('mt-4 font-bold')}>Tools</Typography>
+                        { getTools() }
+                        <div className={classNames('mt-4 flex items-center')}>
+                            <Typography 
+                                component="h2" 
+                                variant="h6" 
+                                gutterBottom
+                                className={classNames('font-bold')}>
+                                Source Code:
+                            </Typography>
+                            <a 
+                                href={project.sourceCodeURL} 
+                                rel="noreferrer" 
+                                target="_blank" 
+                                className={classNames(`flex items-center ml-4 hover:underline`, classes.linkText, 'color-transition')}>
+                                <GitHubIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')}/> 
+                                Github
+                            </a>
+                        </div>
+                        <div className={classNames('flex items-center')}>
+                            <Typography 
+                                component="h2" 
+                                variant="h6" 
+                                className={classNames('font-bold')}>
+                                Live site:
+                            </Typography>
+                            <a 
+                                href={project.liveURL} 
+                                rel="noreferrer" 
+                                target="_blank" 
+                                className={classNames(`flex items-center ml-4 hover:underline`, classes.linkText, 'color-transition')}>
+                                <WebIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')} /> 
+                                click here to view
+                            </a>
+                        </div>
+                        <div className={classNames('mt-4 flex justify-center')}>
+                            <Pagination 
+                                count={Object.keys(projects).length} 
+                                size="small" 
+                                onChange={handlePaginationChange} 
+                                page={defaultIndex}
+                            /> 
+                        </div>
                         <a 
                             href={project.liveURL} 
                             rel="noreferrer" 
                             target="_blank" 
-                            className={classNames(`flex items-center ml-4 hover:underline`, classes.linkText, 'color-transition')}>
-                            <WebIcon color="primary" className={classNames(classes.linkIcon, 'color-transition')} /> 
-                            click here to view
+                            className={classNames(classes.itemShortcut,
+                            'flex items-center uppercase no-underline text-white bg-transition', 'color-transition')}>
+                            <WebIcon 
+                                color="primary" 
+                                className={classNames(classes.itemShortcutIcon, 'text-white color-transition')} 
+                            /> 
+                            Visit website
                         </a>
-                    </div>
-                    <div className={classNames('mt-4 flex justify-center')}>
-                        <Pagination 
-                            count={Object.keys(projects).length} 
-                            size="small" 
-                            onChange={handlePaginationChange} 
-                            page={defaultIndex}
-                        /> 
-                    </div>
-                    <a 
-                        href={project.liveURL} 
-                        rel="noreferrer" 
-                        target="_blank" 
-                        className={classNames(classes.itemShortcut,
-                        'flex items-center uppercase no-underline text-white bg-transition', 'color-transition')}>
-                        <WebIcon 
-                            color="primary" 
-                            className={classNames(classes.itemShortcutIcon, 'text-white color-transition')} 
-                        /> 
-                        Visit website
-                    </a>
-                </Paper>
+                    </Paper>
+                </Grid>
+                <Grid item xs={12}>
+                    <Paper elevation={0} classes={{ root: classNames('mx-4 mt-8')}} className={classNames()}>
+                        <Typography 
+                            component="h2" 
+                            variant="h6" 
+                            className={classNames('mt-4 font-bold')}>
+                            Project background
+                        </Typography>
+                        <Typography 
+                            className={classNames('text-sm sm:text-base', classes.description)}>
+                            This project was a front-end  challenge from Frontend Mentor. It’s a 
+                            platform that enables you to practice building websites to a design 
+                            and project brief. Each challenge includes mobile and desktop 
+                            designs to show how the website should look at different screen sizes. 
+                            Creating these projects has helped me refine my workflow and solve real-world 
+                            coding problems. I’ve learned something new with each project, helping me 
+                            to improve and adapt my style.
+                        </Typography>
+                    </Paper>
+                </Grid>
             </Grid>
         </Grid>
     );
