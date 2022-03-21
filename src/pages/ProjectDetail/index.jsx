@@ -13,6 +13,8 @@ import CircleIcon from '@mui/icons-material/Circle';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WebIcon from '@mui/icons-material/Web';
 import { Pagination } from '@mui/material';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const ProjectDetail = () => {
@@ -263,6 +265,34 @@ const ProjectDetail = () => {
                             to improve and adapt my style.
                         </Typography>
                     </Paper>
+                </Grid>
+            </Grid>
+            <Grid item container xs={12} className={classNames('pt-6')}>
+                <Grid item xs={6}>
+                    <div className={classNames('flex flex-col sm:flex-row sm:items-center')}>
+                        <ArrowBackIosNewIcon className={classNames('text-sm')} />
+                        <p className={classNames('flex flex-col')}>
+                            <span className={classNames('font-bold capitalize text-lg')}>
+                                Bookmark
+                            </span>
+                            <span className={classNames('text-base')}>
+                                previous project
+                            </span>
+                        </p>
+                    </div>
+                </Grid>
+                <Grid item xs={6}>
+                    <div className={classNames('flex flex-col items-end sm:flex-row sm:items-center')}>
+                        <ArrowForwardIosIcon className={classNames('text-sm')} />
+                        <p className={classNames('flex flex-col items-end')}>
+                            <span className={classNames('font-bold capitalize text-lg')}>
+                                Bookmark
+                            </span>
+                            <span className={classNames('text-base')}>
+                                previous project
+                            </span>
+                        </p>
+                    </div>
                 </Grid>
             </Grid>
         </Grid>
