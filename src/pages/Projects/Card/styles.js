@@ -12,6 +12,9 @@ export const useStyles = makeStyles(theme => ({
             maxWidth: '23.5%'
         }
     },
+    cardImageGalleryContainer: {
+        //height: 300
+    },
     projectCard: {
         //height: '67% !important',
         [theme.breakpoints.up('sm')]: {

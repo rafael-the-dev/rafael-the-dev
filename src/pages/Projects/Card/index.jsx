@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, Grid, IconButton, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, Grid, IconButton, Typography } from '@mui/material';
 import { useStyles } from './styles';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
@@ -13,30 +13,39 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
     const carouselImages = useRef(
         [
             {
-              original: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[0]}`,
-              thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[0]}`,
+              original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[0]}`,
+              thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[0]}`,
             },
             {
-                original: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[1]}`,
-                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[1]}`,
+                original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[1]}`,
+                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[1]}`,
             },
             {
-                original: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[2]}`,
-                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[2]}`,
+                original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[2]}`,
+                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[2]}`,
             },
             {
-                original: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[3]}`,
-                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[3]}`,
+                original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[3]}`,
+                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[3]}`,
             },
         ]
     );
 
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16', classes.card)}>
-             <Card sx={{ maxWidth: 345 }}>
-                <div className={classNames(classes.heroSectionImageGalleryContainer)}>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16 pt-0', classes.card)}>
+             <Card >
+                <div className={classNames(classes.cardImageGalleryContainer)}>
                     <ImageGallery showThumbnails={false} items={carouselImages.current} />
                 </div>
+                <CardContent>
+                    <Typography 
+                        gutterBottom 
+                        component="h2" 
+                        variant="h6" 
+                        className={classNames(classes.projectCardTitle, 'font-bold text-ellipsis overflow-hidden whitespace-nowrap')}>
+                        { project.name }
+                    </Typography>
+                </CardContent>
                 <CardActions disableSpacing className={classNames('flex items-center justify-between')}>
                     <a href='/'>
                         <Button className={classNames('uppercase')}>Visit website</Button>

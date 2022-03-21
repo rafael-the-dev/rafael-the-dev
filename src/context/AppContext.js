@@ -61,7 +61,14 @@ export const AppContextProvider = ({ children }) => {
                     }
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'dine-restaurant-website': {
             backward: '/projects/audiophile-e-commerce',
@@ -127,7 +134,14 @@ export const AppContextProvider = ({ children }) => {
                     }
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'coffeeroasters-subscription-site': {
             backward: '/projects/dine-restaurant-website',
@@ -189,7 +203,14 @@ export const AppContextProvider = ({ children }) => {
                     }
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'photosnap': {
             backward: '/projects/coffeeroasters-subscription-site',
@@ -233,7 +254,14 @@ export const AppContextProvider = ({ children }) => {
                     }
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'devjobs-web-app': {
             backward: '/projects/photosnap',
@@ -284,7 +312,14 @@ export const AppContextProvider = ({ children }) => {
                     }
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'planects-fact-web-app': {
             backward: '/projects/devjobs-web-app',
@@ -324,7 +359,14 @@ export const AppContextProvider = ({ children }) => {
                     }
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'myteam-multi-page-website': {
             backward: '/projects/planects-fact-web-app',
@@ -392,7 +434,14 @@ export const AppContextProvider = ({ children }) => {
                     }
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'designo-multi-page-website': {
             backward: '/projects/myteam-multi-page-website',
@@ -457,7 +506,14 @@ export const AppContextProvider = ({ children }) => {
                     },
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220321_082907.jpg',
+                '20220321_082948.jpg',
+                '20220321_082920.jpg',
+                '20220321_083001.jpg'
+            ]
         },
         'invoice-app': {
             backward: '/projects/designo-multi-page-website',
@@ -518,7 +574,14 @@ export const AppContextProvider = ({ children }) => {
                     },
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'e-commerce-product-page': {
             backward: '/projects/invoice-app',
@@ -574,7 +637,14 @@ export const AppContextProvider = ({ children }) => {
                     },
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'github-user-search-app': {
             backward: '/projects/e-commerce-product-page',
@@ -630,7 +700,14 @@ export const AppContextProvider = ({ children }) => {
                     },
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'art-gallery-website': {
             backward: '/projects/github-user-search-app',
@@ -683,7 +760,14 @@ export const AppContextProvider = ({ children }) => {
                     },
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'clock-app': {
             backward: '/projects/github-user-search-app',
@@ -727,7 +811,14 @@ export const AppContextProvider = ({ children }) => {
                     },
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         },
         'payAPI-multi-page website': {
             backward: '/projects/clock-app',
@@ -790,7 +881,14 @@ export const AppContextProvider = ({ children }) => {
                     },
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220202_133105.jpg',
+                '20220321_082318.jpg',
+                '20220321_082336.jpg',
+                '20220321_082400.jpg'
+            ]
         },
         'scoot-multi-page-website': {
             backward: '/projects/payAPI-multi-page website',
@@ -842,7 +940,14 @@ export const AppContextProvider = ({ children }) => {
                     },
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220321_082717.jpg',
+                '20220321_082734.jpg',
+                '20220321_082757.jpg',
+                '20220321_082823.jpg'
+            ]
         },
         'arch-studio-multi-page-website': {
             backward: '/projects/payAPI-multi-page website',
@@ -909,7 +1014,14 @@ export const AppContextProvider = ({ children }) => {
                     },
                 ]
 
-            }
+            },
+            images: [
+                'preview.jpg',
+                '20220211_100124.jpg',
+                '20220321_082511.jpg',
+                '20220321_082551.jpg',
+                '20220321_082613.jpg'
+            ]
         }
     };
 

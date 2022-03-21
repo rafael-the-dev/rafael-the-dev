@@ -9,6 +9,8 @@ import Card from './Card';
 import SearchIcon from '@mui/icons-material/Search';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import React, { useCallback, useEffect, useState, useRef } from 'react';
+import 'react-image-gallery/styles/css/image-gallery.css'
+import './styles.css'
 
 const ProjectsContainer = () => {
     //const bg = useBackground();
@@ -173,6 +175,8 @@ const ProjectsContainer = () => {
             getFilteredInvoices();
         }
     }, [ getFilteredInvoices, state ]);
+
+    console.log(projectsList)
 
     return (
        <main className={classNames(display.px5, 'pb-12 pt-6')}>
