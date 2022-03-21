@@ -693,11 +693,9 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vnhorbifareii6uedrt4.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/efwq5easgvylrajcjcmc.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/mrzh8mpwtifjjxaenpmn.jpg',
             ]
         },
         'art-gallery-website': {
@@ -753,11 +751,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ofieenxp0c7dlmjy0voa.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/lz2nfaa5cch6xetnwkqw.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/xjnrkeagx9tacluldw9l.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ck4os1mvowbmow7hhrtf.jpg',
             ]
         },
         'clock-app': {
@@ -804,11 +801,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/rhg8wnn0jawmcfq3vta1.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ky1qo7dpekp1beimjgjz.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/nzqdviljd6xqzulklj6w.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/pwfpwzfdf34rjxsaf5om.jpg',
             ]
         },
         'payAPI-multi-page website': {
@@ -874,11 +870,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220202_133105.jpg',
-                '20220321_082318.jpg',
-                '20220321_082336.jpg',
-                '20220321_082400.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/epifjilrebysvrlmmipt.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/lrrahirlxqzw8kvbfs0r.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/dqn5yjzkz3qrkttftss0.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/klvuqhospk4vcmwhebra.jpg',
             ]
         },
         'scoot-multi-page-website': {
@@ -933,11 +928,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220321_082717.jpg',
-                '20220321_082734.jpg',
-                '20220321_082757.jpg',
-                '20220321_082823.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vrii3to3c3zgplm6qtrm.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/wayr5yglxsqf65fheaa0.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/qrnyi4bmsavxlqclrpqn.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/zm69cyp5cz1mdddanzkv.jpg',
             ]
         },
         'arch-studio-multi-page-website': {
@@ -1007,11 +1001,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/bflu1myynk7j8quyezyc.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/wqhcstaducgoy9ycjkrq.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/uuyclmcbnu6oh7wefyia.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/jwsakoruxd53bqlkbham.jpg',
             ]
         }
     };

@@ -47,7 +47,7 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing className={classNames('flex items-center justify-between')}>
-                    <a href='/'>
+                    <a href={project.liveURL} rel="noreferrer" target="_blank">
                         <Button className={classNames('uppercase')}>Visit website</Button>
                     </a>
                     <IconButton>
