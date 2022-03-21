@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import ShowMoreText from "react-show-more-text";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useRef } from 'react'
+import { useMemo, useRef } from 'react'
 import ImageGallery from 'react-image-gallery'
 
 const CardContainer = ({ project, name, description, nameParameter, images, imageLink }) => {
     const classes = useStyles();
 
-    const carouselImages = useRef(
+    const carouselImages = useMemo(() =>
         [
             {
               original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[0]}`,
@@ -28,14 +28,14 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                 original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[3]}`,
                 thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[3]}`,
             },
-        ]
+        ], [ nameParameter, project ]
     );
 
     return (
         <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16 pt-0', classes.card)}>
              <Card >
                 <div className={classNames(classes.cardImageGalleryContainer)}>
-                    <ImageGallery showThumbnails={false} items={carouselImages.current} />
+                    <ImageGallery showThumbnails={false} items={carouselImages} />
                 </div>
                 <CardContent>
                     <Typography 
