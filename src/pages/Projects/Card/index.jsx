@@ -1,14 +1,39 @@
-import { Grid, Paper, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardMedia, Grid, IconButton, Typography } from '@mui/material';
 import { useStyles } from './styles';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import ShowMoreText from "react-show-more-text";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-const Card = ({ project, name, description, nameParameter, imageLink }) => {
+const CardContainer = ({ project, name, description, nameParameter, imageLink }) => {
     const classes = useStyles();
 
     return (
         <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16', classes.card)}>
+             <Card sx={{ maxWidth: 345 }}>
+                <CardMedia
+                    component="img"
+                    height="194"
+                    image="/static/images/cards/paella.jpg"
+                    alt="Paella dish"
+                />
+                <CardActions disableSpacing className={classNames('flex items-center justify-between')}>
+                    <a href='/'>
+                        <Button className={classNames('uppercase')}>Visit website</Button>
+                    </a>
+                    <IconButton>
+                        <KeyboardArrowDownIcon />
+                    </IconButton>
+                </CardActions>
+             </Card>
+        </Grid>
+    );
+};
+
+export default CardContainer;
+
+/**
+ * <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16', classes.card)}>
             <Paper component="article" className={classNames(classes.projectCard,
                `relative pb-8 px-4 pt-12 h-full flex flex-col`)}>
                 <div
@@ -38,7 +63,4 @@ const Card = ({ project, name, description, nameParameter, imageLink }) => {
                 </div>
             </Paper>
         </Grid>
-    );
-};
-
-export default Card;
+ */
