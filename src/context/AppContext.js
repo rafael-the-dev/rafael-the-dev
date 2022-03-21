@@ -63,11 +63,11 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ax9kvjgksws1lz8vrlim.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/dgxetxuu7dmkrgubeuav.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/gsga5rj9gks5rd3h05xl.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/fs0rui2wbalhkdwyqioc.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/gxtyjhbeafr8d33dotya.jpg'
             ]
         },
         'dine-restaurant-website': {
@@ -136,11 +136,9 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220321_151321.jpg',
-                '20220321_151358.jpg',
-                '20220321_151343.jpg',
-                '20220321_151423.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ug3acx3rt7hms1renszu.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/btsyc0ho3mohvkzmi3pu.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/rdhowfxj5ib8bx9dumzx.jpg',
             ]
         },
         'coffeeroasters-subscription-site': {
@@ -205,10 +203,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220321_150910.jpg',
-                '20220321_150938.jpg',
-                '20220321_150925.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/nq94jwosne8ahc2eyslv.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/jkrkcxdc1gvjyz6temht.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/x5f9foxw7apxsssp6ram.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/pg6tgaewwhkz0y2enizm.jpg',
                 '20220321_151019.jpg'
             ]
         },
@@ -256,11 +254,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220321_151620.jpg',
-                '20220321_151709.jpg',
-                '20220321_151735.jpg',
-                '20220321_151638.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/zvkqvpshdas9rtdkubkx.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/pbdzyfy546b6jlzqrkjb.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ysdcgoki01oxpgkg0gpb.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vgki5snipvebjuebvvuo.jpg',
             ]
         },
         'devjobs-web-app': {
@@ -314,11 +311,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/lowozx0v3khn1hyggkqy.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/rnueclns10uy2tlekooq.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vfwhflursux1ia6rcgeo.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/rqhfup4zodb4skhe0gml.jpg',
             ]
         },
         'planects-fact-web-app': {
@@ -435,11 +431,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ixjx74lti9wkn6hu7f21.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/bbwo9dlbeid4jguqmxcl.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/nzemf5prnqneszcgp2ib.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/exphzbkytxfvprpmfkvk.jpg',
             ]
         },
         'designo-multi-page-website': {
@@ -575,11 +570,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/qjvxdujiq2594nunbhar.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/quwy3ha8dyaczhyvdfoi.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/s26iaomtphrrakmdxcok.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/sp3sdjjgibontb36fhgx.jpg',
             ]
         },
         'e-commerce-product-page': {
@@ -638,11 +632,9 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/uehz7kwoo7gesfebbqi8.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/jvjhl89ypvsv3bwns99u.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ybtjzutfxmkmbaqgcysz.jpg',
             ]
         },
         'github-user-search-app': {

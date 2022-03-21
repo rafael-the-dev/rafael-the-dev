@@ -28,10 +28,6 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                 original: getImageURL(2),
                 thumbnail: getImageURL(2),
             },
-            {
-                original: getImageURL(3),
-                thumbnail: getImageURL(3),
-            },
         ], [ getImageURL ]
     );
 
