@@ -1,10 +1,10 @@
 import { Button, Card, CardActions, CardContent, Grid, IconButton, Typography } from '@mui/material';
 import { useStyles } from './styles';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import ShowMoreText from "react-show-more-text";
+//import ShowMoreText from "react-show-more-text";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useCallback, useMemo, useRef } from 'react'
+import { useCallback, useMemo } from 'react'
 import ImageGallery from 'react-image-gallery'
 
 const CardContainer = ({ project, name, description, nameParameter, images, imageLink }) => {

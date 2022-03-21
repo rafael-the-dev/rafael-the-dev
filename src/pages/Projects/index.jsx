@@ -176,8 +176,6 @@ const ProjectsContainer = () => {
         }
     }, [ getFilteredInvoices, state ]);
 
-    console.log(projectsList)
-
     return (
        <main className={classNames(display.px5, 'pb-12 pt-6')}>
            <form className={classNames(`flex items-stretch mb-16`, classes.searchForm,)}>
