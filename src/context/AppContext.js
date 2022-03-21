@@ -137,10 +137,10 @@ export const AppContextProvider = ({ children }) => {
             },
             images: [
                 'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                '20220321_151321.jpg',
+                '20220321_151358.jpg',
+                '20220321_151343.jpg',
+                '20220321_151423.jpg'
             ]
         },
         'coffeeroasters-subscription-site': {
@@ -206,10 +206,10 @@ export const AppContextProvider = ({ children }) => {
             },
             images: [
                 'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                '20220321_150910.jpg',
+                '20220321_150938.jpg',
+                '20220321_150925.jpg',
+                '20220321_151019.jpg'
             ]
         },
         'photosnap': {
@@ -257,10 +257,10 @@ export const AppContextProvider = ({ children }) => {
             },
             images: [
                 'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                '20220321_151620.jpg',
+                '20220321_151709.jpg',
+                '20220321_151735.jpg',
+                '20220321_151638.jpg'
             ]
         },
         'devjobs-web-app': {
