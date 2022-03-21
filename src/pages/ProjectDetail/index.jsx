@@ -12,7 +12,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CircleIcon from '@mui/icons-material/Circle';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import WebIcon from '@mui/icons-material/Web';
-import { Pagination } from '@mui/material';
+//import { Pagination } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -102,16 +102,16 @@ const ProjectDetail = () => {
     const projectsRefs = useRef([]);
     let navigate = useNavigate();
 
-    const handlePaginationChange = (event, value) => {
+    /*const handlePaginationChange = (event, value) => {
         navigate(`/projects/${projectsRefs.current[value - 1]}`);
-    };
+    };*/
 
     const handlerNavigate = prop => () => {
         navigate(prop);
     }
     
     const { name } = useParams();
-    const [ defaultIndex, setDefaultIndex ] = useState(1);
+    //const [ defaultIndex, setDefaultIndex ] = useState(1);
 
     useEffect(() => {
         setProject(projects[name]);
@@ -119,7 +119,7 @@ const ProjectDetail = () => {
         if(index === -1)
             navigate('/projects')
         
-        setDefaultIndex(index + 1)
+        //setDefaultIndex(index + 1)
     }, [ name, projects, navigate ]);
     
     useEffect(() => {
