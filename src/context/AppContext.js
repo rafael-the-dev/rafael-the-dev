@@ -361,11 +361,10 @@ export const AppContextProvider = ({ children }) => {
 
             },
             images: [
-                'preview.jpg',
-                '20220211_100124.jpg',
-                '20220321_082511.jpg',
-                '20220321_082551.jpg',
-                '20220321_082613.jpg'
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ksbsn4xdmhyssrra7ztz.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/y17tovuk40mqsuhn6ubw.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/qepwv1re55fzkonws7kc.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/hs1uvrojcgypiq2tjmmo.jpg',
             ]
         },
         'myteam-multi-page-website': {

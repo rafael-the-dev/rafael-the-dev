@@ -4,31 +4,35 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import ShowMoreText from "react-show-more-text";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useMemo, useRef } from 'react'
+import { useCallback, useMemo, useRef } from 'react'
 import ImageGallery from 'react-image-gallery'
 
 const CardContainer = ({ project, name, description, nameParameter, images, imageLink }) => {
     const classes = useStyles();
 
+    const getImageURL = useCallback((index) => 
+        project.images[index].startsWith('https://') ? project.images[index] : `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[index]}`, 
+    [ nameParameter, project ]);
+
     const carouselImages = useMemo(() =>
         [
             {
-              original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[0]}`,
-              thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[0]}`,
+              original: getImageURL(0),
+              thumbnail: getImageURL(0),
             },
             {
-                original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[1]}`,
-                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[1]}`,
+                original: getImageURL(1),
+                thumbnail: getImageURL(1),
             },
             {
-                original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[2]}`,
-                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[2]}`,
+                original: getImageURL(2),
+                thumbnail: getImageURL(2),
             },
             {
-                original: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[3]}`,
-                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[3]}`,
+                original: getImageURL(3),
+                thumbnail: getImageURL(3),
             },
-        ], [ nameParameter, project ]
+        ], [ getImageURL ]
     );
 
     return (
