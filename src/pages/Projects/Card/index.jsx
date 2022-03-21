@@ -1,22 +1,42 @@
-import { Button, Card, CardActions, CardMedia, Grid, IconButton, Typography } from '@mui/material';
+import { Button, Card, CardActions, Grid, IconButton, Typography } from '@mui/material';
 import { useStyles } from './styles';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import ShowMoreText from "react-show-more-text";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { useRef } from 'react'
+import ImageGallery from 'react-image-gallery'
 
-const CardContainer = ({ project, name, description, nameParameter, imageLink }) => {
+const CardContainer = ({ project, name, description, nameParameter, images, imageLink }) => {
     const classes = useStyles();
+
+    const carouselImages = useRef(
+        [
+            {
+              original: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[0]}`,
+              thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[0]}`,
+            },
+            {
+                original: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[1]}`,
+                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[1]}`,
+            },
+            {
+                original: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[2]}`,
+                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[2]}`,
+            },
+            {
+                original: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[3]}`,
+                thumbnail: `${process.env.PUBLIC_URL}/images/projects-images/${project}/${images[3]}`,
+            },
+        ]
+    );
 
     return (
         <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16', classes.card)}>
              <Card sx={{ maxWidth: 345 }}>
-                <CardMedia
-                    component="img"
-                    height="194"
-                    image="/static/images/cards/paella.jpg"
-                    alt="Paella dish"
-                />
+                <div className={classNames(classes.heroSectionImageGalleryContainer)}>
+                    <ImageGallery showThumbnails={false} items={carouselImages.current} />
+                </div>
                 <CardActions disableSpacing className={classNames('flex items-center justify-between')}>
                     <a href='/'>
                         <Button className={classNames('uppercase')}>Visit website</Button>
