@@ -41,7 +41,7 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                 <div className={classNames(classes.cardImageGalleryContainer)}>
                     <ImageGallery showThumbnails={false} items={carouselImages} />
                 </div>
-                <CardContent>
+                <CardContent className={classNames('pb-0')}>
                     <Typography 
                         gutterBottom 
                         component="h2" 
@@ -59,7 +59,18 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                     </IconButton>
                 </CardActions>
                 <Collapse in={open} timeout="auto" unmountOnExit>
-
+                    <section className={classNames(classes.collapse, `pb-4`)}>
+                        <Typography 
+                            component="h3" 
+                            variant="h6" 
+                            className={classNames('font-bold sm:text-2xl')}>
+                            Description
+                        </Typography>
+                        <Typography 
+                            className={classNames('mt-4 text-base', classes.description)}>
+                            { project.content?.description }
+                        </Typography>
+                    </section>
                 </Collapse>
              </Card>
         </Grid>

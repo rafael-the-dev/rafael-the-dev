@@ -50,5 +50,9 @@ export const useStyles = makeStyles(theme => ({
         '&:hover': {
             color: '#d70077 !important'
         }
+    },
+    collapse: {
+        paddingLeft: '5%',
+        paddingRight: '5%'
     }
 }));
