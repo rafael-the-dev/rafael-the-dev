@@ -1,7 +1,7 @@
 import { Paper, Typography } from '@mui/material';
 //import { useBackground, useDisplay, useTypography } from '../../../styles';
 import { useStyles } from './styles';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 const LatestProject = ({ name, description, image, nameParameter, imageClassName, liveURL }) => {
