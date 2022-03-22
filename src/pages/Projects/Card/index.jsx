@@ -55,7 +55,7 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                         <Button className={classNames('uppercase')}>Visit website</Button>
                     </a>
                     <IconButton onClick={clickHandler}>
-                        <KeyboardArrowDownIcon />
+                        <KeyboardArrowDownIcon className={classNames({'rotate-180': open })}/>
                     </IconButton>
                 </CardActions>
                 <Collapse in={open} timeout="auto" unmountOnExit>
