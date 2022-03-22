@@ -43,7 +43,7 @@ export const useStyles = makeStyles(theme => ({
         }
     },
     projectCardLink: {
-        color: '#9f2395 !important',
+        //color: '#9f2395 !important',
         '.pink-theme &': {
             color: '#E7816B !important',
         },

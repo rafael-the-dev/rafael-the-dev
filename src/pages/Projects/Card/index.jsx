@@ -52,7 +52,10 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                 </CardContent>
                 <CardActions disableSpacing className={classNames('flex items-center justify-between')}>
                     <a href={project.liveURL} rel="noreferrer" target="_blank">
-                        <Button className={classNames('uppercase')}>Visit website</Button>
+                        <Button 
+                            className={classNames('uppercase', classes.projectCardLink)}>
+                            Visit website
+                        </Button>
                     </a>
                     <IconButton onClick={clickHandler}>
                         <KeyboardArrowDownIcon className={classNames({'rotate-180': open })}/>
@@ -63,11 +66,11 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                         <Typography 
                             component="h3" 
                             variant="h6" 
-                            className={classNames('font-bold sm:text-2xl')}>
+                            className={classNames('font-bold sm:text-lg')}>
                             Description
                         </Typography>
                         <Typography 
-                            className={classNames('mt-4 text-base', classes.description)}>
+                            className={classNames('mt-3 text-base', classes.description)}>
                             { project.content?.description }
                         </Typography>
                     </section>
