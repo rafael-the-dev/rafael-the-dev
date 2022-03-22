@@ -1,18 +1,22 @@
-import { Button, Card, CardActions, CardContent, Grid, IconButton, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, Collapse, Grid, IconButton, Typography } from '@mui/material';
 import { useStyles } from './styles';
 //import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 //import ShowMoreText from "react-show-more-text";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { useCallback, useMemo } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import ImageGallery from 'react-image-gallery'
 
 const CardContainer = ({ project, name, description, nameParameter, images, imageLink }) => {
     const classes = useStyles();
 
+    const [ open, setOpen ] = useState(false);
+
     const getImageURL = useCallback((index) => 
         project.images[index].startsWith('https://') ? project.images[index] : `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[index]}`, 
     [ nameParameter, project ]);
+
+    const clickHandler = useCallback(() => setOpen(o => !o), []);
 
     const carouselImages = useMemo(() =>
         [
@@ -50,10 +54,13 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                     <a href={project.liveURL} rel="noreferrer" target="_blank">
                         <Button className={classNames('uppercase')}>Visit website</Button>
                     </a>
-                    <IconButton>
+                    <IconButton onClick={clickHandler}>
                         <KeyboardArrowDownIcon />
                     </IconButton>
                 </CardActions>
+                <Collapse in={open} timeout="auto" unmountOnExit>
+
+                </Collapse>
              </Card>
         </Grid>
     );
