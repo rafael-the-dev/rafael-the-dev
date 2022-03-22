@@ -44,7 +44,7 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
     }, [ project ]);
 
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16 pt-0', classes.card)}>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-12 pt-0', classes.card)}>
              <Card >
                 <div className={classNames(classes.cardImageGalleryContainer)}>
                     <ImageGallery showThumbnails={false} items={carouselImages} />

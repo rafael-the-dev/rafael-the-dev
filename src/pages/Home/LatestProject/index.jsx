@@ -4,7 +4,7 @@ import { useStyles } from './styles';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
-const LatestProject = ({ name, description, image, nameParameter, imageClassName }) => {
+const LatestProject = ({ name, description, image, nameParameter, imageClassName, liveURL }) => {
     const classes = useStyles();
 
     return (
@@ -22,12 +22,23 @@ const LatestProject = ({ name, description, image, nameParameter, imageClassName
                 <Typography gutterBottom className={classNames('text-base')}>
                     { description }
                 </Typography>
-                <Link to={`/projects/${nameParameter}`} className={classNames('no-underline', classes.projectLink)}>
-                    view details
-                </Link>
+                <a 
+                     className={classNames('no-underline uppercase', classes.projectLink)}
+                    href={liveURL} 
+                    rel="noreferrer" 
+                    target="_blank">
+                    Visit website
+                </a>
             </div>
         </Paper>
     )
 };
 
 export default LatestProject;
+
+/**
+ * 
+                <Link to={`/projects/${nameParameter}`} className={classNames('no-underline', classes.projectLink)}>
+                    view details
+                </Link>
+ */

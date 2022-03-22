@@ -139,18 +139,21 @@ const Home = () => {
                         image={redECommerceIcon}
                         nameParameter="audiophile-e-commerce"
                         imageClassName={classNames(classes.audioPhileImage)}
+                        liveURL="https://pro-audiophile-ecommerce.netlify.app/"
                     />
                     <LatestProject 
                         name="Planects Fact Web App"
                         description='8-page planets fact app that users can view each planet page and toggle between the "Overview", "Internal Structure", and "Surface Geology" tabs.'
                         image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLxJF47Y1wAKA4mo3dvcWrLd-rgm1KutnUg&usqp=CAU"
                         nameParameter="planects-fact-web-app"
+                        liveURL="https://pro-planets-fact-site.netlify.app"
                     />
                     <LatestProject 
                         name="Coffeeroasters Subscription Site"
                         description="3-page coffee subscription website that users can make selections to create a coffee subscription and see an order summary modal of their choices ."
                         image="https://cdn1.iconfinder.com/data/icons/e-commerance-7/56/coffee__cup__mug__drink__glass-512.png"
                         nameParameter="coffeeroasters-subscription-site"
+                        liveURL="https://pro-coffeeroasters.netlify.app/"
                     />
                 </div>
                 <Link to="/projects" className={classNames(`mt-4 no-underline`, classes.projectsSectionLink)}>
