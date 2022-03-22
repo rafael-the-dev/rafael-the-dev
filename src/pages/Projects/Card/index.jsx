@@ -35,6 +35,14 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
         ], [ getImageURL ]
     );
 
+    const getTools = useMemo(() => {
+        const total = project.content.tools.length;
+        return project.content?.tools
+            .reduce((prevValue, currentValue, currentIndex) => (
+                prevValue + currentValue.name + ( currentIndex === total - 1 ? '' : ' | ')
+            ), "")
+    }, [ project ]);
+
     return (
         <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16 pt-0', classes.card)}>
              <Card >
@@ -72,6 +80,10 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                         <Typography 
                             className={classNames('mt-3 text-base', classes.description)}>
                             { project.content?.description }
+                        </Typography>
+                        <Typography 
+                            className={classNames('mt-3 text-base', classes.tools)}>
+                            { getTools }
                         </Typography>
                     </section>
                 </Collapse>

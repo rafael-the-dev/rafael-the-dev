@@ -54,5 +54,8 @@ export const useStyles = makeStyles(theme => ({
     collapse: {
         paddingLeft: '5%',
         paddingRight: '5%'
+    },
+    tools: {
+        color: '#213032'
     }
 }));
