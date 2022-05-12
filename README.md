@@ -1,4 +1,4 @@
-### Hi there 👋
+# Hi there! <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="29px">
 
 <div align="center">
   <a href="https://github.com/rafael-the-dev">
@@ -26,6 +26,7 @@
 </div>
   <br/>
   <div> 
+    <a href="https://rafael-the-dev.netlify.app/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-5340ff?style=for-the-badge&logo=Google-chrome&logoColor=white" target="_blank"></a>
   <a href="https://www.instagram.com/rafael_the_dev/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
  <a href="https://discord.gg/wagxzStdcR" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank"></a> 
   <a href = "mailto:rafaeljossefativanejunior@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
