@@ -6,6 +6,79 @@ AppContext.displayName = 'AppContext';
 
 export const AppContextProvider = ({ children }) => {
     const projects = {
+        'arch-studio-multi-page-website': {
+            backward: '/projects/payAPI-multi-page website',
+            forward: '/projects/audiophile-e-commerce',
+            liveURL: 'https://pro-arch-studio-multipage.netlify.app/',
+            sourceCodeURL: 'https://github.com/rafael-the-dev/arch-studio-multi-page',
+            name: 'Arch Studio multi-page website',
+            level: 'advanced',
+            videoURL: 'https://player.vimeo.com/video/678025714?h=808d0140dc',
+            imageLink: `data:image/jpeg;base64,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`,
+            content: {
+                description: "Scoot multi-page website is a frontend  4-page website challenge for a marketing purpose. During this website development I improved my front-end skills from specially CSS: Grid, Scrolling animations, form validation. with help of built-in css classes of tailwind CSS I could finish it as soon as possible",
+                features: [
+                    "View the optimal layout for the app depending on their device's screen size", 
+                    "See hover states for all interactive elements on the page",
+                    {
+                        name: 'Receive an error message when the contact form is submitted if:',
+                        list: [
+                            `he Name, Email or Message fields are empty should show "Can't be empty"`,
+                            `The Email is not formatted correctly should show "Please use a valid email address"`
+                        ]
+                    }
+                ],
+                tools: [
+                    {
+                        name: 'React JS',
+                        url: ''
+                    },
+                    {
+                        name: 'HTML',
+                        url: ''
+                    },
+                    {
+                        name: 'CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'React router dom',
+                        url: ''
+                    },
+                    {
+                        name: 'React hook form',
+                        url: ''
+                    },
+                    {
+                        name: 'AOS',
+                        url: ''
+                    },
+                    {
+                        name: 'Tailwind CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'classnames',
+                        url: ''
+                    },
+                    {
+                        name: 'Material UI',
+                        url: ''
+                    },
+                ]
+
+            },
+            images: [
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/bflu1myynk7j8quyezyc.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/wqhcstaducgoy9ycjkrq.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/uuyclmcbnu6oh7wefyia.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/jwsakoruxd53bqlkbham.jpg',
+            ]
+        },
         'audiophile-e-commerce': {
             backward: '/projects/myteam-multi-page-website',
             forward: '/projects/dine-restaurant-website',
@@ -68,6 +141,133 @@ export const AppContextProvider = ({ children }) => {
                 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/gsga5rj9gks5rd3h05xl.jpg',
                 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/fs0rui2wbalhkdwyqioc.jpg',
                 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/gxtyjhbeafr8d33dotya.jpg'
+            ]
+        },
+        'payAPI-multi-page website': {
+            backward: '/projects/clock-app',
+            forward: '/projects/scoot-multi-page-website',
+            liveURL: 'https://pro-payapi-multi-page-website.netlify.app/',
+            sourceCodeURL: 'https://github.com/rafael-the-dev/payapi-multi-page-website',
+            name: 'PayAPI multi-page website',
+            level: 'advanced',
+            videoURL: 'https://player.vimeo.com/video/678028360?h=7b0d11215b',
+            imageLink: `https://findicons.com/files/icons/1261/sticker_system/256/home.png`,
+            content: {
+                description: "PayAPI multi-page website is a frontend  4-page website challenge for a marketing purpose..",
+                features: [
+                    "View the optimal layout for the app depending on their device's screen size", 
+                    "See hover states for all interactive elements on the page",
+                    {
+                        name: 'Receive an error message when the contact form is submitted if:',
+                        list: [
+                            `The Name, Email Address or Message fields are empty should show "This field can't be empty"`,
+                            'The Email Address is not formatted correctly should show "Please use a valid email address"'
+                        ]
+                    }
+                ],
+                tools: [
+                    {
+                        name: 'React JS',
+                        url: ''
+                    },
+                    {
+                        name: 'HTML',
+                        url: ''
+                    },
+                    {
+                        name: 'CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'React router dom',
+                        url: ''
+                    },
+                    {
+                        name: 'Tailwind CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'React hook form',
+                        url: ''
+                    },
+                    {
+                        name: 'classnames',
+                        url: ''
+                    },
+                    {
+                        name: 'Material UI',
+                        url: ''
+                    },
+                ]
+
+            },
+            images: [
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/epifjilrebysvrlmmipt.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/lrrahirlxqzw8kvbfs0r.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/dqn5yjzkz3qrkttftss0.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/klvuqhospk4vcmwhebra.jpg',
+            ]
+        },
+        'scoot-multi-page-website': {
+            backward: '/projects/payAPI-multi-page website',
+            forward: '/projects/arch-studio-multi-page-website',
+            liveURL: 'https://pro-scoot-multi-page-website.netlify.app/',
+            sourceCodeURL: 'https://github.com/rafael-the-dev/scoot-multi-page-website',
+            name: 'Scoot multi-page website',
+            level: 'advanced',
+            videoURL: 'https://player.vimeo.com/video/677820267?h=ac9a2a1b5c',
+            imageLink: `data:image/png;base64,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`,
+            content: {
+                description: "Scoot multi-page website is a frontend  4-page website challenge for a marketing purpose. During this website development I improved my front-end skills from specially CSS, with help of built-in css classes of tailwind CSS I could finish it as soon as possible",
+                features: [
+                    "View the optimal layout for the app depending on their device's screen size", 
+                    "See hover states for all interactive elements on the page",
+                ],
+                tools: [
+                    {
+                        name: 'React JS',
+                        url: ''
+                    },
+                    {
+                        name: 'HTML',
+                        url: ''
+                    },
+                    {
+                        name: 'CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'React router dom',
+                        url: ''
+                    },
+                    {
+                        name: 'Tailwind CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'classnames',
+                        url: ''
+                    },
+                    {
+                        name: 'Material UI',
+                        url: ''
+                    },
+                ]
+
+            },
+            images: [
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vrii3to3c3zgplm6qtrm.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/wayr5yglxsqf65fheaa0.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/qrnyi4bmsavxlqclrpqn.jpg',
+                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/zm69cyp5cz1mdddanzkv.jpg',
             ]
         },
         'dine-restaurant-website': {
@@ -807,27 +1007,34 @@ export const AppContextProvider = ({ children }) => {
                 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/pwfpwzfdf34rjxsaf5om.jpg',
             ]
         },
-        'payAPI-multi-page website': {
-            backward: '/projects/clock-app',
-            forward: '/projects/scoot-multi-page-website',
-            liveURL: 'https://pro-payapi-multi-page-website.netlify.app/',
-            sourceCodeURL: 'https://github.com/rafael-the-dev/payapi-multi-page-website',
-            name: 'PayAPI multi-page website',
-            level: 'advanced',
-            videoURL: 'https://player.vimeo.com/video/678028360?h=7b0d11215b',
-            imageLink: `https://findicons.com/files/icons/1261/sticker_system/256/home.png`,
+        'todos-app': {
+            backward: '/projects/github-user-search-app',
+            forward: '/projects/payAPI-multi-page website',
+            liveURL: 'https://pro-todos.netlify.app/',
+            sourceCodeURL: 'https://github.com/rafael-the-dev/todos--nextJS',
+            name: 'Todos App',
+            level: 'intermediate',
+            videoURL: '',
+            imageLink: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgWH3g7EKNb80WTOENdFjaa_tcuJ16Dad5v2Xvbkc5OmBEdQmbYT1c0E0JvduFykVlfrc&usqp=CAU`,
             content: {
-                description: "PayAPI multi-page website is a frontend  4-page website challenge for a marketing purpose..",
+                description: <>
+                    Todos APP - Next JS, React, MongoDB
+
+                        The classic todo app with a few twists! This app includes a dark/light theme toggle and drag &amp; drop reordering for anyone wanting an extra test.
+                        The challenge was to build out this fullstack todo app and get it looking as close to the design.<br/>
+                        
+                        In this challenge I could practice different technologies Next JS, Database connection using MongoDB, 
+                        Drang and Drop components for reordering, besides this I used Tailwind Css for styling components.
+                        The user can toggle from light to dark theme.
+
+                </>,
                 features: [
                     "View the optimal layout for the app depending on their device's screen size", 
                     "See hover states for all interactive elements on the page",
-                    {
-                        name: 'Receive an error message when the contact form is submitted if:',
-                        list: [
-                            `The Name, Email Address or Message fields are empty should show "This field can't be empty"`,
-                            'The Email Address is not formatted correctly should show "Please use a valid email address"'
-                        ]
-                    }
+                    "View the current time and location information based on their IP address",
+                    "View additional information about the date and time in the expanded state",
+                    "Be shown the correct greeting and background image based on the time of day they're visiting the site",
+                    "Generate random programming quotes by clicking the refresh icon near the quote"
                 ],
                 tools: [
                     {
@@ -847,164 +1054,27 @@ export const AppContextProvider = ({ children }) => {
                         url: ''
                     },
                     {
-                        name: 'React router dom',
+                        name: 'Drag & Drop',
                         url: ''
                     },
                     {
-                        name: 'Tailwind CSS',
+                        name: 'MongoDB',
                         url: ''
                     },
                     {
-                        name: 'React hook form',
+                        name: 'Next JS',
                         url: ''
                     },
                     {
-                        name: 'classnames',
-                        url: ''
-                    },
-                    {
-                        name: 'Material UI',
+                        name: 'Tailwind Css',
                         url: ''
                     },
                 ]
 
             },
             images: [
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/epifjilrebysvrlmmipt.jpg',
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/lrrahirlxqzw8kvbfs0r.jpg',
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/dqn5yjzkz3qrkttftss0.jpg',
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/klvuqhospk4vcmwhebra.jpg',
-            ]
-        },
-        'scoot-multi-page-website': {
-            backward: '/projects/payAPI-multi-page website',
-            forward: '/projects/arch-studio-multi-page-website',
-            liveURL: 'https://pro-scoot-multi-page-website.netlify.app/',
-            sourceCodeURL: 'https://github.com/rafael-the-dev/scoot-multi-page-website',
-            name: 'Scoot multi-page website',
-            level: 'advanced',
-            videoURL: 'https://player.vimeo.com/video/677820267?h=ac9a2a1b5c',
-            imageLink: `data:image/png;base64,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`,
-            content: {
-                description: "Scoot multi-page website is a frontend  4-page website challenge for a marketing purpose. During this website development I improved my front-end skills from specially CSS, with help of built-in css classes of tailwind CSS I could finish it as soon as possible",
-                features: [
-                    "View the optimal layout for the app depending on their device's screen size", 
-                    "See hover states for all interactive elements on the page",
-                ],
-                tools: [
-                    {
-                        name: 'React JS',
-                        url: ''
-                    },
-                    {
-                        name: 'HTML',
-                        url: ''
-                    },
-                    {
-                        name: 'CSS',
-                        url: ''
-                    },
-                    {
-                        name: 'JavaScript',
-                        url: ''
-                    },
-                    {
-                        name: 'React router dom',
-                        url: ''
-                    },
-                    {
-                        name: 'Tailwind CSS',
-                        url: ''
-                    },
-                    {
-                        name: 'classnames',
-                        url: ''
-                    },
-                    {
-                        name: 'Material UI',
-                        url: ''
-                    },
-                ]
-
-            },
-            images: [
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/vrii3to3c3zgplm6qtrm.jpg',
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/wayr5yglxsqf65fheaa0.jpg',
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/qrnyi4bmsavxlqclrpqn.jpg',
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/zm69cyp5cz1mdddanzkv.jpg',
-            ]
-        },
-        'arch-studio-multi-page-website': {
-            backward: '/projects/payAPI-multi-page website',
-            forward: '/projects/audiophile-e-commerce',
-            liveURL: 'https://pro-arch-studio-multipage.netlify.app/',
-            sourceCodeURL: 'https://github.com/rafael-the-dev/arch-studio-multi-page',
-            name: 'Arch Studio multi-page website',
-            level: 'advanced',
-            videoURL: 'https://player.vimeo.com/video/678025714?h=808d0140dc',
-            imageLink: `data:image/jpeg;base64,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`,
-            content: {
-                description: "Scoot multi-page website is a frontend  4-page website challenge for a marketing purpose. During this website development I improved my front-end skills from specially CSS: Grid, Scrolling animations, form validation. with help of built-in css classes of tailwind CSS I could finish it as soon as possible",
-                features: [
-                    "View the optimal layout for the app depending on their device's screen size", 
-                    "See hover states for all interactive elements on the page",
-                    {
-                        name: 'Receive an error message when the contact form is submitted if:',
-                        list: [
-                            `he Name, Email or Message fields are empty should show "Can't be empty"`,
-                            `The Email is not formatted correctly should show "Please use a valid email address"`
-                        ]
-                    }
-                ],
-                tools: [
-                    {
-                        name: 'React JS',
-                        url: ''
-                    },
-                    {
-                        name: 'HTML',
-                        url: ''
-                    },
-                    {
-                        name: 'CSS',
-                        url: ''
-                    },
-                    {
-                        name: 'JavaScript',
-                        url: ''
-                    },
-                    {
-                        name: 'React router dom',
-                        url: ''
-                    },
-                    {
-                        name: 'React hook form',
-                        url: ''
-                    },
-                    {
-                        name: 'AOS',
-                        url: ''
-                    },
-                    {
-                        name: 'Tailwind CSS',
-                        url: ''
-                    },
-                    {
-                        name: 'classnames',
-                        url: ''
-                    },
-                    {
-                        name: 'Material UI',
-                        url: ''
-                    },
-                ]
-
-            },
-            images: [
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/bflu1myynk7j8quyezyc.jpg',
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/wqhcstaducgoy9ycjkrq.jpg',
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/uuyclmcbnu6oh7wefyia.jpg',
-                'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/jwsakoruxd53bqlkbham.jpg',
+                "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/llcq9eiv3ney5tkxgdtu.jpg",
+                "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/hieh9u8fnnptucjepnfu.jpg"
             ]
         }
     };

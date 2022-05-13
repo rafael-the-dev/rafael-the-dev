@@ -12,27 +12,18 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
 
     const [ open, setOpen ] = useState(false);
 
-    const getImageURL = useCallback((index) => 
-        project.images[index].startsWith('https://') ? project.images[index] : `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${project.images[index]}`, 
-    [ nameParameter, project ]);
+    const getImageURL = useCallback((image) => 
+        image.startsWith('https://') ? image : `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${image}`, 
+    [ nameParameter ]);
 
     const clickHandler = useCallback(() => setOpen(o => !o), []);
 
-    const carouselImages = useMemo(() =>
-        [
-            {
-              original: getImageURL(0),
-              thumbnail: getImageURL(0),
-            },
-            {
-                original: getImageURL(1),
-                thumbnail: getImageURL(1),
-            },
-            {
-                original: getImageURL(2),
-                thumbnail: getImageURL(2),
-            },
-        ], [ getImageURL ]
+    const carouselImages = useMemo(() => 
+        project.images.map(image => ( {
+            original: getImageURL(image),
+            thumbnail: getImageURL(image),
+          }))
+    , [ getImageURL, project ]
     );
 
     const getTools = useMemo(() => {
@@ -85,6 +76,12 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                             className={classNames('mt-3 text-base', classes.tools)}>
                             { getTools }
                         </Typography>
+                        <a className="block mt-4" href={project.sourceCodeURL} rel="noreferrer" target="_blank">
+                            <Button 
+                                className={classNames('text-red-700 uppercase px-0 ')}>
+                                Github - source code
+                            </Button>
+                        </a>
                     </section>
                 </Collapse>
              </Card>
@@ -95,6 +92,21 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
 export default CardContainer;
 
 /**
+ * 
+        [
+            {
+              original: getImageURL(0),
+              thumbnail: getImageURL(0),
+            },
+            {
+                original: getImageURL(1),
+                thumbnail: getImageURL(1),
+            },
+            {
+                original: getImageURL(2),
+                thumbnail: getImageURL(2),
+            },
+        ]
  * <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-16', classes.card)}>
             <Paper component="article" className={classNames(classes.projectCard,
                `relative pb-8 px-4 pt-12 h-full flex flex-col`)}>
