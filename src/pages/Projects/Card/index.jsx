@@ -19,7 +19,7 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
     const clickHandler = useCallback(() => setOpen(o => !o), []);
 
     const carouselImages = useMemo(() => 
-        project.images.map(image => ( {
+        project.images?.map(image => ( {
             original: getImageURL(image),
             thumbnail: getImageURL(image),
           }))
@@ -27,13 +27,15 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
     );
 
     const getTools = useMemo(() => {
-        const total = project.content.tools.length;
+        const total = project.content?.tools.length;
         return project.content?.tools
             .reduce((prevValue, currentValue, currentIndex) => (
                 prevValue + currentValue.name + ( currentIndex === total - 1 ? '' : ' | ')
             ), "")
     }, [ project ]);
-
+    
+    if(Object.keys(project).length === 0) return <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-12 pt-0', classes.card)}></Grid>
+    
     return (
         <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-12 pt-0', classes.card)}>
              <Card >

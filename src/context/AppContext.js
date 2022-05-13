@@ -1076,7 +1076,59 @@ export const AppContextProvider = ({ children }) => {
                 "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/llcq9eiv3ney5tkxgdtu.jpg",
                 "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/hieh9u8fnnptucjepnfu.jpg"
             ]
-        }
+        },
+        'officelite-coming-soon-site': {
+            backward: '/projects/github-user-search-app',
+            forward: '/projects/payAPI-multi-page website',
+            liveURL: 'https://pro-officelite-coming-soon-site.netlify.app/',
+            sourceCodeURL: 'https://github.com/rafael-the-dev/todos--nextJS',
+            name: 'Officelite coming soon site',
+            level: 'intermediate',
+            videoURL: '',
+            imageLink: `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgWH3g7EKNb80WTOENdFjaa_tcuJ16Dad5v2Xvbkc5OmBEdQmbYT1c0E0JvduFykVlfrc&usqp=CAU`,
+            content: {
+                description: <>
+                    This 2-page challenge was a perfect test when I was starting to get comfortable with 
+                    your HTML &amp; CSS skills. In this challenge I could practice responsive design, form 
+                    validation and to make it possible I used Tailwind Css for styling.
+                </>,
+                features: [
+                    "View the optimal layout for the app depending on their device's screen size", 
+                    "See hover states for all interactive elements on the page",
+                    "View the current time and location information based on their IP address",
+                    "View additional information about the date and time in the expanded state",
+                    "Be shown the correct greeting and background image based on the time of day they're visiting the site",
+                    "Generate random programming quotes by clicking the refresh icon near the quote"
+                ],
+                tools: [
+                    {
+                        name: 'HTML',
+                        url: ''
+                    },
+                    {
+                        name: 'CSS',
+                        url: ''
+                    },
+                    {
+                        name: 'JavaScript',
+                        url: ''
+                    },
+                    {
+                        name: 'Tailwind Css',
+                        url: ''
+                    },
+                ]
+
+            },
+            images: [
+                "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ibtmng4molp6wioogur7.jpg",
+                "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/m9de4ghc2fxe6b8dprcm.jpg",
+                "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/fxvyub5zzakddkmm0epy.jpg",
+                "https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/goponzswe8awqqmtvan9.jpg"
+            ]
+        },
+        "x": {},
+        "y": {}
     };
 
     const [ currentPage, setCurrentPage ] = useState('');
