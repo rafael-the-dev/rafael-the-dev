@@ -5,6 +5,10 @@
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=rafael-the-dev&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rafael-the-dev&layout=compact&langs_count=7&theme=dracula"/>
 </div>
+
+<div align='center'>
+<a height="150em" href="http://www.github.com/rafael-the-dev"><img src="https://github-readme-streak-stats.herokuapp.com/?user=rafael-the-dev&stroke=2ea043&background=171717&ring=3382ed&fire=3382ed&currStreakNum=0bd967&currStreakLabel=3382ed&sideNums=0bd967&sideLabels=3382ed&dates=0bd967&hide_border=true" /></a>
+</div>
   
 <div style="display: inline_block"><br>
   <img align="center" alt="Rafa-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
