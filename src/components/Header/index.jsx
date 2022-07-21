@@ -1,8 +1,7 @@
-import { Button, Drawer, Hidden, IconButton, List, ListItemButton, ListItemIcon , ListItemText, Paper, Typography } from '@mui/material';
+import { Button, Hidden, IconButton, List, ListItemButton, ListItemIcon , ListItemText, Paper, Typography } from '@mui/material';
 import classNames from 'classnames';
 import Link from 'next/link';
-import React, { useCallback, useContext, useMemo, useState } from 'react';
-import { useRouter } from "next/router"
+import React, { useCallback, useMemo, useRef } from 'react';
 
 import classes from './styles.module.css';
 
@@ -13,32 +12,30 @@ import ArticleIcon from '@mui/icons-material/Article';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 
 import ListItem from "./components/list-item"
+import Drawer from "src/components/drawer"
 
 const Header = () => {
-    const { pathname } = useRouter();
-
-    const [ canIOpenNavBar, setCanIOpenNavBar ] = useState(false);
-    const menuClickHandler = useCallback(() => setCanIOpenNavBar(b => !b), [ ]);
-    const clickHandler = useCallback(() => setCanIOpenNavBar(false), []);
+    const openHandler = useRef(null);
+    const closeHandler = useRef(null);
 
     const headerNavigation = useMemo(() => (
         <nav className={classNames(classes.headerNav, 
             `flex flex-col items-start md:ml-8 md:relative h-full pt-4 md:pt-0`)}>
             <Hidden mdUp>
                 <IconButton 
-                    onClick={menuClickHandler}>
+                    onClick={() => closeHandler.current?.()}>
                     <ArrowBackIcon className='text-white hover:text-orange-700' />
                 </IconButton>
             </Hidden>
             <List component="ul" className={classNames(`flex flex-col grow px-5 md:flex-row`)}>
-                <ListItem href="/" onClick={clickHandler} pathName="/" text="Home" />
-                <ListItem href="projects" onClick={clickHandler} pathName="/projects" text="projects" />
-                <ListItem href="resume" onClick={clickHandler} pathName="/resume" text="resume" />                
+                <ListItem href="/"  pathName="/" text="Home" />
+                <ListItem href="projects"  pathName="/projects" text="projects" />
+                <ListItem href="resume"  pathName="/resume" text="resume" />                
             </List>
             <Hidden mdUp>
                 <div className={classNames(`px-5 pb-4 w-full 
                     bg-transparent`, classes.headerDrawerBottom)}>
-                    <Link href="resume" onClick={clickHandler} 
+                    <Link href="resume"
                         className={classNames(classes.contactMeLink, `no-underline`)}>
                         <Button 
                             className={classNames(classes.headerGetStarted, classes.headerContactMe, 
@@ -50,7 +47,7 @@ const Header = () => {
                 </div>
             </Hidden>
         </nav>
-    ), [ classes, clickHandler, menuClickHandler, pathname]);
+    ), [ classes ]);
 
     return (
         <header 
@@ -67,7 +64,10 @@ const Header = () => {
                     { headerNavigation }
                 </Hidden>
                 <Hidden mdUp>
-                    <Drawer anchor="right" open={canIOpenNavBar} onClose={menuClickHandler} classes={{ paper: classes.headerDrawe}}>
+                    <Drawer 
+                        onClick={openHandler}
+                        onClose={closeHandler}
+                        drawerPaperClassName={classes.headerDrawe}>
                         { headerNavigation }
                     </Drawer>
                 </Hidden>
@@ -85,7 +85,7 @@ const Header = () => {
                     <IconButton 
                         aria-label="menu" 
                         className={classNames('outline-none border-0 text-white hover:text-orange-500')} 
-                        onClick={menuClickHandler}>
+                        onClick={() => openHandler.current?.()}>
                         <MenuIcon />
                     </IconButton>
                 </Hidden>
