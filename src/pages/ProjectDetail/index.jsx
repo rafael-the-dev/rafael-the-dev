@@ -1,4 +1,4 @@
-import { Button, Grid, IconButton, List, ListItem, ListItemText, Paper, Typography } from '@mui/material';
+/*import { Button, Grid, IconButton, List, ListItem, ListItemText, Paper, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useDisplay } from '../../styles';
@@ -104,7 +104,7 @@ const ProjectDetail = () => {
 
     /*const handlePaginationChange = (event, value) => {
         navigate(`/projects/${projectsRefs.current[value - 1]}`);
-    };*/
+    };
 
     const handlerNavigate = prop => () => {
         navigate(prop);
@@ -299,7 +299,7 @@ const ProjectDetail = () => {
     );
 };
 
-export default ProjectDetail;
+export default ProjectDetail;*/
 
 /**
  * <iframe 

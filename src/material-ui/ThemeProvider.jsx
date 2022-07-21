@@ -1,10 +1,8 @@
-import { useContext } from "react"
 import { ThemeProvider } from '@mui/material/styles';
 
-import { ThemeContext } from "src/context/ThemeContext"
+import { theme } from "./theme"
 
 const ThemeProviderContainer  = ({ children }) => {
-    const { theme } = useContext(ThemeContext);
 
     return (
         <ThemeProvider theme={theme}>

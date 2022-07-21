@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, Collapse, Grid, IconButton, Typography } from '@mui/material';
+/*import { Button, Card, CardActions, CardContent, Collapse, Grid, IconButton, Typography } from '@mui/material';
 import { useStyles } from './styles';
 //import { Link } from 'react-router-dom';
 import classNames from 'classnames';
@@ -91,7 +91,7 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
     );
 };
 
-export default CardContainer;
+export default CardContainer;*/
 
 /**
  * 

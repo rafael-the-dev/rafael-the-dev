@@ -7,6 +7,11 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        orange: {
+          
+        }
+      },
       spacing: {
         "5": "5%"
       }

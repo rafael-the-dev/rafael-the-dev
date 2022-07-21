@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import redECommerceIcon from '../assets/images/red-ecommerce-icon.jfif'
+//import redECommerceIcon from 'public/red-ecommerce-icon.jfif'
 
 export const AppContext = createContext();
 AppContext.displayName = 'AppContext';
@@ -87,7 +87,7 @@ export const AppContextProvider = ({ children }) => {
             name: 'Audiophile e-commerce',
             level: 'guru',
             videoURL: 'https://player.vimeo.com/video/678030551?h=5c859c8006',
-            imageLink: `${redECommerceIcon}`,
+            imageLink: ``,
             content: {
                 description: "Audiophile e-commerce is a frontend project for shopping with optimal layout for the app depending on their device's screen size. In this challenge I have been working with complex muiltipage app and states managment.",
                 features: [
