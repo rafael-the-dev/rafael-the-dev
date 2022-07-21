@@ -52,17 +52,14 @@ const Header = () => {
     return (
         <header 
             className={classNames( 
-            classes.header, `flex items-center justify-between px-5 md:py-4 bg-neutral-800`)}>
+            classes.header, `flex items-center justify-between px-5 lg:px-8 md:py-4 bg-neutral-800`)}>
             <div className={classNames(`flex items-center`)}>
                 <Link href="/">
                     <Typography 
-                        className={classNames(classes.headerLogo, 'font-bold text-2xl uppercase')}>
+                        className={classNames(classes.headerLogo, 'font-bold text-2xl uppercase md:text-3xl lg:font-black lg:text-4xl')}>
                         Rafael Tivane
                     </Typography>
                 </Link>
-                <Hidden mdDown>
-                    { headerNavigation }
-                </Hidden>
                 <Hidden mdUp>
                     <Drawer 
                         onClick={openHandler}
@@ -74,12 +71,7 @@ const Header = () => {
             </div>
             <div className={classNames('flex items-center')}>
                 <Hidden mdDown>
-                    <Link href="/resume" className={classNames('no-underline')}>
-                        <Button className={classNames(classes.headerGetStarted, `py-2.5 uppercase px-4 md:font-bold
-                        md:ml-4 md:bg-transparent text-sm hover:opacity-80`)}>
-                            Contact Me
-                        </Button>
-                    </Link>
+                    { headerNavigation }
                 </Hidden>
                 <Hidden mdUp>
                     <IconButton 

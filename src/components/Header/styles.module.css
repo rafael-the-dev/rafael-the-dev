@@ -55,12 +55,6 @@
     .headerDrawe {
         width: auto !important;
     }
-
-    .headerNav {
-        top: 0;
-        right: 0;
-        width: 300px !important;
-    }
 }
 
 @media screen and (min-width: 900px) {
@@ -69,7 +63,7 @@
     }
 
     .headerNav {
-        width: auto !important;
+        background-image: none;
     }
 
     .headerItem {

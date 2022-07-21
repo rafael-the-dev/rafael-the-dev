@@ -1,0 +1,17 @@
+.root {
+    padding: 2rem 5%;
+}
+
+@media screen and (min-width: 900px) {
+    .root {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .root {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

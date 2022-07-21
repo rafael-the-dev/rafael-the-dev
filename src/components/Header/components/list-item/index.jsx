@@ -12,7 +12,7 @@ const ListItemContainer = ({ href, onClick, pathName, text }) => {
     return (
         <ListItem disablePadding>
             <Link 
-                className={classNames('capitalize mb-2 text-bsase md:my-0 md:text-black hover:text-orange-700', 
+                className={classNames('capitalize mb-2 text-bsase md:my-0 md:mr-4 hover:text-orange-700', 
                 'color-transition', 
                 classes.headerNavItemText, 
                 pathname === pathName ? "font-bold text-orange-600": "text-white" )} 
