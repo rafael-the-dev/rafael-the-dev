@@ -1,11 +1,16 @@
 import Link from "next/link"
+import { Typography  } from "@mui/material";
 
-const LinkContainer = ({ children, className, href, onClick, passHref }) => {
+
+const LinkContainer = ({ children, className, href, onClick }) => {
     return (
-        <Link href={href} passHref={passHref}>
-            <a className={className} onClick={onClick}>
+        <Link href={href} passHref>
+            <Typography
+                className={className}
+                component="a"
+                onClick={onClick}>
                 { children }
-            </a>
+            </Typography>
         </Link>
     );
 };

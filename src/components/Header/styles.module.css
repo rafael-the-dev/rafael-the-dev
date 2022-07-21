@@ -23,8 +23,7 @@
 }
 
 .headerNav {
-    background-image: linear-gradient(to bottom, #0b4681 , #186bbd ) !important;
-    transition: all 1s ease-in;
+    background-image: linear-gradient(169deg, #000, #404040);
 }
 
 .headerNavDisplay {
@@ -35,13 +34,6 @@
     min-width: 0 !important
 }
 
-.headerGetStarted {
-    color: #186bbd !important;
-}
-
-.headerGetStarted:hover {
-    color: #FFF !important;
-}
 
 .headerDrawerBottom {
     bottom: 19;

@@ -22,31 +22,34 @@ const Header = () => {
     const clickHandler = useCallback(() => setCanIOpenNavBar(false), []);
 
     const headerNavigation = useMemo(() => (
-        <Paper elevation={0} component="nav" className={classNames(classes.headerNav, 
-            `md:ml-8 md:relative h-full pt-4 md:pt-0`)}>
+        <nav className={classNames(classes.headerNav, 
+            `flex flex-col items-start md:ml-8 md:relative h-full pt-4 md:pt-0`)}>
             <Hidden mdUp>
-                <Button onClick={menuClickHandler}><ArrowBackIcon classes={{ root: 'text-white'}} /></Button>
+                <IconButton 
+                    onClick={menuClickHandler}>
+                    <ArrowBackIcon className='text-white hover:text-orange-700' />
+                </IconButton>
             </Hidden>
-            <List component="ul" className={classNames(`flex flex-col md:flex-row`)}>
+            <List component="ul" className={classNames(`flex flex-col grow px-5 md:flex-row`)}>
                 <ListItem href="/" onClick={clickHandler} pathName="/" text="Home" />
                 <ListItem href="projects" onClick={clickHandler} pathName="/projects" text="projects" />
                 <ListItem href="resume" onClick={clickHandler} pathName="/resume" text="resume" />                
             </List>
             <Hidden mdUp>
-                <Paper elevation={0} className={classNames(`flex flex-col items-stretch absolute w-full 
+                <div className={classNames(`px-5 pb-4 w-full 
                     bg-transparent`, classes.headerDrawerBottom)}>
-                    <Link href="/resume" onClick={clickHandler} 
+                    <Link href="resume" onClick={clickHandler} 
                         className={classNames(classes.contactMeLink, `no-underline`)}>
                         <Button 
                             className={classNames(classes.headerGetStarted, classes.headerContactMe, 
-                            'bg-transition', `bg-white text-sm capitalize font-bold w-full text-white py-3
-                            hover:border hover:border-white hover:border-solid`)}>
+                            `bg-orange-700 text-sm capitalize font-bold w-full text-white py-3
+                            hover:bg-orange-900`)}>
                             Contact me
                         </Button>
                     </Link>
-                </Paper>
+                </div>
             </Hidden>
-        </Paper>
+        </nav>
     ), [ classes, clickHandler, menuClickHandler, pathname]);
 
     return (
