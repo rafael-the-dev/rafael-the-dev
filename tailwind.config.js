@@ -1,15 +1,14 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{html,js,jsx,ts,tsx}"
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}"
   ],
+  darkMode: 'class',
   theme: {
     extend: {
-      colors: {
-        blue: {
-          700: '#1976d2',
-          800: '#092c4e',
-          900: '#021d38'
-        },
+      spacing: {
+        "5": "5%"
       }
     },
     screens: {
