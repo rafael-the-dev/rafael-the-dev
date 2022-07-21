@@ -1,0 +1,8 @@
+.headerNavItemText {
+    width: max-content;
+}
+
+.currentPage {
+    color: #27b1bf !important;
+    font-weight: 700 !important;
+}

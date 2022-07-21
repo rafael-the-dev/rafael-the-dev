@@ -1,26 +1,21 @@
-import { Button, Drawer, Hidden, List, ListItem, ListItemButton, ListItemIcon , ListItemText, Paper, Typography } from '@mui/material';
+import { Button, Drawer, Hidden, IconButton, List, ListItemButton, ListItemIcon , ListItemText, Paper, Typography } from '@mui/material';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
-import { useDisplay } from '../../styles';
-import { useStyles } from './styles'
-import React, { useState, useCallback, useMemo } from 'react';
+import Link from 'next/link';
+import React, { useCallback, useContext, useMemo, useState } from 'react';
+import { useRouter } from "next/router"
+
+import classes from './styles.module.css';
+
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import ArticleIcon from '@mui/icons-material/Article';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import { useContext } from 'react'
-import { AppContext } from '../../context/AppContext'
 
+import ListItem from "./components/list-item"
 
 const Header = () => {
-    const display = useDisplay();
-    //const text = useTypography();
-    //const bg = useBackground();
-    //const responsive = useResponsive();
-    const classes = useStyles();
-
-    const { currentPage } = useContext(AppContext);
+    const { pathname } = useRouter();
 
     const [ canIOpenNavBar, setCanIOpenNavBar ] = useState(false);
     const menuClickHandler = useCallback(() => setCanIOpenNavBar(b => !b), [ ]);
@@ -33,44 +28,14 @@ const Header = () => {
                 <Button onClick={menuClickHandler}><ArrowBackIcon classes={{ root: 'text-white'}} /></Button>
             </Hidden>
             <List component="ul" className={classNames(`flex flex-col md:flex-row`)}>
-                <ListItem disablePadding onClick={clickHandler} component={Link} to="/" >
-                    <ListItemButton>
-                        <Hidden mdUp>
-                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames('mr-4')}>
-                                <HomeIcon classes={{ root: classNames('text-white', { [classes.currentPage]: currentPage === '/'})}} />
-                            </ListItemIcon>
-                        </Hidden>
-                        <ListItemText classes={{ root: classNames('text-white md:my-0 md:text-black', 'color-transition', classes.headerNavItemText, 
-                            { [classes.currentPage]: currentPage === '/'})}} primary="Home" />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding onClick={clickHandler} component={Link} to="/projects">
-                    <ListItemButton>
-                        <Hidden mdUp>
-                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames('mr-4')}>
-                                <DashboardIcon classes={{ root: classNames('text-white', { [classes.currentPage]: currentPage === '/projects'})}} />
-                            </ListItemIcon>
-                        </Hidden>
-                        <ListItemText classes={{ root: classNames('text-white md:my-0 md:text-black', 'color-transition', classes.headerNavItemText, 
-                            { [classes.currentPage]: currentPage === '/projects'})}} primary="Projects" />
-                    </ListItemButton>
-                </ListItem>
-                <ListItem disablePadding onClick={clickHandler} component={Link} to="/resume">
-                    <ListItemButton>
-                        <Hidden mdUp>
-                            <ListItemIcon classes={{ root: classes.headerNavIcon}} className={classNames('mr-4')}>
-                                <ArticleIcon classes={{ root: classNames('text-white', { [classes.currentPage]: currentPage === '/resume'})}} />
-                            </ListItemIcon>
-                        </Hidden>
-                        <ListItemText classes={{ root: classNames('text-white md:my-0 md:text-black ', 'color-transition', classes.headerNavItemText, 
-                            { [classes.currentPage]: currentPage === '/resume'})}} primary="Resume" />
-                    </ListItemButton>
-                </ListItem>
+                <ListItem href="/" onClick={clickHandler} pathName="/" text="Home" />
+                <ListItem href="projects" onClick={clickHandler} pathName="/projects" text="projects" />
+                <ListItem href="resume" onClick={clickHandler} pathName="/resume" text="resume" />                
             </List>
             <Hidden mdUp>
                 <Paper elevation={0} className={classNames(`flex flex-col items-stretch absolute w-full 
                     bg-transparent`, classes.headerDrawerBottom)}>
-                    <Link to="/resume" onClick={clickHandler} 
+                    <Link href="/resume" onClick={clickHandler} 
                         className={classNames(classes.contactMeLink, `no-underline`)}>
                         <Button 
                             className={classNames(classes.headerGetStarted, classes.headerContactMe, 
@@ -82,19 +47,19 @@ const Header = () => {
                 </Paper>
             </Hidden>
         </Paper>
-    ), [ classes, clickHandler, menuClickHandler, currentPage]);
+    ), [ classes, clickHandler, menuClickHandler, pathname]);
 
     return (
-        <Paper elevation={0} component="header" className={classNames( 
-            display.px5, classes.header, `flex items-center justify-between md:py-4`)}>
-            <Paper elevation={0} className={classNames(`flex items-center`)}>
-            <Typography 
-                variant="h5" 
-                component={Link} 
-                to="/" 
-                className={classNames(classes.headerLogo, 'font-bold no-underline text-color', 'color-transition')}>
-                Rafael Tivane
-            </Typography>
+        <header 
+            className={classNames( 
+            classes.header, `flex items-center justify-between px-5 md:py-4 bg-neutral-800`)}>
+            <div className={classNames(`flex items-center`)}>
+                <Link href="/">
+                    <Typography 
+                        className={classNames(classes.headerLogo, 'font-bold text-2xl uppercase')}>
+                        Rafael Tivane
+                    </Typography>
+                </Link>
                 <Hidden mdDown>
                     { headerNavigation }
                 </Hidden>
@@ -103,10 +68,10 @@ const Header = () => {
                         { headerNavigation }
                     </Drawer>
                 </Hidden>
-            </Paper>
-            <Paper elevation={0} className={classNames('flex items-center')}>
+            </div>
+            <div className={classNames('flex items-center')}>
                 <Hidden mdDown>
-                    <Link to="/resume" className={classNames('no-underline')}>
+                    <Link href="/resume" className={classNames('no-underline')}>
                         <Button className={classNames(classes.headerGetStarted, `py-2.5 uppercase px-4 md:font-bold
                         md:ml-4 md:bg-transparent text-sm hover:opacity-80`)}>
                             Contact Me
@@ -114,29 +79,16 @@ const Header = () => {
                     </Link>
                 </Hidden>
                 <Hidden mdUp>
-                    <button 
+                    <IconButton 
                         aria-label="menu" 
-                        className={classNames('bg-transparent outline-none border-0')} 
+                        className={classNames('outline-none border-0 text-white hover:text-orange-500')} 
                         onClick={menuClickHandler}>
                         <MenuIcon />
-                    </button>
+                    </IconButton>
                 </Hidden>
-            </Paper>
-        </Paper>
+            </div>
+        </header>
     );
 };
 
 export default Header;
-
-/**
- * 
-        <Paper 
-            elevation={0}
-            component="header" 
-            className={classNames(display.flex, display.justifyBetween, display.alignCenter, classes.header)}>
-            <Typography variant="h5" component={Link} to="/" className={classNames(text.noUnderline, text.font7)}>Rafael Tivane</Typography>
-            <IconButton>
-                <MenuOutlinedIcon />
-            </IconButton>
-        </Paper>
- */
