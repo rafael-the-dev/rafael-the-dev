@@ -74,7 +74,7 @@ const Header = () => {
             <div className={classNames(`flex items-center`)}>
                 <Link href="/">
                     <Typography 
-                        className={classNames(classes.headerLogo, 'font-bold text-2xl uppercase md:text-3xl lg:font-black lg:text-4xl')}>
+                        className={classNames(classes.headerLogo, 'font-bold text-2xl text-gradient uppercase md:text-3xl lg:font-black lg:text-4xl')}>
                         Rafael Tivane
                     </Typography>
                 </Link>

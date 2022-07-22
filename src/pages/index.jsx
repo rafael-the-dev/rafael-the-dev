@@ -1,12 +1,56 @@
-import { Button, Divider, Grid, Hidden, Typography } from '@mui/material';
+import { Button, CardMedia, Divider, Grid, Hidden, Paper, Typography } from '@mui/material';
 import classNames from 'classnames';
-import { useContext, useEffect } from 'react';
+
+import classes from "src/styles/Home.module.css"
+
+import Link from "src/components/link";
+
+const AboutImage = () => (
+    <CardMedia
+        component="img"
+        className={classes.aboutImage}
+        image="/rafael-tivane=2/jpg"
+    />
+);
 
 const Home = () => {
 
+
     return (
-       <main className={classNames()}>
-           Hello
+       <main className={classNames("py-6")}>
+           <section className={classNames(classes.hero, 
+                "bg-neutral-800 px-5 lg:px-8 py-6 md:flex md:items-center md:justify-between")}>
+                <div className="flex flex-col items-center md:items-start">
+                    <Typography
+                        className="text-center text-white text-lg uppercase md:text-left md:text-xl"
+                        component="h1">
+                        I am Rafael Tivane<br/>
+                        <span className={classNames(classes.position, 'block capitalize font-black mt-4 text-gradient text-3xl md:text-6xl')}>
+                            frontend developer
+                        </span>
+                    </Typography>
+                    <Link className="mt-8" href="/#contact-me">
+                        <Button className={classNames(classes.contactMeButton, `px-8 text-white`)}>Contact me</Button>
+                    </Link>
+                </div>
+                <Hidden mdDown>
+                    <Paper 
+                        className={classNames(classes.heroImageContainer, "rounded-none")}
+                        elevation={4}>
+                        <CardMedia 
+                            alt="rafael tivane"
+                            component="img"
+                            className={classes.heroImage}
+                            image='/rafael-tivane.jpg'
+                        />
+                    </Paper>
+                </Hidden>
+           </section>
+           <section className={classNames(classes.about, "bg-neutral-800 px-5 lg:px-8")}>
+                <Hidden mdUp>
+                    <AboutImage />
+                </Hidden>
+           </section>
        </main>
     );
 };
