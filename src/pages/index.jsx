@@ -1,11 +1,13 @@
 import { Button, CardMedia, Divider, Grid, Hidden, Paper, Typography } from '@mui/material';
 import classNames from 'classnames';
 import { useContext, useMemo } from 'react';
-import Card from "src/components/portfolio-card"
 
 import classes from "src/styles/Home.module.css"
 
 import Link from "src/components/link";
+import Card from "src/components/portfolio-card"
+import TestimonialCard from "src/components/testimonial"
+
 import { AppContext } from "src/context/AppContext"
 
 const AboutImage = () => (
@@ -24,6 +26,23 @@ const Home = () => {
             'arch-studio-multi-page-website', 'payAPI-multi-page website', 'scoot-multi-page-website', 'audiophile-e-commerce', 'invoice-app', 'devjobs-web-app'
         ].includes(item[0]));
     }, [ projects ]);
+
+    const testimonails = useMemo(() => (
+        [
+            {
+                image: "https://media-exp1.licdn.com/dms/image/C4D03AQH3Y9iC59JdxA/profile-displayphoto-shrink_100_100/0/1657766172391?e=1663804800&v=beta&t=FasBzr6tMUUrV3U7-MVGuIybYnewIy8QxdSoMJmuwRA",
+                name: "Daniel Carlos",
+                plataform: "Linkedin",
+                text: "Rafael is a talented and dedicated professional frontend developer, his works are well made, besides this he is available to cooporate. I need his help in my project, after one hour after he was able to clear my doubts and help me to move forward."
+            }, 
+            {
+                image: "https://media-exp1.licdn.com/dms/image/C4D03AQEajsmy19CXwg/profile-displayphoto-shrink_100_100/0/1641121573551?e=1663804800&v=beta&t=iAAO71pvHiVcDWRuxRcCdaIfkNXF9A8fQg23kSa6fA8",
+                name: "Jai Chaudhary",
+                plataform: "Linkedin",
+                text: "I highly recommend Rafael. Rafael has helped me to understand many concepts of React even after leaving the organization. He is positive and helpful. He has never hesitated to provide support when needed."
+            }
+        ]
+    ), []);
 
     return (
        <main className={classNames("py-6")}>
@@ -87,7 +106,7 @@ const Home = () => {
                     className="capitalize font-bold text-center text-white text-2xl md:text-3xl">
                     My portfolio
                 </Typography>
-                <ul className={classNames(classes.portfolioList, "my-6 sm:flex sm:justify-between sm:flex-wrap")}>
+                <ul className={classNames(classes.portfolioList, "my-10 sm:flex sm:justify-between sm:flex-wrap")}>
                     {
                         portfolio.map(item => <Card key={item[0]} id={item[0]} { ...item[1]} />)
                     }
@@ -100,6 +119,18 @@ const Home = () => {
                     </Link>
                 </div>
            </section>
+           <section className={classNames("bg-neutral-800 mt-8 py-12 px-5")}>
+                <Typography
+                    component="h2"
+                    className="capitalize font-bold text-center text-white text-2xl md:text-3xl">
+                    testimonials
+                </Typography>
+                <div className="mt-12 md:flex justify-between">
+                    {
+                        testimonails.map((testimonial, index) => <TestimonialCard key={index} { ...testimonial } />)
+                    }
+                </div>
+            </section>
        </main>
     );
 };

@@ -1,0 +1,14 @@
+.quoteIcon {
+    font-size: 7.25rem;
+    line-height: 2.5rem;
+    opacity: .3;
+    right: -11px;
+    top: -1rem;
+    z-index: 0;
+}
+
+@media screen and (min-width: 900px) {
+    .root {
+        width: 49%;
+    }
+}
