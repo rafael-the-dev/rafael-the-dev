@@ -1,15 +1,12 @@
 import { Button, Hidden, IconButton, List, ListItemButton, ListItemIcon , ListItemText, Paper, Typography } from '@mui/material';
 import classNames from 'classnames';
 import Link from 'next/link';
-import React, { useCallback, useMemo, useRef } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
 
 import classes from './styles.module.css';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MenuIcon from '@mui/icons-material/Menu';
-import HomeIcon from '@mui/icons-material/Home';
-import ArticleIcon from '@mui/icons-material/Article';
-import DashboardIcon from '@mui/icons-material/Dashboard';
 
 import ListItem from "./components/list-item"
 import Drawer from "src/components/drawer"
@@ -17,6 +14,26 @@ import Drawer from "src/components/drawer"
 const Header = () => {
     const openHandler = useRef(null);
     const closeHandler = useRef(null);
+    const headerRef = useRef(null);
+
+    const scrollHandler = useCallback(() => {
+        if(window.scrollY > 80) {
+            if(!headerRef.current.classList.contains(classes.headerFixed))
+                headerRef.current.classList.add(classes.headerFixed);
+        } else {
+            if(headerRef.current.classList.contains(classes.headerFixed))
+                headerRef.current.classList.remove(classes.headerFixed);
+        }
+    }, [])
+
+    useEffect(() => {
+        window.addEventListener("scroll", scrollHandler);
+
+        const currentWindow = window;
+        return () => {
+            if(currentWindow) currentWindow.removeEventListener("scroll", scrollHandler)
+        }
+    }, [ scrollHandler ])
 
     const headerNavigation = useMemo(() => (
         <nav className={classNames(classes.headerNav, 
@@ -52,7 +69,8 @@ const Header = () => {
     return (
         <header 
             className={classNames( 
-            classes.header, `flex items-center justify-between px-5 lg:px-8 md:py-4 bg-neutral-800`)}>
+            classes.header, `flex items-center justify-between px-5 lg:px-8 md:py-4 bg-neutral-800`)}
+            ref={headerRef}>
             <div className={classNames(`flex items-center`)}>
                 <Link href="/">
                     <Typography 
