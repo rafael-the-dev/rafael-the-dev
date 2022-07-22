@@ -1,7 +1,7 @@
 .header {
     padding-bottom: .9rem;
     padding-top: .9rem;
-    transition: position ease-in 1s;
+    transition: all ease-in 1s;
 }
 
 .headerFixed {

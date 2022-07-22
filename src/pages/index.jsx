@@ -1,9 +1,12 @@
 import { Button, CardMedia, Divider, Grid, Hidden, Paper, Typography } from '@mui/material';
 import classNames from 'classnames';
+import { useContext, useMemo } from 'react';
+import Card from "src/components/portfolio-card"
 
 import classes from "src/styles/Home.module.css"
 
 import Link from "src/components/link";
+import { AppContext } from "src/context/AppContext"
 
 const AboutImage = () => (
     <CardMedia
@@ -14,7 +17,13 @@ const AboutImage = () => (
 );
 
 const Home = () => {
+    const { projects } = useContext(AppContext);
 
+    const portfolio = useMemo(() => {
+        return Object.entries(projects).filter(item => [
+            'arch-studio-multi-page-website', 'payAPI-multi-page website', 'scoot-multi-page-website', 'audiophile-e-commerce', 'invoice-app', 'devjobs-web-app'
+        ].includes(item[0]));
+    }, [ projects ]);
 
     return (
        <main className={classNames("py-6")}>
@@ -70,6 +79,25 @@ const Home = () => {
                         nature whether that’s going for a walk, run or reading. I’d love you to 
                         check out my work.
                     </Typography>
+                </div>
+           </section>
+           <section className={classNames("bg-neutral-800 mt-8 py-12 px-5")}>
+                <Typography
+                    component="h2"
+                    className="capitalize font-bold text-center text-white text-2xl md:text-3xl">
+                    My portfolio
+                </Typography>
+                <ul className={classNames(classes.portfolioList, "my-6 sm:flex sm:justify-between sm:flex-wrap")}>
+                    {
+                        portfolio.map(item => <Card key={item[0]} id={item[0]} { ...item[1]} />)
+                    }
+                </ul>
+                <div className="flex justify-end">
+                    <Link className="" href="projects">
+                        <Button className={classNames(classes.contactMeButton, `px-8 text-white`)}>
+                            View more
+                        </Button>
+                    </Link>
                 </div>
            </section>
        </main>

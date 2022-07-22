@@ -1,0 +1,27 @@
+.root {
+    height: 250px;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+    .root {
+        width: 49%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .root {
+        height: 100%;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .root:nth-child(1) {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+}

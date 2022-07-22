@@ -115,11 +115,19 @@
     }
     
     .aboutImage {
-        height: auto;
-        width: 400px;
+        width: 420px;
     }
 
     .aboutTitle {
         font-size: 1.6rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .portfolioList {
+        display: grid;
+        grid-template-columns: 31% 31% 31%;
+        grid-template-rows: 250px 250px;
+        grid-gap: 1.8rem 2.333%;
     }
 }
