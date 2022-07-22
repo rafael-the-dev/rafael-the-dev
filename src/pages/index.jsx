@@ -9,7 +9,7 @@ const AboutImage = () => (
     <CardMedia
         component="img"
         className={classes.aboutImage}
-        image="/rafael-tivane=2/jpg"
+        image="/rafael-tivane-2.jpg"
     />
 );
 
@@ -19,7 +19,7 @@ const Home = () => {
     return (
        <main className={classNames("py-6")}>
            <section className={classNames(classes.hero, 
-                "bg-neutral-800 px-5 lg:px-8 py-6 md:flex md:items-center md:justify-between")}>
+                "bg-neutral-800 px-5 lg:px-8 py-12 md:flex md:items-center md:justify-between")}>
                 <div className="flex flex-col items-center md:items-start">
                     <Typography
                         className="text-center text-white text-lg uppercase md:text-left md:text-xl"
@@ -46,10 +46,31 @@ const Home = () => {
                     </Paper>
                 </Hidden>
            </section>
-           <section className={classNames(classes.about, "bg-neutral-800 px-5 lg:px-8")}>
-                <Hidden mdUp>
-                    <AboutImage />
-                </Hidden>
+           <section className={classNames(classes.about, "bg-neutral-800 mt-6 md:flex md:flex-row-reverse")}>
+                <AboutImage />
+                <div className="flex flex-col md:justify-center pt-8 pb-14">
+                    <Typography
+                        component="h2"
+                        className={classNames(classes.aboutTitle, "font-bold text-center text-white")}>
+                        I love building beautiful and responsive websites
+                    </Typography>
+                    <Typography 
+                        className={classNames(`px-5 md:px-16 text-center text-base text-slate-200 leading-7 sm:leading-8 mt-4`)}
+                        component="p">
+                        I’m a front-end developer looking for a new role in an exciting company. 
+                        I focus on writing accessible HTML, using modern CSS practices and writing 
+                        clean JavaScript. When writing JavaScript code, I mostly use React. 
+                    </Typography>
+                    <Typography
+                        className={classNames(`px-5 md:px-16 text-center text-base text-slate-200 leading-7 sm:leading-8 mt-4`)}
+                        component="p">
+                        I’m based in Maputo, 
+                        Mozambique, but I’m happy working remotely and have experience in remote teams. 
+                        When I’m not coding, you’ll find me outdoors. I love being out in 
+                        nature whether that’s going for a walk, run or reading. I’d love you to 
+                        check out my work.
+                    </Typography>
+                </div>
            </section>
        </main>
     );
