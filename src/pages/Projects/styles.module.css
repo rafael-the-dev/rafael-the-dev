@@ -1,0 +1,41 @@
+.searchForm {
+    border: 1px solid #CCC;
+}
+
+.searchInput {
+    color: #555262;
+    font-family: "Roboto sans-serif";
+    height: 47px;
+    padding-left: 10px;
+}
+
+.searchButton {
+    height: 53px !important;
+}
+
+.loadMoreButton {
+    background-image: linear-gradient(to right #9f2395 #1976d2) !important;
+}
+
+.checkboxGroup {
+    padding: 10px 8px 10px 15px;
+}
+
+.filterImage {
+    background-image: url(https://raw.githubusercontent.com/rafael-the-dev/devjobs/ea0e61c3cf428c534c483c911abb2297c58c33ff/src/assets/icons/icon-filter.svg);
+    height: 13px;
+    margin-left: 7px;
+    width: 13px;
+}
+
+.mobileIcons {
+    color: #1976d2 !important;
+}
+
+@media screen and (min-width: 800px) {
+    .searchForm {
+        margin-left: 15%;
+        margin-right: 15%;
+        width: 70%;
+    }
+}

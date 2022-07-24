@@ -1,23 +1,18 @@
-/*import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Hidden, IconButton, Popover, Tooltip } from '@mui/material';
+import { Button, Checkbox, FormControlLabel, FormGroup, Grid, Hidden, IconButton, Popover, Tooltip } from '@mui/material';
 import classNames from 'classnames';
-import { useDisplay } from '../../styles';
-import { useStyles } from './styles';
-import { useLocation } from 'react-router-dom';
-import { useContext } from 'react';
-import { AppContext } from '../../context/AppContext'
-import Card from './Card';
+import React, { useCallback, useContext, useEffect, useState, useRef } from 'react';
+
+import { AppContext } from 'src/context/AppContext'
+import Card from './components/Card';
+
 import SearchIcon from '@mui/icons-material/Search';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
-import React, { useCallback, useEffect, useState, useRef } from 'react';
+
+import classes from './styles.module.css';
 import 'react-image-gallery/styles/css/image-gallery.css'
-import './styles.css'
 
 const ProjectsContainer = () => {
-    //const bg = useBackground();
-    const display = useDisplay();
-    const classes = useStyles();
-
-    const { projects, setCurrentPage } = useContext(AppContext);
+    const { projects } = useContext(AppContext);
 
     const [ numberOfVisibleProjects, setNumberOfVisibleProjects ] = useState(8);
     const [ projectsList, setProjectsList ] = useState([]);
@@ -95,12 +90,6 @@ const ProjectsContainer = () => {
         handlePaginationChange()
     }, [ handlePaginationChange ]);
 
-    const location = useLocation();
-    useEffect(() => {
-        if(location.pathname) {
-            setCurrentPage(location.pathname);
-        }
-    }, [ setCurrentPage, location ]);
 
     const [ anchorEl, setAnchorEl ] = useState(false);
     const [ state, setState ] = useState({
@@ -116,13 +105,11 @@ const ProjectsContainer = () => {
 
     const popoverId = anchorEl ? 'popover' : undefined;
     const { advanced, junior, guru, intermediate } = state;
-    //const [ isBoxChecked, setIsBoxChecked ] = useState(false);
     const isBoxChecked = useRef(false);
 
     const checkboxSelectHandler = event => {
         const name = event.target.getAttribute('name');
         setState(oldState => ({...oldState, [name.toLowerCase()]: !oldState[name]}));
-        //setIsBoxChecked(true);
         isBoxChecked.current = true;
     };
 
@@ -138,32 +125,20 @@ const ProjectsContainer = () => {
 
         if(junior) {
             filteredList = list.filter(item => item[1].level.toLowerCase() === 'junior');
-            console.log('junior list', list)
-
         }
-
         
         if(intermediate) {
             filteredList = [ ...filteredList, ...list.filter(item => item[1].level.toLowerCase() === 'intermediate')];
-            console.log('intermediate list', list)
-
         }
-
         
         if(advanced) {
             filteredList = [ ...filteredList, ...list.filter(item => item[1].level.toLowerCase() === 'advanced')];
-            console.log('advanced list', list)
-
         }
-
         
         if(guru) {
             filteredList = [ ...filteredList, ...list.filter(item => item[1].level.toLowerCase() === 'guru')];
-            console.log('guru list', list)
-
         }
-        console.log(filteredList);
-        console.log(list)
+
         if(filteredList.length > 0) setProjectsList(filteredList)
         else setProjectsList(list);
 
@@ -177,7 +152,7 @@ const ProjectsContainer = () => {
     }, [ getFilteredInvoices, state ]);
 
     return (
-       <main className={classNames(display.px5, 'pb-12 pt-6')}>
+       <main className={classNames('px-5 pb-12 pt-6')}>
            <form className={classNames(`flex items-stretch mb-16`, classes.searchForm,)}>
                 <Popover
                     id={popoverId}
@@ -265,4 +240,4 @@ const ProjectsContainer = () => {
     )
 };
 
-export default ProjectsContainer;*/
+export default ProjectsContainer;

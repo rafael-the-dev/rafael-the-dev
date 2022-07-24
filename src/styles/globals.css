@@ -53,6 +53,11 @@ a {
   min-height: 95vh;
 }
 
+.image-gallery-svg { 
+  height: 32px !important;
+  width: 19px !important;
+}
+
 @media screen  and (min-width: 900px){
   #root {
     display: flex;

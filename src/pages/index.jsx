@@ -119,7 +119,7 @@ const Home = () => {
                     </Link>
                 </div>
            </section>
-           <section className={classNames("bg-neutral-800 mt-8 py-12 px-5")}>
+           <section className={classNames("bg-neutral-800 mt-8 mb-4 py-12 px-5")}>
                 <Typography
                     component="h2"
                     className="capitalize font-bold text-center text-white text-2xl md:text-3xl">
