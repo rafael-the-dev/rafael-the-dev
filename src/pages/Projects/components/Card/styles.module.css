@@ -1,0 +1,51 @@
+.projectCardIcon {
+    height: 58px;
+    transform: translate(8%, -43%);
+    width: 58px;
+}
+    
+.projectCardTitle {
+    width: 245px;
+}
+    
+.projectCardDescription a {
+    color: #186bbd;
+}
+
+.projectCardDescription a:hover {
+    text-decoration: underline;
+}
+    
+    
+.projectCardLink:hover {
+    color: #d70077 !important;
+        
+}
+    
+.collapse {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        max-width: 48.5%;
+    }   
+    
+    .projectCardTitle {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .card {
+        max-width: 31.5%;
+    }
+        
+}
+
+@media screen and (min-width: 1580px) {
+    .card {
+        max-width: 23.5%;
+    }        
+}

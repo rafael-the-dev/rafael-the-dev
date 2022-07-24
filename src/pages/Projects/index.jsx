@@ -4,6 +4,7 @@ import React, { useCallback, useContext, useEffect, useState, useRef } from 'rea
 
 import { AppContext } from 'src/context/AppContext'
 import Card from './components/Card';
+import ViewMoreButton from "src/components/button"
 
 import SearchIcon from '@mui/icons-material/Search';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
@@ -65,10 +66,8 @@ const ProjectsContainer = () => {
 
     const setListLength = useCallback(width => {
         if(width >= 1400) {
-            setNumberOfVisibleProjects(12)
+            setNumberOfVisibleProjects(9)
         } else if(width >= 900) {
-            setNumberOfVisibleProjects(8)
-        } else if(width >= 600) {
             setNumberOfVisibleProjects(6)
         } else {
             setNumberOfVisibleProjects(4)
@@ -78,8 +77,9 @@ const ProjectsContainer = () => {
     useEffect(() => {
         setListLength(window.innerWidth);
         const func = event => setListLength(event.target.innerWidth);
-        window.addEventListener('resize', func)
-        return () => window.removeEventListener('resize', func);
+        window.addEventListener('resize', func);
+        const currentWindow = window;
+        return () => { if(currentWindow) currentWindow.removeEventListener('resize', func) };
     }, [ setListLength ]);
 
     useEffect(() => {
@@ -152,8 +152,8 @@ const ProjectsContainer = () => {
     }, [ getFilteredInvoices, state ]);
 
     return (
-       <main className={classNames('px-5 pb-12 pt-6')}>
-           <form className={classNames(`flex items-stretch mb-16`, classes.searchForm,)}>
+       <main className={classNames('bg-neutral-800 mt-10 mb-12 px-5 pb-12 pt-8')}>
+           <form className={classNames(`bg-neutral-900 flex items-stretch mb-16 sm:px-3`, classes.searchForm,)}>
                 <Popover
                     id={popoverId}
                     open={Boolean(anchorEl)}
@@ -191,17 +191,17 @@ const ProjectsContainer = () => {
                     ref={searchInputRef}
                     placeholder="Insert text here to search"
                     onChange={inputOnChangeHandler}
-                    className={classNames(classes.searchInput, `text-base grow border-0 outline-none`)} 
+                    className={classNames(classes.searchInput, `bg-transparent text-base grow border-0 outline-none`)} 
                 />
                 <Hidden smUp>
                     <Tooltip title="filter projects">
                         <IconButton  onClick={handleClick}>
-                            <FilterAltIcon className={classNames(classes.mobileIcons)} />
+                            <FilterAltIcon className={classNames(classes.mobileIcons, `text-orange-700`)} />
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="search">
                         <IconButton onClick={searchHandler}>
-                            <SearchIcon className={classNames(classes.mobileIcons)} />
+                            <SearchIcon className={classNames(classes.mobileIcons, `text-orange-700`)} />
                         </IconButton>
                     </Tooltip>
                 </Hidden>
@@ -210,14 +210,14 @@ const ProjectsContainer = () => {
                         aria-describedby={popoverId}
                         aria-haspopup="true" 
                         endIcon={<FilterAltIcon />} 
-                        className={classNames('text-color', 'color-transition')}
+                        className={classNames('text-color text-orange-700', 'color-transition')}
                         onClick={handleClick}>
                         Filter
                     </Button>
                 <Button 
                         endIcon={<SearchIcon />} 
                         onClick={searchHandler}
-                        className={classNames(classes.searchButton, 'outline-none text-color', 'color-transition')}>
+                        className={classNames(classes.searchButton, 'outline-none text-color text-orange-700', 'color-transition')}>
                         Search
                     </Button>
                 </Hidden>
@@ -229,13 +229,11 @@ const ProjectsContainer = () => {
                     ))
                }
            </Grid>
-            <Button 
+            <ViewMoreButton 
                 onClick={handlePaginationChange} 
-                disabled={!hasMoreProjects} 
-                className={classNames(classes.loadMoreButton, `text-white text-sm bg-transition
-                bg-transparent py-2.5 px-4 capitalize hover:opacity-90`)}>
+                disabled={!hasMoreProjects}>
                 View more
-            </Button>
+            </ViewMoreButton>
        </main>
     )
 };

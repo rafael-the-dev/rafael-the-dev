@@ -1,5 +1,5 @@
-/*import { Button, Card, CardActions, CardContent, Collapse, Grid, IconButton, Typography } from '@mui/material';
-import { useStyles } from './styles';
+import { Button, Card, CardActions, CardContent, Collapse, Grid, IconButton, Typography } from '@mui/material';
+import classes from './styles.module.css';
 //import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 //import ShowMoreText from "react-show-more-text";
@@ -8,12 +8,10 @@ import { useCallback, useMemo, useState } from 'react'
 import ImageGallery from 'react-image-gallery'
 
 const CardContainer = ({ project, name, description, nameParameter, images, imageLink }) => {
-    const classes = useStyles();
-
     const [ open, setOpen ] = useState(false);
 
     const getImageURL = useCallback((image) => 
-        image.startsWith('https://') ? image : `${process.env.PUBLIC_URL}/images/projects-images/${nameParameter}/${image}`, 
+        image.startsWith('https://') ? image : `/images/projects-images/${nameParameter}/${image}`, 
     [ nameParameter ]);
 
     const clickHandler = useCallback(() => setOpen(o => !o), []);
@@ -37,8 +35,8 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
     if(Object.keys(project).length === 0) return <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-12 pt-0', classes.card)}></Grid>
     
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3} className={classNames('mb-12 pt-0', classes.card)}>
-             <Card >
+        <Grid item xs={12} sm={6} md={4} className={classNames('mb-12 pt-0', classes.card)}>
+             <Card className="bg-neutral-900">
                 <div className={classNames(classes.cardImageGalleryContainer)}>
                     <ImageGallery showThumbnails={false} items={carouselImages} />
                 </div>
@@ -47,19 +45,20 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                         gutterBottom 
                         component="h2" 
                         variant="h6" 
-                        className={classNames(classes.projectCardTitle, 'font-bold text-ellipsis overflow-hidden whitespace-nowrap')}>
+                        className={classNames(classes.projectCardTitle, 
+                        'font-bold text-ellipsis text-slate-300 overflow-hidden whitespace-nowrap')}>
                         { project.name }
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing className={classNames('flex items-center justify-between')}>
                     <a href={project.liveURL} rel="noreferrer" target="_blank">
                         <Button 
-                            className={classNames('uppercase', classes.projectCardLink)}>
+                            className={classNames('uppercase text-orange-700', classes.projectCardLink)}>
                             Visit website
                         </Button>
                     </a>
                     <IconButton onClick={clickHandler}>
-                        <KeyboardArrowDownIcon className={classNames({'rotate-180': open })}/>
+                        <KeyboardArrowDownIcon className={classNames("text-slate-300", {'rotate-180': open })}/>
                     </IconButton>
                 </CardActions>
                 <Collapse in={open} timeout="auto" unmountOnExit>
@@ -67,15 +66,15 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
                         <Typography 
                             component="h3" 
                             variant="h6" 
-                            className={classNames('font-bold sm:text-lg')}>
+                            className={classNames('font-bold text-slate-300 sm:text-lg')}>
                             Description
                         </Typography>
                         <Typography 
-                            className={classNames('mt-3 text-base', classes.description)}>
+                            className={classNames('mt-3 text-base text-slate-400', classes.description)}>
                             { project.content?.description }
                         </Typography>
                         <Typography 
-                            className={classNames('mt-3 text-base', classes.tools)}>
+                            className={classNames('mt-3 text-base text-slate-400')}>
                             { getTools }
                         </Typography>
                         <a className="block mt-4" href={project.sourceCodeURL} rel="noreferrer" target="_blank">
@@ -91,7 +90,7 @@ const CardContainer = ({ project, name, description, nameParameter, images, imag
     );
 };
 
-export default CardContainer;*/
+export default CardContainer;
 
 /**
  * 
