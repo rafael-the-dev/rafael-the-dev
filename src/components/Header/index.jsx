@@ -9,7 +9,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import ListItem from "./components/list-item"
-import Drawer from "src/components/drawer"
+import Drawer from "src/components/drawer";
+import ContactMeButton from "src/components/button"
 
 const Header = () => {
     const openHandler = useRef(null);
@@ -54,12 +55,9 @@ const Header = () => {
                     bg-transparent`, classes.headerDrawerBottom)}>
                     <Link href="resume"
                         className={classNames(classes.contactMeLink, `no-underline`)}>
-                        <Button 
-                            className={classNames(classes.headerGetStarted, classes.headerContactMe, 
-                            `bg-orange-700 text-sm capitalize font-bold w-full text-white py-3
-                            hover:bg-orange-900`)}>
+                        <ContactMeButton className="w-full">
                             Contact me
-                        </Button>
+                        </ContactMeButton>
                     </Link>
                 </div>
             </Hidden>

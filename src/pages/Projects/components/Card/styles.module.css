@@ -5,7 +5,7 @@
 }
     
 .projectCardTitle {
-    width: 245px;
+    width: 95%;
 }
     
 .projectCardDescription a {
@@ -31,10 +31,6 @@
     .card {
         max-width: 48.5%;
     }   
-    
-    .projectCardTitle {
-        width: 95%;
-    }
 }
 
 @media screen and (min-width: 900px) {
