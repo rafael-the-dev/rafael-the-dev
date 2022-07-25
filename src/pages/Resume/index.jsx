@@ -11,11 +11,13 @@ import EmailIcon from '@mui/icons-material/Email';//
 
 import ProjectLink from "./components/projects-link";
 import Button from "./components/button";
-
+import LeftSideTitle from "./components/left-side-title";
+import RightSideTitle from "./components/right-side-title";
+import Anchor from "./components/anchor"
 
 const LeftSide = ({ open, isMobile}) => (
     <div className={classNames(classes.leftSide, `bg-neutral-800 flex flex-col items-center pt-8 md:pt-4`, 
-        { 'hidden': !open.leftSide && isMobile }, 'bg-transition')}>
+        { 'hidden': !open.leftSide && isMobile }, 'bg-transition md:bg-neutral-900')}>
         <div className={classNames(classes.leftSideIntro, `flex pl-4 mb-8 md:pl-0`)}>
             <figure className={classNames(classes.imageContainer, 'mx-0')}>
                 <img 
@@ -36,32 +38,24 @@ const LeftSide = ({ open, isMobile}) => (
             </Hidden>
         </div>
         <div className={classNames('flex flex-col w-full mb-4')}>
-            <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
-                <Typography component="h2" variant="h5">Contact</Typography>
-            </div>
+            <LeftSideTitle title="Contact" />
             <div className={classNames('flex flex-col pl-8')}>
-                <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline', 
-                    classes.contactLinks)} href="mailto:luislangabusiness@gmail.com">
+                <Anchor href="mailto:rafaeljossefativanejunior@gmail.com">
                     <EmailIcon  className={classNames('text-white mr-4')} /> Gmail
-                </a>
-                <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline' 
-                    ,classes.contactLinks)} href="https://linkedin.com/in/rafael-tivane/">
+                </Anchor>
+                <Anchor href="https://linkedin.com/in/rafael-tivane/">
                     <LinkedInIcon  className={classNames('text-white mr-4')} /> Linkedin
-                </a>
-                <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline' 
-                    ,classes.contactLinks)} href="https://github.com/rafael-the-dev/">
+                </Anchor>
+                <Anchor href="https://github.com/rafael-the-dev/">
                     <GitHubIcon  className={classNames('text-white mr-4')} /> Github
-                </a>
-                <a target="_blank" rel="noreferrer" className={classNames('flex items-center no-underline' 
-                    ,classes.contactLinks)} href="https://www.instagram.com/rafael_the_dev/?hl=en">
+                </Anchor>
+                <Anchor href="https://www.instagram.com/rafael_the_dev/?hl=en">
                     <InstagramIcon  className={classNames('text-white mr-4')} /> Instagram
-                </a>
+                </Anchor>
             </div>
         </div>
         <div className={classNames('flex flex-col w-full mb-4')}>
-            <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
-                <Typography component="h2" variant="h5">Education</Typography>
-            </div>
+            <LeftSideTitle title="Education" />
             <div className={classNames('pl-8 pr-1 mb-4 text-white')}>
                 <Typography component="h3" >React Developer</Typography>
                 <a 
@@ -80,26 +74,26 @@ const LeftSide = ({ open, isMobile}) => (
                 </Typography>
             </div>
         </div>
-        <div className={classNames('flex flex-col w-full', )}>
-            <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
-                <Typography component="h2" variant="h5">Expertise</Typography>
-            </div>
+        <div className={classNames('flex flex-col mb-4 w-full', )}>
+            <LeftSideTitle title="Expertise" />
             <ul className={classNames(`flex flex-col pl-8 text-white opacity-90 mt-0`)}>
-                <li className={classNames(classes.expertiseItem)}>JavaScript</li>
-                <li className={classNames(classes.expertiseItem)}>HTML5</li>
-                <li className={classNames(classes.expertiseItem)}>CSS3</li>
-                <li className={classNames(classes.expertiseItem)}>React</li>
-                <li className={classNames(classes.expertiseItem)}>Material-UI</li>
-                <li className={classNames(classes.expertiseItem)}>Bootstrap 5</li>
+                {
+                    [ 'Next JS', "React", "JavaScript", "GraphQL", "Node JS", "Material-UI", "Bootstrap 5", "CSS3", "HTML5" ].map((item, index) => (
+                        <Typography 
+                            component="li" 
+                            className={classNames(classes.expertiseItem)}
+                            key={index}>
+                            { item }
+                        </Typography>
+                    ))
+                }
             </ul>
         </div>
         <div className={classNames('flex flex-col w-full pb-8 md:pb-0')}>
-            <div className={classNames(classes.leftSideSubtitleContainer, 'pl-8 mb-4')}>
-                <Typography component="h2" variant="h5">Languages</Typography>
-            </div>
+            <LeftSideTitle title="Languages" />
             <ul className={classNames(`flex flex-col pl-8 text-white opacity-90 mt-0`)}>
-                <li className={classNames(classes.expertiseItem)}>English</li>
-                <li className={classNames(classes.expertiseItem)}>Portuguese</li>
+                <Typography component="li" className={classNames(classes.expertiseItem, "mb-3")}>English</Typography>
+                <Typography component="li" className={classNames(classes.expertiseItem)}>Portuguese</Typography>
             </ul>
         </div>
     </div>
@@ -109,29 +103,22 @@ const RightSide = ({ open, isMobile}) => (
     <div className={classNames(`md:pl-12 md:pt-8 flex items-stretch flex-col grow pb-8`, 
         { 'hidden': !open.rightSide && isMobile })}>
         <Typography component="h2" variant="h4" className={classNames(classes.rightSideTitle, 
-            'font-bold pl-4 md:pl-0 color-transition')}>
+            'font-bold pl-4 text-white md:pl-0 text-gradient')}>
             Rafael Tivane
         </Typography>
-        <Typography component="p" variant="h6" className={classNames(classes.darkBlue1, 'color-transition pl-4 md:pl-0', 
+        <Typography component="p" variant="h6" className={classNames('pl-4 text-slate-200 md:pl-0', 
             classes.rightSidePosition)}>
             Frontend Developer
         </Typography>
         <div className={classNames('pt-4')}>
-            <div className={classNames(classes.rightSideSubtitleContainer, 'bg-transition pl-4')}>
-                <Typography 
-                    component="h3" 
-                    variant="h6" 
-                    className={classNames(classes.rightSideSubtitleContainer, 'bg-transition text-white')}>
-                    About me
-                </Typography>
-            </div>
-            <Typography className={classNames(`sm:text-base opacity-90 px-4 pt-4 mb-4`)}>
+            <RightSideTitle title="About me" />
+            <Typography className={classNames(`sm:text-base opacity-90 px-4 pt-4 mb-4 text-slate-300`)}>
                 I’m a front-end developer looking for a new role in an exciting company. 
                 I focus on writing accessible HTML, using modern CSS practices and writing 
                 clean JavaScript. When writing JavaScript code, I mostly use React. 
                 Besides these I spend time working on personal projects, challenges and learning new skills.
             </Typography>
-            <Typography className={classNames(`sm:text-base opacity-90 px-4`)}>
+            <Typography className={classNames(`sm:text-base opacity-90 px-4 text-slate-300`)}>
                 I’m based in Maputo, 
                 Mozambique, but I’m happy working remotely and have experience in remote teams. 
                 When I’m not coding, you’ll find me outdoors. I love being out in 
@@ -139,31 +126,30 @@ const RightSide = ({ open, isMobile}) => (
             </Typography>
         </div>
         <div className={classNames('pt-4')}>
-            <div className={classNames(classes.rightSideSubtitleContainer, 'bg-transition pl-4')}>
-                <Typography 
-                    component="h3" 
-                    variant="h6" className={classNames(classes.rightSideSubtitleContainer, 'bg-transition text-white')}>
-                    Work Experience
-                </Typography>
-            </div>
+            <RightSideTitle title="Work Experience" />
             <div className={classNames('pt-4 pl-4')}>
                 <Typography 
                     component="h4" 
-                    className={classNames(classes.experienceSubtitle, classes.darkBlue1, 'color-transition')}>
+                    className={classNames(classes.experienceSubtitle, 'text-gray-200')}>
                     Frontend Developer
                 </Typography>
                 <Typography 
                     component="h5" 
-                    className={classNames(classes.experienceCompa, 'mb-2')}>
+                    className={classNames(classes.experienceCompa, 'mb-2 opacity-90 text-slate-200')}>
                     RetriveAI (2022 - 2021)
                 </Typography>
                 <ul className={classNames('flex flex-col pl-8 pr-4 list-disc')}>
-                    <li className={classNames(classes.experienceItem)}>Work on the front-end of enterprise applications</li>
-                    <li className={classNames(classes.experienceItem)}>Meet with team to align on Sprint objectives</li>
-                    <li className={classNames(classes.experienceItem)}>Ensure quality by adhering to technical best practices</li>
-                    <li className={classNames(classes.experienceItem)}>and pair programming to tackle difficult issues</li>
-                    <li className={classNames(classes.experienceItem)}>Collaborate with backend team in ensuaring technical feasibility</li>
-                    <li className={classNames(classes.experienceItem)}>code reviews</li>
+                    {
+                        [ 'Work on the front-end of enterprise applications', 'Meet with team to align on Sprint objectives', 'Ensure quality by adhering to technical best practices', 
+                        'and pair programming to tackle difficult issues', 'Collaborate with backend team in ensuaring technical feasibility', 'code reviews'].map((item, index) => (
+                            <Typography 
+                                key={index} 
+                                component="li" 
+                                className={classNames(`mb-2 text-slate-300`)}>
+                                { item }
+                            </Typography>
+                        ))
+                    }
                 </ul>
             </div>
         </div>
@@ -171,7 +157,7 @@ const RightSide = ({ open, isMobile}) => (
             <div className={classNames('pt-4 pl-4')}>
                 <Typography 
                     component="h3" 
-                    className={classNames(classes.experienceSubtitle, classes.darkBlue1, 'mb-2 color-transition')}>
+                    className={classNames(classes.experienceSubtitle, 'mb-2 text-gray-200')}>
                     Personal projects
                 </Typography>
                 <ul className={classNames('flex flex-col pl-8 pr-4 list-disc')}>

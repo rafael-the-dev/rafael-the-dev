@@ -20,29 +20,9 @@
     object-fit: cover;
 }
 
-.leftSideSubtitleContainer {
-    border-radius: 0 65px 69px 0;
-    background: #FFF;
-    width: 80%;
-}
-
-.contactLinks {
-    color: #e7e6e9;
-    margin-bottom: 10px;
-}
-
 .expertiseItem {
     list-style-type: none;
     margin-bottom: 7px;
-}
-
-.rightSideTitle {
-    color: #081f3e;
-}
-
-.rightSideSubtitleContainer {
-    background-color: #294468;
-    border-radius: 100px 0 0 100px;
 }
 
 .experienceSubtitle {
@@ -61,24 +41,15 @@
     text-decoration: underline !important;
 }
 
-@media screen and (min-width: 600px) {
-    .main {
-        min-height: 70vh;
-        margin-left: 15%;
-        margin-right: 15%;
-    }
-}
-
 @media screen and (min-width: 900px) {
     .main {
-            margin-left: auto;
-            margin-right: auto;
-            width: 800
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .leftSide {
-        border-radius: 100px 100px 0 0;
-        width: 200px;
+        border-radius: 115px 115px 0 0;
+        width: 250px;
     }
 
     .imageContainer {
@@ -100,6 +71,7 @@
     }
 
     .rightSideTitle {
+        background-image: linear-gradient(45deg, #ea580c, #db2777);
         font-size: 3.75rem !important;
     }
 }
