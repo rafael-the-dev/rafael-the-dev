@@ -1,23 +1,25 @@
-/*import { Button, Hidden, Paper, Typography } from '@mui/material';
-import { useStyles } from './styles';
-import { Link, useLocation } from 'react-router-dom';
+import { Hidden, Paper, Typography } from '@mui/material';
+import Link from "next/link";
 import classNames from 'classnames';
-import rafaelImage from '../../assets/images/rafael-tivane.jpg';
+import classes from "./styles.module.css"
+import { useState } from 'react';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { useContext, useEffect, useState } from 'react';
-import { AppContext } from '../../context/AppContext';
 import EmailIcon from '@mui/icons-material/Email';//
 
+import ProjectLink from "./components/projects-link";
+import Button from "./components/button";
 
-const LeftSide = ({ classes, open, isMobile}) => (
-    <div className={classNames(classes.leftSide, `flex flex-col items-center pt-8 md:pt-4`, 
+
+const LeftSide = ({ open, isMobile}) => (
+    <div className={classNames(classes.leftSide, `bg-neutral-800 flex flex-col items-center pt-8 md:pt-4`, 
         { 'hidden': !open.leftSide && isMobile }, 'bg-transition')}>
         <div className={classNames(classes.leftSideIntro, `flex pl-4 mb-8 md:pl-0`)}>
             <figure className={classNames(classes.imageContainer, 'mx-0')}>
                 <img 
-                    src={rafaelImage}
+                    src="/rafael-tivane.jpg"
                     alt="rafael tivane" 
                     className={classNames('block h-full w-full', classes.leftSideImage)}
                 />
@@ -103,7 +105,7 @@ const LeftSide = ({ classes, open, isMobile}) => (
     </div>
 );
 
-const RightSide = ({ open, classes, isMobile}) => (
+const RightSide = ({ open, isMobile}) => (
     <div className={classNames(`md:pl-12 md:pt-8 flex items-stretch flex-col grow pb-8`, 
         { 'hidden': !open.rightSide && isMobile })}>
         <Typography component="h2" variant="h4" className={classNames(classes.rightSideTitle, 
@@ -173,41 +175,12 @@ const RightSide = ({ open, classes, isMobile}) => (
                     Personal projects
                 </Typography>
                 <ul className={classNames('flex flex-col pl-8 pr-4 list-disc')}>
-                    <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/dine-restaurant-website">
-                            Built out Dine Restaurant Website
-                        </Link>
-                    </li>
-                    <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/coffeeroasters-subscription-site">
-                            Built out Coffeeroasters Subscription Site
-                        </Link>
-                    </li>
-                    <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/myteam-multi-page-website">
-                            Built out Myteam Multipage Website
-                        </Link>
-                    </li>
-                    <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/planects-fact-web-app">
-                            Built out Planects Fact Web App
-                        </Link>
-                    </li>
-                    <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/photosnap">
-                            Built Photosnap multi-page website
-                        </Link>
-                    </li>
-                    <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects/devjobs-web-app">
-                            Built out Devjobs web app
-                        </Link>
-                    </li>
-                    <li className={classNames(classes.experienceItem)}>
-                        <Link className={classNames('no-underline color-transition', classes.projectsLink)} to="/projects">
-                            view more projects
-                        </Link>
-                    </li>
+                    <ProjectLink id="dine-restaurant-website" label="Built out Dine Restaurant Website" />
+                    <ProjectLink id="coffeeroasters-subscription-site" label="Built out Coffeeroasters Subscription Site" />
+                    <ProjectLink id="myteam-multi-page-website" label="Built out Myteam Multipage Website" />
+                    <ProjectLink id="planects-fact-web-app" label="Built out Planects Fact Web App" />
+                    <ProjectLink id="photosnap" label="Built Photosnap multi-page website" />
+                    <ProjectLink id="devjobs-web-app" label="Built out Devjobs web app" />
                 </ul>
             </div>
         </div>
@@ -215,34 +188,22 @@ const RightSide = ({ open, classes, isMobile}) => (
 )
 
 const Resume = () => {
-    const classes = useStyles();
-
-    const { setCurrentPage } = useContext(AppContext);
-
     const [ open, setOpen ] = useState({ leftSide: true, rightSide: false });
     const leftSideButtonClickHandler = () => setOpen(o => ({ leftSide: !o['leftSide'], rightSide: !o['rightSide'] }));
-    //const rightSideButtonClickHandler = () => setOpen(o => ({ leftSide: !o['leftSide'], rightSide: !o['rightSide'] }))
 
-    
-    const location = useLocation();
-    useEffect(() => {
-        if(location.pathname) {
-            setCurrentPage(location.pathname);
-        }
-    }, [ setCurrentPage, location ]);
     return (
-        <Paper elevation={2} component="main" className={classNames(classes.main, `flex flex-col items-stretch 
+        <Paper elevation={2} component="main" className={classNames(classes.main, `bg-neutral-800 flex flex-col items-stretch 
             pt-4 mb-12 mt-8 md:flex-row`)}>
             <Hidden mdUp>
                 <div style={{ marginLeft: 7}} className={classNames('flex items-stretch mb-4')}>
                     <Button 
                         onClick={leftSideButtonClickHandler}
-                        className={classNames(classes.button, { [classes.selectedButton]: open.leftSide, [classes.notSelectedButton]: !open.leftSide}, 'bg-transition', 'color-transition')}>
+                        selected={open.leftSide}>
                         Left Side
                     </Button>
                     <Button 
                         onClick={leftSideButtonClickHandler}
-                        className={classNames(classes.button, { [classes.selectedButton]: open.rightSide, [classes.notSelectedButton]: !open.rightSide}, 'bg-transition', 'color-transition')}>
+                        selected={open.rightSide}>
                         Right Side
                     </Button>
                 </div>
